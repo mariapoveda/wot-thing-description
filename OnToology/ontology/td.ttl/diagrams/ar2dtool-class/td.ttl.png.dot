@@ -1,0 +1,32 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "td:Thing" "td:Link" "td:InteractionPattern" "td:DataSchema" ; /*classes style*/
+	"td:" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "dcterms:license" ];
+	"td:" -> "http://purl.org/net/mpoveda" [ label = "dcterms:creator" ];
+	"td:" -> "http://www.oeg-upm.net/" [ label = "dc:publisher" ];
+	"td:" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = "dcterms:creator" ];
+	"td:" -> "http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/" [ label = "dcterms:contributor" ];
+	"NULL" -> "td:Link" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "xsd:string" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "xsd:boolean" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "td:inputData" [ label = "owl:onProperty" ];
+	"NULL" -> "td:isWritable" [ label = "owl:onProperty" ];
+	"NULL" -> "td:link" [ label = "owl:onProperty" ];
+	"NULL" -> "td:interaction" [ label = "owl:onProperty" ];
+	"NULL" -> "td:InteractionPattern" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "td:DataSchema" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "td:Link" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "td:mediaType" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "td:outputData" [ label = "owl:onProperty" ];
+	"NULL" -> "td:href" [ label = "owl:onProperty" ];
+	"NULL" -> "td:DataSchema" [ label = "owl:allValuesFrom" ];
+	"owl:Thing" -> "xsd:string" [ label = "td:href" ];
+	"owl:Thing" -> "xsd:string" [ label = "td:name" ];
+	"td:Thing" -> "td:InteractionPattern" [ label = "td:interaction" ];
+	"owl:Thing" -> "xsd:string" [ label = "td:mediaType" ];
+	"td:Thing" -> "xsd:string" [ label = "td:base" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "td:isWritable" ];
+
+}
