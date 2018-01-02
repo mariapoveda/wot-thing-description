@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "td:Property" "td:InteractionPattern" "td:Event" "td:Action" ; /*classes style*/
+	"td:Property" -> "td:InteractionPattern" [ label = "rdfs:subClassOf" ];
+	"td:Event" -> "td:InteractionPattern" [ label = "rdfs:subClassOf" ];
+	"td:Action" -> "td:InteractionPattern" [ label = "rdfs:subClassOf" ];
+
+}
