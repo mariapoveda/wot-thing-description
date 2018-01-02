@@ -1,0 +1,130 @@
+@prefix : <http://www.w3.org/ns/td##> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/ns/td#> .
+
+<http://www.w3.org/ns/td#> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/ns/td#allOf
+<http://www.w3.org/ns/td#allOf> rdf:type owl:ObjectProperty ;
+                                rdfs:comment "definition of a intersection type (aligned with JSON schema)"@en ;
+                                rdfs:label "allOf"@en .
+
+
+###  http://www.w3.org/ns/td#anyOf
+<http://www.w3.org/ns/td#anyOf> rdf:type owl:ObjectProperty ;
+                                rdfs:comment "definition of a union type (aligned with JSON schema)"@en ;
+                                rdfs:label "anyOf"@en .
+
+
+###  http://www.w3.org/ns/td#enum
+<http://www.w3.org/ns/td#enum> rdf:type owl:ObjectProperty ;
+                               rdfs:comment "enumerated list of literals (aligned with JSON schema)."@en ;
+                               rdfs:label "enum"@en .
+
+
+###  http://www.w3.org/ns/td#field
+<http://www.w3.org/ns/td#field> rdf:type owl:ObjectProperty ;
+                                rdfs:range <http://www.w3.org/ns/td#DataField> .
+
+
+###  http://www.w3.org/ns/td#items
+<http://www.w3.org/ns/td#items> rdf:type owl:ObjectProperty ;
+                                rdfs:domain <http://www.w3.org/ns/td#Array> ;
+                                rdfs:range <http://www.w3.org/ns/td#DataSchema> ;
+                                rdfs:comment "array item data schema definition (JSON Schema)"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#oneOf
+<http://www.w3.org/ns/td#oneOf> rdf:type owl:ObjectProperty ;
+                                rdfs:comment "definition of an exclusive union type (aligned with JSON Schema)"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#value
+<http://www.w3.org/ns/td#value> rdf:type owl:ObjectProperty ;
+                                rdfs:domain <http://www.w3.org/ns/td#DataField> ;
+                                rdfs:range <http://www.w3.org/ns/td#DataSchema> ;
+                                rdfs:comment "expected value type for a given object entry (derived from JSON Schema)"^^xsd:string ;
+                                rdfs:label "value"^^xsd:string .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/ns/td#maxItems
+<http://www.w3.org/ns/td#maxItems> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <http://www.w3.org/ns/td#Array> ;
+                                   rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/ns/td#minItems
+<http://www.w3.org/ns/td#minItems> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <http://www.w3.org/ns/td#Array> ;
+                                   rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/ns/td#required
+<http://www.w3.org/ns/td#required> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <http://www.w3.org/ns/td#Object> ;
+                                   rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/td#Array
+<http://www.w3.org/ns/td#Array> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ;
+                                rdfs:label "Array Data Schema"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#Boolean
+<http://www.w3.org/ns/td#Boolean> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ;
+                                  rdfs:label "Boolean Data Schema"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#DataField
+<http://www.w3.org/ns/td#DataField> rdf:type owl:Class ;
+                                    rdfs:label "Data Field"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#DataSchema
+<http://www.w3.org/ns/td#DataSchema> rdf:type owl:Class ;
+                                     rdfs:label "Data Schema"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#Integer
+<http://www.w3.org/ns/td#Integer> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ;
+                                  rdfs:label "Integer Data Schema"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#Number
+<http://www.w3.org/ns/td#Number> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ;
+                                 rdfs:label "Number Data Schema"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#Object
+<http://www.w3.org/ns/td#Object> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ;
+                                 rdfs:label "Object Data Schema"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#String
+<http://www.w3.org/ns/td#String> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ;
+                                 rdfs:label "String Data Schema"^^xsd:string .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

@@ -1,0 +1,21 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"NULL" -> "cca6f037ca7967d067fb45ec6b7da68d" [ label = "rdf:first" ];
+	"NULL" -> "9aa78a4993002f4a153f6ca927e63e2a" [ label = "rdf:first" ];
+	"NULL" -> "-29fd5601:160b65af8a2:-7ff8" [ label = "rdf:rest" ];
+	"NULL" -> "631d32cdb87626d688e4b566a8e08b69" [ label = "td:value" ];
+	"NULL" -> "-29fd5601:160b65af8a2:-7ffc" [ label = "td:field" ];
+	"NULL" -> "a012252a1f99396fed911111db18c377" [ label = "td:value" ];
+	"NULL" -> "e8e359d11503b33d9cebb883effd05a8" [ label = "td:value" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "-29fd5601:160b65af8a2:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "-29fd5601:160b65af8a2:-7ffa" [ label = "td:field" ];
+	"NULL" -> "7e75bc1d031898ee88035298fa7708c6" [ label = "rdf:first" ];
+	"NULL" -> "3b318873b4c846d82faa694dedfc38f9" [ label = "rdf:first" ];
+	"NULL" -> "b4a523b7d4272d5777a3e18bd54a0b65" [ label = "rdf:first" ];
+	"NULL" -> "5bf9228ff4b263774fc1d686543d8bed" [ label = "td:value" ];
+	"NULL" -> "f30bdbbc36aad1d2ddd42a2ce7e47314" [ label = "td:value" ];
+	"NULL" -> "-29fd5601:160b65af8a2:-7ff9" [ label = "rdf:rest" ];
+
+}

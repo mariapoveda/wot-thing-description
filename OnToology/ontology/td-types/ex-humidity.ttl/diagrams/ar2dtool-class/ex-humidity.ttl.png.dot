@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"NULL" -> "4a078884:160b65a6232:-7ffc" [ label = "td:field" ];
+	"NULL" -> "4047b763d0c0732b2835709d24f7ab54" [ label = "td:value" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "8e812cba44610390eaa179794c4830bc" [ label = "rdf:first" ];
+
+}
