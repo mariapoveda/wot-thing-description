@@ -1,0 +1,45 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "td:Thing" "td:Security" "td:Link" "td:InteractionPattern" "td:Form" "td:DataSchema" ; /*classes style*/
+	"td:" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "dcterms:license" ];
+	"td:" -> "http://purl.org/net/mpoveda" [ label = "dcterms:creator" ];
+	"td:" -> "https://www.w3.org/WoT/WG/" [ label = "dc:publisher" ];
+	"td:" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = "dcterms:creator" ];
+	"td:" -> "http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/" [ label = "dcterms:contributor" ];
+	"NULL" -> "xsd:string" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "td:Form" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "xsd:boolean" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "td:form" [ label = "owl:onProperty" ];
+	"NULL" -> "td:Security" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "xsd:anyURI" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "td:anchor" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:anyURI" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "td:link" [ label = "owl:onProperty" ];
+	"NULL" -> "td:interaction" [ label = "owl:onProperty" ];
+	"NULL" -> "td:InteractionPattern" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "td:observable" [ label = "owl:onProperty" ];
+	"NULL" -> "td:inputSchema" [ label = "owl:onProperty" ];
+	"NULL" -> "td:DataSchema" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "td:rel" [ label = "owl:onProperty" ];
+	"NULL" -> "td:security" [ label = "owl:onProperty" ];
+	"NULL" -> "td:Link" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "td:outputSchema" [ label = "owl:onProperty" ];
+	"NULL" -> "td:writable" [ label = "owl:onProperty" ];
+	"NULL" -> "td:mediaType" [ label = "owl:onProperty" ];
+	"NULL" -> "td:schema" [ label = "owl:onProperty" ];
+	"NULL" -> "td:name" [ label = "owl:onProperty" ];
+	"NULL" -> "td:base" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "td:href" [ label = "owl:onProperty" ];
+	"NULL" -> "td:DataSchema" [ label = "owl:allValuesFrom" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "td:href" ];
+	"owl:Thing" -> "xsd:string" [ label = "td:name" ];
+	"owl:Thing" -> "xsd:string" [ label = "td:rel" ];
+	"td:Thing" -> "td:InteractionPattern" [ label = "td:interaction" ];
+	"owl:Thing" -> "xsd:string" [ label = "td:mediaType" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "td:base" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "td:observable" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "td:writable" ];
+
+}
