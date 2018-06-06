@@ -1,0 +1,543 @@
+@prefix : <http://www.w3.org/ns/td##> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/ns/td#> .
+
+<http://www.w3.org/ns/td#> rdf:type owl:Ontology ;
+                            <http://purl.org/dc/elements/1.1/publisher> <https://www.w3.org/WoT/WG/> ;
+                            <http://purl.org/dc/elements/1.1/title> "Ontology model for Web of Things"@en ;
+                            <http://purl.org/dc/terms/contributor> <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
+                            <http://purl.org/dc/terms/creator> <http://purl.org/net/mpoveda> ,
+                                                               <http://www.garcia-castro.com/foaf.rdf#me> ;
+                            <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "td"^^xsd:string ;
+                            <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3.org/ns/td#"^^xsd:string ;
+                            rdfs:comment "This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)"@en ;
+                            owl:versionInfo "0.0.1"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/ns/td#actions
+<http://www.w3.org/ns/td#actions> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <http://www.w3.org/ns/td#Thing> ;
+                                  rdfs:range <http://www.w3.org/ns/td#Action> ;
+                                  rdfs:comment "Keeps all Action-based interaction pattern of the Thing."^^xsd:string ;
+                                  rdfs:label "actions"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#events
+<http://www.w3.org/ns/td#events> rdf:type owl:ObjectProperty ;
+                                 rdfs:comment "Keeps all Event-based interaction pattern of the Thing."^^xsd:string ;
+                                 rdfs:label "events"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#forms
+<http://www.w3.org/ns/td#forms> rdf:type owl:ObjectProperty ;
+                                rdfs:comment "Indicates one or more endpoints from which an interaction pattern is accessible"@en ;
+                                rdfs:label "forms"@en .
+
+
+###  http://www.w3.org/ns/td#input
+<http://www.w3.org/ns/td#input> rdf:type owl:ObjectProperty ;
+                                rdfs:domain <http://www.w3.org/ns/td#Thing> ;
+                                rdfs:range <http://www.w3.org/ns/td#Property> ;
+                                rdfs:comment "link to the n-ary class that allows the declaration of the accepted data type of an action."@en ;
+                                rdfs:label "input"@en .
+
+
+###  http://www.w3.org/ns/td#items
+<http://www.w3.org/ns/td#items> rdf:type owl:ObjectProperty ;
+                                rdfs:domain <http://www.w3.org/ns/td#Thing> ;
+                                rdfs:range <http://www.w3.org/ns/td#Property> ;
+                                rdfs:comment "Used to defines characteristics of an array."^^xsd:string ;
+                                rdfs:label "items"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#links
+<http://www.w3.org/ns/td#links> rdf:type owl:ObjectProperty ;
+                                rdfs:comment "provides Web links to arbitrary resources that relate to the specified Thing Description."^^xsd:string ;
+                                rdfs:label "links"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#objectSchemaProperties
+<http://www.w3.org/ns/td#objectSchemaProperties> rdf:type owl:ObjectProperty ;
+                                                 rdfs:comment "Data schema nested definitions"^^xsd:string ;
+                                                 rdfs:label "properties"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#output
+<http://www.w3.org/ns/td#output> rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <http://www.w3.org/ns/td#Thing> ;
+                                 rdfs:range <http://www.w3.org/ns/td#Property> ;
+                                 rdfs:comment "link to the n-ary class that allows the declaration of the data type returned by an action."@en ;
+                                 rdfs:label "output"@en .
+
+
+###  http://www.w3.org/ns/td#properties
+<http://www.w3.org/ns/td#properties> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://www.w3.org/ns/td#Thing> ;
+                                     rdfs:range <http://www.w3.org/ns/td#Property> ;
+                                     rdfs:comment "Keeps all Property-based interaction pattern of the Thing."^^xsd:string ;
+                                     rdfs:label "properties"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#schema
+<http://www.w3.org/ns/td#schema> rdf:type owl:ObjectProperty ;
+                                 rdfs:range <http://www.w3.org/ns/td#Property> ;
+                                 rdfs:comment "schema definition for values of the given object schema property."@en ;
+                                 rdfs:label "schema"@en .
+
+
+###  http://www.w3.org/ns/td#securityDefinition
+<http://www.w3.org/ns/td#securityDefinition> rdf:type owl:ObjectProperty ;
+                                             rdfs:comment "Links a given Thing to the security information that indicates the access metadata information for securely transmitting information via all the resources of the Thing."@en ;
+                                             rdfs:label "securityDefinitions"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/ns/td#anchor
+<http://www.w3.org/ns/td#anchor> rdf:type owl:DatatypeProperty ;
+                                 rdfs:comment "By default, the context of a link is the URL of the representation it is associated with, and is serialised as a URI. When present, the anchor parameter overrides this with another URI, such as a fragment of this resource, or a third resource (i.e., when the anchor value is an absolute URI)."^^xsd:string ;
+                                 rdfs:label "anchor"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#base
+<http://www.w3.org/ns/td#base> rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:anyURI ;
+                               rdfs:comment "Define base URI that is valid for all defined local interaction resources. All other URIs in the TD must then be resolved using the algorithm defined in [[!RFC3986]]. This field is optional."@en ;
+                               rdfs:label "base"@en .
+
+
+###  http://www.w3.org/ns/td#const
+<http://www.w3.org/ns/td#const> rdf:type owl:DatatypeProperty ;
+                                rdfs:range rdfs:Literal ;
+                                rdfs:comment "Provides a constant value."^^xsd:string ;
+                                rdfs:label "const"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#description
+<http://www.w3.org/ns/td#description> rdf:type owl:DatatypeProperty ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:comment "Provides additionel (human) readable information."^^xsd:string ;
+                                      rdfs:label "description"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#enum
+<http://www.w3.org/ns/td#enum> rdf:type owl:DatatypeProperty ;
+                               rdfs:range rdfs:Literal ;
+                               rdfs:comment "Restricted set of values provided as array."^^xsd:string ;
+                               rdfs:label "enum"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#href
+<http://www.w3.org/ns/td#href> rdf:type owl:DatatypeProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:range xsd:anyURI ;
+                               rdfs:comment "URI of the endpoint where an interaction pattern is provided"@en ;
+                               rdfs:label "href"@en .
+
+
+###  http://www.w3.org/ns/td#id
+<http://www.w3.org/ns/td#id> rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:anyURI ;
+                             rdfs:comment "Defines unique URI (includes also URNs) ID of the Thing."^^xsd:string ;
+                             rdfs:label "id"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#in
+<http://www.w3.org/ns/td#in> rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:string ;
+                             rdfs:comment "Specifies location of the authentication information"^^xsd:string ;
+                             rdfs:label "in"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#label
+<http://www.w3.org/ns/td#label> rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:string ;
+                                rdfs:comment "Provides a label (e.g., display a text for UI representation) of the interaction pattern."^^xsd:string ;
+                                rdfs:label "label"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#maxItems
+<http://www.w3.org/ns/td#maxItems> rdf:type owl:DatatypeProperty ;
+                                   rdfs:range xsd:unsignedInt ;
+                                   rdfs:comment "Defines the maximum number of itmes that have to be in the array."^^xsd:string ;
+                                   rdfs:label "maxItems"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#maximum
+<http://www.w3.org/ns/td#maximum> rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:double ;
+                                  rdfs:comment "Specifies a maximum numeric value. Only applicable for associated number or integer types."^^xsd:string ;
+                                  rdfs:label "maximum"^^xsd:string ;
+                                  rdfs:seeAlso <http://schema.org/maxValue> .
+
+
+###  http://www.w3.org/ns/td#mediaType
+<http://www.w3.org/ns/td#mediaType> rdf:type owl:DatatypeProperty ;
+                                    rdfs:range xsd:string ;
+                                    rdfs:comment "Assign underlying media type of the interaction pattern based on IANA (https://www.iana.org/assignments/media-types/media-types.xhtml)"@en ;
+                                    rdfs:label "mediaType"@en .
+
+
+###  http://www.w3.org/ns/td#minItems
+<http://www.w3.org/ns/td#minItems> rdf:type owl:DatatypeProperty ;
+                                   rdfs:range xsd:unsignedInt ;
+                                   rdfs:comment "Defines the minimum number of itmes that have to be in the array."^^xsd:string ;
+                                   rdfs:label "minItems"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#minimum
+<http://www.w3.org/ns/td#minimum> rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:double ;
+                                  rdfs:comment "Specifies a minimum numeric value. Only applicable for associated number or integer types."^^xsd:string ;
+                                  rdfs:label "minimum"^^xsd:string ;
+                                  rdfs:seeAlso <http://schema.org/minValue> .
+
+
+###  http://www.w3.org/ns/td#name
+<http://www.w3.org/ns/td#name> rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:string ;
+                               rdfs:comment "Name of the Thing or interaction pattern (must be a valid keyword to be used in the scripting API)"^^xsd:string ;
+                               rdfs:label "name"@en .
+
+
+###  http://www.w3.org/ns/td#observable
+<http://www.w3.org/ns/td#observable> rdf:type owl:DatatypeProperty ,
+                                              owl:FunctionalProperty ;
+                                     rdfs:range xsd:boolean ;
+                                     rdfs:comment "Indicates whether a remote servient can subscribe to (\"observe\") the Property, to receive change notifications or periodic updates (true/false). "@en ;
+                                     rdfs:label "observable"@en .
+
+
+###  http://www.w3.org/ns/td#rel
+<http://www.w3.org/ns/td#rel> rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment """Indicates the expected result of performing the operation described by the form.
+
+For example, the Property interaction allows get and set operations. The protocol binding may contain a form for the get operation and a different form for the set operation. The value of the \"rel\" attribute of the form indicates which form is which and allows the client to select the correct form for the oeration required"""@en ;
+                              rdfs:label "rel"@en .
+
+
+###  http://www.w3.org/ns/td#required
+<http://www.w3.org/ns/td#required> rdf:type owl:DatatypeProperty ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:comment "Defines which members of the object type are required/mandatory."^^xsd:string ;
+                                   rdfs:label "required"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#scheme
+<http://www.w3.org/ns/td#scheme> rdf:type owl:DatatypeProperty ;
+                                 rdfs:comment "Identification of security scheme (e.g., basic, digest, and oauth2)."^^xsd:string ;
+                                 rdfs:label "scheme"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#security
+<http://www.w3.org/ns/td#security> rdf:type owl:DatatypeProperty ;
+                                   rdfs:range rdfs:Literal ;
+                                   rdfs:comment "Defines the security requirements of the interacions by making a reference to the top level securityDefinition"^^xsd:string ;
+                                   rdfs:label "security"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#support
+<http://www.w3.org/ns/td#support> rdf:type owl:DatatypeProperty ;
+                                  rdfs:comment "Provides information about TD maintainer (e.g., author, link or telephon number to get support, etc)."^^xsd:string ;
+                                  rdfs:label "support"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#type
+<http://www.w3.org/ns/td#type> rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:string ;
+                               rdfs:comment "Assignment of JSON-based data types that are compatible with JSON Schema (boolean, integer, number, string, object, array, null)."^^xsd:string ;
+                               rdfs:label "type"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#writable
+<http://www.w3.org/ns/td#writable> rdf:type owl:DatatypeProperty ,
+                                            owl:FunctionalProperty ;
+                                   rdfs:range xsd:boolean ;
+                                   rdfs:comment "Boolean value that indicates whether a property is writable (=true) or not (=false)"@en ;
+                                   rdfs:label "writable"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/td#Action
+<http://www.w3.org/ns/td#Action> rdf:type owl:Class ;
+                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://www.w3.org/ns/td#forms> ;
+                                                   owl:allValuesFrom <http://www.w3.org/ns/td#Form>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://www.w3.org/ns/td#input> ;
+                                                   owl:allValuesFrom <http://www.w3.org/ns/td#Property>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://www.w3.org/ns/td#output> ;
+                                                   owl:allValuesFrom <http://www.w3.org/ns/td#Property>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://www.w3.org/ns/td#description> ;
+                                                   owl:allValuesFrom xsd:string
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://www.w3.org/ns/td#label> ;
+                                                   owl:allValuesFrom xsd:string
+                                                 ] ;
+                                 rdfs:comment "Actions offer functions of the Thing. These functions may manipulate the interal state of a Thing in a way that is not possible through setting Properties. Examples are changing internal state that is not exposed as Property, changing multiple Properties, changing Properties over time or with a process that shall not be disclosed. Actions may also be pure functions, that is, they do not use any internal state at all, e.g., for processing input data and returning the result directly."@en ;
+                                 rdfs:label "Action"@en .
+
+
+###  http://www.w3.org/ns/td#ArraySchema
+<http://www.w3.org/ns/td#ArraySchema> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/ns/td#items> ;
+                                                        owl:allValuesFrom <http://www.w3.org/ns/td#DataSchema>
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/ns/td#maxItems> ;
+                                                        owl:allValuesFrom xsd:unsignedInt
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/ns/td#minItems> ;
+                                                        owl:allValuesFrom xsd:unsignedInt
+                                                      ] ;
+                                      rdfs:comment "A JSON array specification (\"type\": \"array\")."^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#BooleanSchema
+<http://www.w3.org/ns/td#BooleanSchema> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ;
+                                        rdfs:comment "A JSON boolean value specification (\"type\": \"boolean\")."^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#DataSchema
+<http://www.w3.org/ns/td#DataSchema> rdf:type owl:Class ;
+                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://www.w3.org/ns/td#const> ;
+                                                       owl:allValuesFrom rdfs:Literal
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://www.w3.org/ns/td#enum> ;
+                                                       owl:allValuesFrom rdfs:Literal
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://www.w3.org/ns/td#type> ;
+                                                       owl:allValuesFrom xsd:string
+                                                     ] ;
+                                     rdfs:comment "Any JSON value specification."^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#Event
+<http://www.w3.org/ns/td#Event> rdf:type owl:Class ;
+                                rdfs:comment "The Event Interaction Pattern describes event sources that asynchronously push messages. Here not state, but state transitions (events) are communicated (e.g., \"clicked\"). Events may be triggered by internal state changes that are not exposed as Properties. Events usually follow strong consistency, where messages need to be queued to ensure eventual delivery of all occured events."^^xsd:string ;
+                                rdfs:label "Event"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#Form
+<http://www.w3.org/ns/td#Form> rdf:type owl:Class ;
+                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/ns/td#href> ;
+                                                 owl:someValuesFrom xsd:anyURI
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/ns/td#mediaType> ;
+                                                 owl:allValuesFrom xsd:string
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/ns/td#rel> ;
+                                                 owl:allValuesFrom xsd:string
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/ns/td#security> ;
+                                                 owl:allValuesFrom xsd:string
+                                               ] ;
+                               rdfs:comment "Communication metadata where a service can be accessed by a client application. An interaction might have more than one form."@en ;
+                               rdfs:label "Form"@en .
+
+
+###  http://www.w3.org/ns/td#IntegerSchema
+<http://www.w3.org/ns/td#IntegerSchema> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.w3.org/ns/td#NumberSchema> ;
+                                        rdfs:comment "A JSON integer value specification, i.e. numbers without a fractional part (\"type\": \"integer\")."^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#Link
+<http://www.w3.org/ns/td#Link> rdf:type owl:Class ;
+                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/ns/td#href> ;
+                                                 owl:someValuesFrom xsd:anyURI
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/ns/td#anchor> ;
+                                                 owl:allValuesFrom xsd:anyURI
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/ns/td#mediaType> ;
+                                                 owl:allValuesFrom xsd:string
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/ns/td#rel> ;
+                                                 owl:allValuesFrom xsd:string
+                                               ] ;
+                               rdfs:comment "A Web link, as specified by IETF RFC 8288 (https://tools.ietf.org/html/rfc8288)."^^xsd:string ;
+                               rdfs:label "Link"^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#NumberSchema
+<http://www.w3.org/ns/td#NumberSchema> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/ns/td#maximum> ;
+                                                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                             owl:unionOf ( xsd:double
+                                                                                           xsd:integer
+                                                                                         )
+                                                                           ]
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/ns/td#minimum> ;
+                                                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                             owl:unionOf ( xsd:double
+                                                                                           xsd:integer
+                                                                                         )
+                                                                           ]
+                                                       ] ;
+                                       rdfs:comment "A JSON number value specification (\"type\": \"number\")."^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#ObjectSchema
+<http://www.w3.org/ns/td#ObjectSchema> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/ns/td#properties> ;
+                                                         owl:allValuesFrom <http://www.w3.org/ns/td#DataSchema>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/ns/td#required> ;
+                                                         owl:allValuesFrom xsd:string
+                                                       ] ;
+                                       rdfs:comment "A JSON object specification (\"type\": \"object\")."^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#Property
+<http://www.w3.org/ns/td#Property> rdf:type owl:Class ;
+                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/ns/td#forms> ;
+                                                     owl:allValuesFrom <http://www.w3.org/ns/td#Form>
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/ns/td#schema> ;
+                                                     owl:allValuesFrom <http://www.w3.org/ns/td#DataSchema>
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/ns/td#label> ;
+                                                     owl:allValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/ns/td#observable> ;
+                                                     owl:allValuesFrom xsd:boolean
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/ns/td#writable> ;
+                                                     owl:allValuesFrom xsd:boolean
+                                                   ] ;
+                                   rdfs:comment "Properties expose internal state of a Thing that can be directly accessed (get) and optionally manipulated (set). In addition, Things can also choose to make Properties observable by pushing the new state (not an event) after a change; this must follow eventual consistency (also see CAP Theorem)."@en ;
+                                   rdfs:label "Property"@en .
+
+
+###  http://www.w3.org/ns/td#Security
+<http://www.w3.org/ns/td#Security> rdf:type owl:Class ;
+                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/ns/td#in> ;
+                                                     owl:allValuesFrom xsd:string
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://www.w3.org/ns/td#scheme> ;
+                                                     owl:allValuesFrom xsd:string
+                                                   ] ;
+                                   rdfs:comment "The (optional) security field can be used to provide access metadata (self-contained) information of the Thing for securely transmitting information via all its resources. Also see Section Security Consideration. Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#security-metadata"@en ;
+                                   rdfs:label "Security"@en ;
+                                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en .
+
+
+###  http://www.w3.org/ns/td#SimpleDataSchema
+<http://www.w3.org/ns/td#SimpleDataSchema> rdf:type owl:Class ;
+                                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( <http://www.w3.org/ns/td#BooleanSchema>
+                                                                               <http://www.w3.org/ns/td#NumberSchema>
+                                                                               <http://www.w3.org/ns/td#StringSchema>
+                                                                             )
+                                                               ] ;
+                                           rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ;
+                                           rdfs:seeAlso <http://schema.org/PropertyValueSpecification> .
+
+
+###  http://www.w3.org/ns/td#StringSchema
+<http://www.w3.org/ns/td#StringSchema> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/ns/td#DataSchema> ;
+                                       rdfs:comment "A JSON string value specification (\"type\": \"string\")."^^xsd:string .
+
+
+###  http://www.w3.org/ns/td#Thing
+<http://www.w3.org/ns/td#Thing> rdf:type owl:Class ;
+                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/ns/td#actions> ;
+                                                  owl:allValuesFrom <http://www.w3.org/ns/td#Action>
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/ns/td#events> ;
+                                                  owl:allValuesFrom <http://www.w3.org/ns/td#Property>
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/ns/td#links> ;
+                                                  owl:allValuesFrom <http://www.w3.org/ns/td#Link>
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/ns/td#securityDefinition> ;
+                                                  owl:allValuesFrom <http://www.w3.org/ns/td#Security>
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/ns/td#name> ;
+                                                  owl:someValuesFrom xsd:string
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/ns/td#base> ;
+                                                  owl:allValuesFrom xsd:anyURI
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/ns/td#description> ;
+                                                  owl:allValuesFrom xsd:string
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/ns/td#id> ;
+                                                  owl:allValuesFrom xsd:string
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/ns/td#support> ;
+                                                  owl:allValuesFrom xsd:string
+                                                ] ;
+                                rdfs:comment "Describes a physical and/or virtual Thing (may represent one or more physical and / or virtual Things) in the Web of Thing context."@en ;
+                                rdfs:label "Thing"@en .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
