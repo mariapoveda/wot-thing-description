@@ -110,6 +110,29 @@
     
 
 
+    <!-- http://www.w3.org/ns/td-validation#APIKeySecuritySchemeShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#APIKeySecuritySchemeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid2">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>query</shacl:defaultValue>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#in"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid3">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#name"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/wot-security#APIKeySecurityScheme"/>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.w3.org/ns/td-validation#ActionShape -->
 
 
@@ -117,33 +140,31 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid2">
-                <shacl:class rdf:resource="http://www.w3.org/ns/td#Form"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#forms"/>
-            </rdf:Description>
-        </shacl:property>
-        <shacl:property>
-            <rdf:Description rdf:nodeID="genid3">
-                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#description"/>
-            </rdf:Description>
-        </shacl:property>
-        <shacl:property>
             <rdf:Description rdf:nodeID="genid4">
-                <shacl:class rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
+                <shacl:class rdf:resource="http://www.w3.org/ns/json-schema#DataSchema"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#input"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
             <rdf:Description rdf:nodeID="genid5">
-                <shacl:class rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
+                <shacl:class rdf:resource="http://www.w3.org/ns/json-schema#DataSchema"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#output"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
             <rdf:Description rdf:nodeID="genid6">
-                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#label"/>
+                <shacl:class rdf:resource="http://www.w3.org/ns/json-schema#DataSchema"/>
+                <shacl:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:defaultValue>
+                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#safe"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid7">
+                <shacl:class rdf:resource="http://www.w3.org/ns/json-schema#DataSchema"/>
+                <shacl:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:defaultValue>
+                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#idempotent"/>
             </rdf:Description>
         </shacl:property>
         <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#Action"/>
@@ -158,25 +179,90 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid7">
-                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#maxItems"/>
-            </rdf:Description>
-        </shacl:property>
-        <shacl:property>
             <rdf:Description rdf:nodeID="genid8">
-                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#minItems"/>
+                <shacl:class rdf:resource="http://www.w3.org/ns/json-schema#DataSchema"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#items"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
             <rdf:Description rdf:nodeID="genid9">
-                <shacl:class rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
-                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#items"/>
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#minItems"/>
             </rdf:Description>
         </shacl:property>
-        <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#ArraySchema"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid10">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#maxItems"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/json-schema#ArraySchema"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/td-validation#BasicSecuritySchemeShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#BasicSecuritySchemeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid11">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>header</shacl:defaultValue>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#in"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid12">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#name"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/wot-security#BasicSecurityScheme"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/td-validation#BearerSecuritySchemeShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#BearerSecuritySchemeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid13">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#authorization"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid14">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>ES256</shacl:defaultValue>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#alg"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid15">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>jwt</shacl:defaultValue>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#format"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid16">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>header</shacl:defaultValue>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#in"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid17">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#name"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/wot-security#BearerSecurityScheme"/>
     </NamedIndividual>
     
 
@@ -187,7 +273,23 @@
     <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#BooleanSchemaShape">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
-        <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#BooleanSchema"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/json-schema#BooleanSchema"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/td-validation#CertSecuritySchemeShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#CertSecuritySchemeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid18">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#identity"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/wot-security#CertSecurityScheme"/>
     </NamedIndividual>
     
 
@@ -199,31 +301,88 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid10">
+            <rdf:Description rdf:nodeID="genid19">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#description"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid11">
+            <rdf:Description rdf:nodeID="genid20">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#type"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#title"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid12">
+            <rdf:Description rdf:nodeID="genid21">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#type"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid22">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyType"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#const"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#const"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid13">
+            <rdf:Description rdf:nodeID="genid23">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#enum"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#unit"/>
             </rdf:Description>
         </shacl:property>
-        <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid24">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyType"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#enum"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid25">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                <shacl:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:defaultValue>
+                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#readOnly"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid26">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                <shacl:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:defaultValue>
+                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#writeOnly"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/json-schema#DataSchema"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/td-validation#DigestSecuritySchemeShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#DigestSecuritySchemeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid27">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>auth</shacl:defaultValue>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#qop"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid28">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>header</shacl:defaultValue>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#in"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid29">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#name"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/wot-security#DigestSecurityScheme"/>
     </NamedIndividual>
     
 
@@ -234,6 +393,24 @@
     <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#EventShape">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid30">
+                <shacl:class rdf:resource="http://www.w3.org/ns/json-schema#DataSchema"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#subscription"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid31">
+                <shacl:class rdf:resource="http://www.w3.org/ns/json-schema#DataSchema"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#data"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid32">
+                <shacl:class rdf:resource="http://www.w3.org/ns/json-schema#DataSchema"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#cancellation"/>
+            </rdf:Description>
+        </shacl:property>
         <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#Event"/>
     </NamedIndividual>
     
@@ -246,29 +423,42 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid14">
-                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:defaultValue>application/json</shacl:defaultValue>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#mediaType"/>
-            </rdf:Description>
-        </shacl:property>
-        <shacl:property>
-            <rdf:Description rdf:nodeID="genid15">
+            <rdf:Description rdf:nodeID="genid33">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
                 <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#href"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid16">
+            <rdf:Description rdf:nodeID="genid34">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>application/json</shacl:defaultValue>
+                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#contentType"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid35">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#op"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid36">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#subprotocol"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid37">
+                <shacl:class rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#security"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid17">
+            <rdf:Description rdf:nodeID="genid38">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#rel"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#scopes"/>
             </rdf:Description>
         </shacl:property>
         <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#Form"/>
@@ -283,18 +473,66 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid18">
+            <rdf:Description rdf:nodeID="genid39">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#minimum"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#minimum"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid19">
+            <rdf:Description rdf:nodeID="genid40">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#maximum"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#maximum"/>
             </rdf:Description>
         </shacl:property>
-        <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#IntegerSchema"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/json-schema#IntegerSchema"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/td-validation#InteractionPatternShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#InteractionPatternShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid41">
+                <shacl:class rdf:resource="http://www.w3.org/ns/td#Form"/>
+                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#forms"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid42">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#title"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid43">
+                <shacl:class rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#uriVariables"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid44">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#description"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid45">
+                <shacl:class rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#security"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid46">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#scopes"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#InteractionPattern"/>
     </NamedIndividual>
     
 
@@ -306,32 +544,41 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid20">
+            <rdf:Description rdf:nodeID="genid47">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
                 <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#href"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid21">
+            <rdf:Description rdf:nodeID="genid48">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:defaultValue>application/json</shacl:defaultValue>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#mediaType"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#type"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid22">
+            <rdf:Description rdf:nodeID="genid49">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#rel"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid23">
+            <rdf:Description rdf:nodeID="genid50">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#anchor"/>
             </rdf:Description>
         </shacl:property>
         <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#Link"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/td-validation#NoSecuritySchemeShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#NoSecuritySchemeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/wot-security#NoSecurityScheme"/>
     </NamedIndividual>
     
 
@@ -343,18 +590,59 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid24">
+            <rdf:Description rdf:nodeID="genid51">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#minimum"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#minimum"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid25">
+            <rdf:Description rdf:nodeID="genid52">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#maximum"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#maximum"/>
             </rdf:Description>
         </shacl:property>
-        <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#NumberSchema"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/json-schema#NumberSchema"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/td-validation#OAuth2SecuritySchemeShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#OAuth2SecuritySchemeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid53">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#authorization"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid54">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#token"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid55">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#refresh"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid56">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#scopes"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid57">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>implicit</shacl:defaultValue>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#flow"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/wot-security#OAuth2SecurityScheme"/>
     </NamedIndividual>
     
 
@@ -366,19 +654,77 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid26">
-                <shacl:class rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
-                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#objectSchemaProperties"/>
+            <rdf:Description rdf:nodeID="genid58">
+                <shacl:class rdf:resource="http://www.w3.org/ns/json-schema#DataSchema"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#properties"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid27">
-                <shacl:class rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#required"/>
+            <rdf:Description rdf:nodeID="genid59">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/json-schema#required"/>
             </rdf:Description>
         </shacl:property>
-        <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#ObjectSchema"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/json-schema#ObjectSchema"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/td-validation#PSKSecuritySchemeShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#PSKSecuritySchemeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid60">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#identity"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/wot-security#PSKSecurityScheme"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/td-validation#PoPSecuritySchemeShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#PoPSecuritySchemeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid61">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#authorization"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid62">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>ES256</shacl:defaultValue>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#alg"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid63">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>jwt</shacl:defaultValue>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#format"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid64">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:defaultValue>header</shacl:defaultValue>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#in"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid65">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#name"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/wot-security#PoPSecurityScheme"/>
     </NamedIndividual>
     
 
@@ -390,32 +736,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid28">
-                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#label"/>
-            </rdf:Description>
-        </shacl:property>
-        <shacl:property>
-            <rdf:Description rdf:nodeID="genid29">
-                <shacl:class rdf:resource="http://www.w3.org/ns/td#Form"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#forms"/>
-            </rdf:Description>
-        </shacl:property>
-        <shacl:property>
-            <rdf:Description rdf:nodeID="genid30">
-                <shacl:class rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#objectSchemaProperties"/>
-            </rdf:Description>
-        </shacl:property>
-        <shacl:property>
-            <rdf:Description rdf:nodeID="genid31">
-                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-                <shacl:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:defaultValue>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#writable"/>
-            </rdf:Description>
-        </shacl:property>
-        <shacl:property>
-            <rdf:Description rdf:nodeID="genid32">
+            <rdf:Description rdf:nodeID="genid66">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
                 <shacl:defaultValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:defaultValue>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#observable"/>
@@ -426,26 +747,48 @@
     
 
 
-    <!-- http://www.w3.org/ns/td-validation#SecurityShape -->
+    <!-- http://www.w3.org/ns/td-validation#PublicSecuritySchemeShape -->
 
 
-    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#SecurityShape">
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#PublicSecuritySchemeShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid67">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#identity"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/wot-security#PublicSecurityScheme"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/td-validation#SecuritySchemeShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#SecuritySchemeShape">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid33">
+            <rdf:Description rdf:nodeID="genid68">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#in"/>
+                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid34">
+            <rdf:Description rdf:nodeID="genid69">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#scheme"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#description"/>
             </rdf:Description>
         </shacl:property>
-        <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#Security"/>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid70">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/wot-security#proxy"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
     </NamedIndividual>
     
 
@@ -456,7 +799,7 @@
     <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#StringSchemaShape">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
-        <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#StringSchema"/>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/json-schema#StringSchema"/>
     </NamedIndividual>
     
 
@@ -468,60 +811,98 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid35">
+            <rdf:Description rdf:nodeID="genid71">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#label"/>
+                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#name"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid36">
+            <rdf:Description rdf:nodeID="genid72">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#description"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid37">
+            <rdf:Description rdf:nodeID="genid73">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#support"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid38">
+            <rdf:Description rdf:nodeID="genid74">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#created"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid75">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#lastModified"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid76">
                 <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#base"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid39">
+            <rdf:Description rdf:nodeID="genid77">
                 <shacl:class rdf:resource="http://www.w3.org/ns/td#Property"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#properties"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid40">
+            <rdf:Description rdf:nodeID="genid78">
                 <shacl:class rdf:resource="http://www.w3.org/ns/td#Action"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#actions"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid41">
+            <rdf:Description rdf:nodeID="genid79">
                 <shacl:class rdf:resource="http://www.w3.org/ns/td#Event"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#events"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid42">
+            <rdf:Description rdf:nodeID="genid80">
                 <shacl:class rdf:resource="http://www.w3.org/ns/td#Link"/>
                 <shacl:path rdf:resource="http://www.w3.org/ns/td#links"/>
             </rdf:Description>
         </shacl:property>
         <shacl:property>
-            <rdf:Description rdf:nodeID="genid43">
-                <shacl:class rdf:resource="http://www.w3.org/ns/td#Security"/>
-                <shacl:path rdf:resource="http://www.w3.org/ns/td#securityDefinitions"/>
+            <rdf:Description rdf:nodeID="genid81">
+                <shacl:class rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#security"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid82">
+                <shacl:class rdf:resource="http://www.w3.org/ns/td#Versioning"/>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#version"/>
             </rdf:Description>
         </shacl:property>
         <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#Thing"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/td-validation#VersioningShape -->
+
+
+    <NamedIndividual rdf:about="http://www.w3.org/ns/td-validation#VersioningShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</shacl:closed>
+        <shacl:property>
+            <rdf:Description rdf:nodeID="genid83">
+                <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+                <shacl:path rdf:resource="http://www.w3.org/ns/td#instance"/>
+            </rdf:Description>
+        </shacl:property>
+        <shacl:targetClass rdf:resource="http://www.w3.org/ns/td#Versioning"/>
     </NamedIndividual>
 </rdf:RDF>
 

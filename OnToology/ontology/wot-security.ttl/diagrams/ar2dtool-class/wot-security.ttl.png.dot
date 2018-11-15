@@ -1,0 +1,37 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"NULL" -> "wotsec:token" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:refresh" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:authorization" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:name" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:anyURI" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "wotsec:alg" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:flow" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:qop" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:description" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:scopes" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:scheme" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:proxy" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:identity" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:in" [ label = "owl:onProperty" ];
+	"NULL" -> "wotsec:format" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
+	"wotsec:" -> "mailto:victor.charpenay@siemens.com" [ label = "dcterms:contributor" ];
+	"wotsec:" -> "mailto:michael.mccool@intel.com" [ label = "dcterms:creator" ];
+	"wotsec:" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "dcterms:license" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "wotsec:proxy" ];
+	"owl:Thing" -> "xsd:string" [ label = "wotsec:alg" ];
+	"owl:Thing" -> "xsd:string" [ label = "wotsec:scopes" ];
+	"owl:Thing" -> "xsd:string" [ label = "wotsec:in" ];
+	"owl:Thing" -> "xsd:string" [ label = "wotsec:flow" ];
+	"owl:Thing" -> "xsd:string" [ label = "wotsec:name" ];
+	"owl:Thing" -> "xsd:string" [ label = "wotsec:scheme" ];
+	"owl:Thing" -> "xsd:string" [ label = "wotsec:qop" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "wotsec:token" ];
+	"owl:Thing" -> "xsd:string" [ label = "wotsec:identity" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "wotsec:authorization" ];
+	"owl:Thing" -> "xsd:string" [ label = "wotsec:format" ];
+	"owl:Thing" -> "xsd:anyURI" [ label = "wotsec:refresh" ];
+
+}

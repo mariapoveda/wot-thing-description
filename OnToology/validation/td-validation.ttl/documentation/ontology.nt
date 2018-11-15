@@ -53,224 +53,425 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
+# http://www.w3.org/ns/td-validation#APIKeySecuritySchemeShape
+<http://www.w3.org/ns/td-validation#APIKeySecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#APIKeySecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#APIKeySecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid2 .
+_:genid2 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid2 <http://www.w3.org/ns/shacl#defaultValue> "query" .
+_:genid2 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#in> .
+<http://www.w3.org/ns/td-validation#APIKeySecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid3 .
+_:genid3 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid3 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#name> .
+<http://www.w3.org/ns/td-validation#APIKeySecuritySchemeShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/wot-security#APIKeySecurityScheme> .
+# 
 # http://www.w3.org/ns/td-validation#ActionShape
 <http://www.w3.org/ns/td-validation#ActionShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#ActionShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#ActionShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#ActionShape> <http://www.w3.org/ns/shacl#property> _:genid2 .
-_:genid2 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Form> .
-_:genid2 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#forms> .
-<http://www.w3.org/ns/td-validation#ActionShape> <http://www.w3.org/ns/shacl#property> _:genid3 .
-_:genid3 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid3 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#description> .
 <http://www.w3.org/ns/td-validation#ActionShape> <http://www.w3.org/ns/shacl#property> _:genid4 .
-_:genid4 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#DataSchema> .
+_:genid4 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/json-schema#DataSchema> .
 _:genid4 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#input> .
 <http://www.w3.org/ns/td-validation#ActionShape> <http://www.w3.org/ns/shacl#property> _:genid5 .
-_:genid5 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#DataSchema> .
+_:genid5 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/json-schema#DataSchema> .
 _:genid5 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#output> .
 <http://www.w3.org/ns/td-validation#ActionShape> <http://www.w3.org/ns/shacl#property> _:genid6 .
-_:genid6 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid6 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#label> .
+_:genid6 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/json-schema#DataSchema> .
+_:genid6 <http://www.w3.org/ns/shacl#defaultValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid6 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid6 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#safe> .
+<http://www.w3.org/ns/td-validation#ActionShape> <http://www.w3.org/ns/shacl#property> _:genid7 .
+_:genid7 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/json-schema#DataSchema> .
+_:genid7 <http://www.w3.org/ns/shacl#defaultValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid7 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid7 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#idempotent> .
 <http://www.w3.org/ns/td-validation#ActionShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#Action> .
 # 
 # http://www.w3.org/ns/td-validation#ArraySchemaShape
 <http://www.w3.org/ns/td-validation#ArraySchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#ArraySchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#ArraySchemaShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#ArraySchemaShape> <http://www.w3.org/ns/shacl#property> _:genid7 .
-_:genid7 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
-_:genid7 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#maxItems> .
 <http://www.w3.org/ns/td-validation#ArraySchemaShape> <http://www.w3.org/ns/shacl#property> _:genid8 .
-_:genid8 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
-_:genid8 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#minItems> .
+_:genid8 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/json-schema#DataSchema> .
+_:genid8 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#items> .
 <http://www.w3.org/ns/td-validation#ArraySchemaShape> <http://www.w3.org/ns/shacl#property> _:genid9 .
-_:genid9 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#DataSchema> .
-_:genid9 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid9 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#items> .
-<http://www.w3.org/ns/td-validation#ArraySchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#ArraySchema> .
+_:genid9 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
+_:genid9 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#minItems> .
+<http://www.w3.org/ns/td-validation#ArraySchemaShape> <http://www.w3.org/ns/shacl#property> _:genid10 .
+_:genid10 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
+_:genid10 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#maxItems> .
+<http://www.w3.org/ns/td-validation#ArraySchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/json-schema#ArraySchema> .
+# 
+# http://www.w3.org/ns/td-validation#BasicSecuritySchemeShape
+<http://www.w3.org/ns/td-validation#BasicSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#BasicSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#BasicSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid11 .
+_:genid11 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid11 <http://www.w3.org/ns/shacl#defaultValue> "header" .
+_:genid11 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#in> .
+<http://www.w3.org/ns/td-validation#BasicSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid12 .
+_:genid12 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid12 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#name> .
+<http://www.w3.org/ns/td-validation#BasicSecuritySchemeShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/wot-security#BasicSecurityScheme> .
+# 
+# http://www.w3.org/ns/td-validation#BearerSecuritySchemeShape
+<http://www.w3.org/ns/td-validation#BearerSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#BearerSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#BearerSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid13 .
+_:genid13 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid13 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#authorization> .
+<http://www.w3.org/ns/td-validation#BearerSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid14 .
+_:genid14 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid14 <http://www.w3.org/ns/shacl#defaultValue> "ES256" .
+_:genid14 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#alg> .
+<http://www.w3.org/ns/td-validation#BearerSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid15 .
+_:genid15 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid15 <http://www.w3.org/ns/shacl#defaultValue> "jwt" .
+_:genid15 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#format> .
+<http://www.w3.org/ns/td-validation#BearerSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid16 .
+_:genid16 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid16 <http://www.w3.org/ns/shacl#defaultValue> "header" .
+_:genid16 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#in> .
+<http://www.w3.org/ns/td-validation#BearerSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid17 .
+_:genid17 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid17 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#name> .
+<http://www.w3.org/ns/td-validation#BearerSecuritySchemeShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/wot-security#BearerSecurityScheme> .
 # 
 # http://www.w3.org/ns/td-validation#BooleanSchemaShape
 <http://www.w3.org/ns/td-validation#BooleanSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#BooleanSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#BooleanSchemaShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#BooleanSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#BooleanSchema> .
+<http://www.w3.org/ns/td-validation#BooleanSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/json-schema#BooleanSchema> .
+# 
+# http://www.w3.org/ns/td-validation#CertSecuritySchemeShape
+<http://www.w3.org/ns/td-validation#CertSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#CertSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#CertSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid18 .
+_:genid18 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid18 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#identity> .
+<http://www.w3.org/ns/td-validation#CertSecuritySchemeShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/wot-security#CertSecurityScheme> .
 # 
 # http://www.w3.org/ns/td-validation#DataSchemaShape
 <http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid10 .
-_:genid10 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid10 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#description> .
-<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid11 .
-_:genid11 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid11 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#type> .
-<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid12 .
-_:genid12 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyType> .
-_:genid12 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#const> .
-<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid13 .
-_:genid13 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid13 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid13 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#enum> .
-<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#DataSchema> .
+<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid19 .
+_:genid19 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid19 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#description> .
+<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid20 .
+_:genid20 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid20 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#title> .
+<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid21 .
+_:genid21 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid21 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#type> .
+<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid22 .
+_:genid22 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyType> .
+_:genid22 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#const> .
+<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid23 .
+_:genid23 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid23 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#unit> .
+<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid24 .
+_:genid24 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyType> .
+_:genid24 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#enum> .
+<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid25 .
+_:genid25 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid25 <http://www.w3.org/ns/shacl#defaultValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid25 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid25 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#readOnly> .
+<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid26 .
+_:genid26 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid26 <http://www.w3.org/ns/shacl#defaultValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid26 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid26 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#writeOnly> .
+<http://www.w3.org/ns/td-validation#DataSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/json-schema#DataSchema> .
+# 
+# http://www.w3.org/ns/td-validation#DigestSecuritySchemeShape
+<http://www.w3.org/ns/td-validation#DigestSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#DigestSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#DigestSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid27 .
+_:genid27 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid27 <http://www.w3.org/ns/shacl#defaultValue> "auth" .
+_:genid27 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#qop> .
+<http://www.w3.org/ns/td-validation#DigestSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid28 .
+_:genid28 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid28 <http://www.w3.org/ns/shacl#defaultValue> "header" .
+_:genid28 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#in> .
+<http://www.w3.org/ns/td-validation#DigestSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid29 .
+_:genid29 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid29 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#name> .
+<http://www.w3.org/ns/td-validation#DigestSecuritySchemeShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/wot-security#DigestSecurityScheme> .
 # 
 # http://www.w3.org/ns/td-validation#EventShape
 <http://www.w3.org/ns/td-validation#EventShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#EventShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#EventShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.w3.org/ns/td-validation#EventShape> <http://www.w3.org/ns/shacl#property> _:genid30 .
+_:genid30 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/json-schema#DataSchema> .
+_:genid30 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#subscription> .
+<http://www.w3.org/ns/td-validation#EventShape> <http://www.w3.org/ns/shacl#property> _:genid31 .
+_:genid31 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/json-schema#DataSchema> .
+_:genid31 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#data> .
+<http://www.w3.org/ns/td-validation#EventShape> <http://www.w3.org/ns/shacl#property> _:genid32 .
+_:genid32 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/json-schema#DataSchema> .
+_:genid32 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#cancellation> .
 <http://www.w3.org/ns/td-validation#EventShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#Event> .
 # 
 # http://www.w3.org/ns/td-validation#FormShape
 <http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#property> _:genid14 .
-_:genid14 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid14 <http://www.w3.org/ns/shacl#defaultValue> "application/json" .
-_:genid14 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#mediaType> .
-<http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#property> _:genid15 .
-_:genid15 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
-_:genid15 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid15 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#href> .
-<http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#property> _:genid16 .
-_:genid16 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid16 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#security> .
-<http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#property> _:genid17 .
-_:genid17 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid17 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#rel> .
+<http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#property> _:genid33 .
+_:genid33 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid33 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid33 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#href> .
+<http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#property> _:genid34 .
+_:genid34 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid34 <http://www.w3.org/ns/shacl#defaultValue> "application/json" .
+_:genid34 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid34 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#contentType> .
+<http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#property> _:genid35 .
+_:genid35 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid35 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#op> .
+<http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#property> _:genid36 .
+_:genid36 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid36 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#subprotocol> .
+<http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#property> _:genid37 .
+_:genid37 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/wot-security#SecurityScheme> .
+_:genid37 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#security> .
+<http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#property> _:genid38 .
+_:genid38 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid38 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#scopes> .
 <http://www.w3.org/ns/td-validation#FormShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#Form> .
 # 
 # http://www.w3.org/ns/td-validation#IntegerSchemaShape
 <http://www.w3.org/ns/td-validation#IntegerSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#IntegerSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#IntegerSchemaShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#IntegerSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid18 .
-_:genid18 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid18 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#minimum> .
-<http://www.w3.org/ns/td-validation#IntegerSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid19 .
-_:genid19 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid19 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#maximum> .
-<http://www.w3.org/ns/td-validation#IntegerSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#IntegerSchema> .
+<http://www.w3.org/ns/td-validation#IntegerSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid39 .
+_:genid39 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid39 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#minimum> .
+<http://www.w3.org/ns/td-validation#IntegerSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid40 .
+_:genid40 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid40 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#maximum> .
+<http://www.w3.org/ns/td-validation#IntegerSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/json-schema#IntegerSchema> .
+# 
+# http://www.w3.org/ns/td-validation#InteractionPatternShape
+<http://www.w3.org/ns/td-validation#InteractionPatternShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#InteractionPatternShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#InteractionPatternShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.w3.org/ns/td-validation#InteractionPatternShape> <http://www.w3.org/ns/shacl#property> _:genid41 .
+_:genid41 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Form> .
+_:genid41 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid41 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#forms> .
+<http://www.w3.org/ns/td-validation#InteractionPatternShape> <http://www.w3.org/ns/shacl#property> _:genid42 .
+_:genid42 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid42 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#title> .
+<http://www.w3.org/ns/td-validation#InteractionPatternShape> <http://www.w3.org/ns/shacl#property> _:genid43 .
+_:genid43 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#DataSchema> .
+_:genid43 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#uriVariables> .
+<http://www.w3.org/ns/td-validation#InteractionPatternShape> <http://www.w3.org/ns/shacl#property> _:genid44 .
+_:genid44 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid44 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#description> .
+<http://www.w3.org/ns/td-validation#InteractionPatternShape> <http://www.w3.org/ns/shacl#property> _:genid45 .
+_:genid45 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/wot-security#SecurityScheme> .
+_:genid45 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#security> .
+<http://www.w3.org/ns/td-validation#InteractionPatternShape> <http://www.w3.org/ns/shacl#property> _:genid46 .
+_:genid46 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid46 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#scopes> .
+<http://www.w3.org/ns/td-validation#InteractionPatternShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#InteractionPattern> .
 # 
 # http://www.w3.org/ns/td-validation#LinkShape
 <http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/ns/shacl#property> _:genid20 .
-_:genid20 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
-_:genid20 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid20 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#href> .
-<http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/ns/shacl#property> _:genid21 .
-_:genid21 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid21 <http://www.w3.org/ns/shacl#defaultValue> "application/json" .
-_:genid21 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#mediaType> .
-<http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/ns/shacl#property> _:genid22 .
-_:genid22 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid22 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#rel> .
-<http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/ns/shacl#property> _:genid23 .
-_:genid23 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
-_:genid23 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#anchor> .
+<http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/ns/shacl#property> _:genid47 .
+_:genid47 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid47 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid47 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#href> .
+<http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/ns/shacl#property> _:genid48 .
+_:genid48 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid48 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#type> .
+<http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/ns/shacl#property> _:genid49 .
+_:genid49 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid49 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#rel> .
+<http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/ns/shacl#property> _:genid50 .
+_:genid50 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid50 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#anchor> .
 <http://www.w3.org/ns/td-validation#LinkShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#Link> .
+# 
+# http://www.w3.org/ns/td-validation#NoSecuritySchemeShape
+<http://www.w3.org/ns/td-validation#NoSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#NoSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#NoSecuritySchemeShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/wot-security#NoSecurityScheme> .
 # 
 # http://www.w3.org/ns/td-validation#NumberSchemaShape
 <http://www.w3.org/ns/td-validation#NumberSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#NumberSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#NumberSchemaShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#NumberSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid24 .
-_:genid24 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#double> .
-_:genid24 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#minimum> .
-<http://www.w3.org/ns/td-validation#NumberSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid25 .
-_:genid25 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#double> .
-_:genid25 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#maximum> .
-<http://www.w3.org/ns/td-validation#NumberSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#NumberSchema> .
+<http://www.w3.org/ns/td-validation#NumberSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid51 .
+_:genid51 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid51 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#minimum> .
+<http://www.w3.org/ns/td-validation#NumberSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid52 .
+_:genid52 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid52 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#maximum> .
+<http://www.w3.org/ns/td-validation#NumberSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/json-schema#NumberSchema> .
+# 
+# http://www.w3.org/ns/td-validation#OAuth2SecuritySchemeShape
+<http://www.w3.org/ns/td-validation#OAuth2SecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#OAuth2SecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#OAuth2SecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid53 .
+_:genid53 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid53 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#authorization> .
+<http://www.w3.org/ns/td-validation#OAuth2SecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid54 .
+_:genid54 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid54 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#token> .
+<http://www.w3.org/ns/td-validation#OAuth2SecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid55 .
+_:genid55 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid55 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#refresh> .
+<http://www.w3.org/ns/td-validation#OAuth2SecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid56 .
+_:genid56 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid56 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#scopes> .
+<http://www.w3.org/ns/td-validation#OAuth2SecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid57 .
+_:genid57 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid57 <http://www.w3.org/ns/shacl#defaultValue> "implicit" .
+_:genid57 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#flow> .
+<http://www.w3.org/ns/td-validation#OAuth2SecuritySchemeShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/wot-security#OAuth2SecurityScheme> .
 # 
 # http://www.w3.org/ns/td-validation#ObjectSchemaShape
 <http://www.w3.org/ns/td-validation#ObjectSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#ObjectSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#ObjectSchemaShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#ObjectSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid26 .
-_:genid26 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#DataSchema> .
-_:genid26 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid26 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#objectSchemaProperties> .
-<http://www.w3.org/ns/td-validation#ObjectSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid27 .
-_:genid27 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid27 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#required> .
-<http://www.w3.org/ns/td-validation#ObjectSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#ObjectSchema> .
+<http://www.w3.org/ns/td-validation#ObjectSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid58 .
+_:genid58 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/json-schema#DataSchema> .
+_:genid58 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#properties> .
+<http://www.w3.org/ns/td-validation#ObjectSchemaShape> <http://www.w3.org/ns/shacl#property> _:genid59 .
+_:genid59 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid59 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/json-schema#required> .
+<http://www.w3.org/ns/td-validation#ObjectSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/json-schema#ObjectSchema> .
+# 
+# http://www.w3.org/ns/td-validation#PSKSecuritySchemeShape
+<http://www.w3.org/ns/td-validation#PSKSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#PSKSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#PSKSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid60 .
+_:genid60 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid60 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#identity> .
+<http://www.w3.org/ns/td-validation#PSKSecuritySchemeShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/wot-security#PSKSecurityScheme> .
+# 
+# http://www.w3.org/ns/td-validation#PoPSecuritySchemeShape
+<http://www.w3.org/ns/td-validation#PoPSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#PoPSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#PoPSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid61 .
+_:genid61 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid61 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#authorization> .
+<http://www.w3.org/ns/td-validation#PoPSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid62 .
+_:genid62 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid62 <http://www.w3.org/ns/shacl#defaultValue> "ES256" .
+_:genid62 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#alg> .
+<http://www.w3.org/ns/td-validation#PoPSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid63 .
+_:genid63 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid63 <http://www.w3.org/ns/shacl#defaultValue> "jwt" .
+_:genid63 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#format> .
+<http://www.w3.org/ns/td-validation#PoPSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid64 .
+_:genid64 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid64 <http://www.w3.org/ns/shacl#defaultValue> "header" .
+_:genid64 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#in> .
+<http://www.w3.org/ns/td-validation#PoPSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid65 .
+_:genid65 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid65 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#name> .
+<http://www.w3.org/ns/td-validation#PoPSecuritySchemeShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/wot-security#PoPSecurityScheme> .
 # 
 # http://www.w3.org/ns/td-validation#PropertyShape
 <http://www.w3.org/ns/td-validation#PropertyShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#PropertyShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#PropertyShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#PropertyShape> <http://www.w3.org/ns/shacl#property> _:genid28 .
-_:genid28 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid28 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#label> .
-<http://www.w3.org/ns/td-validation#PropertyShape> <http://www.w3.org/ns/shacl#property> _:genid29 .
-_:genid29 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Form> .
-_:genid29 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#forms> .
-<http://www.w3.org/ns/td-validation#PropertyShape> <http://www.w3.org/ns/shacl#property> _:genid30 .
-_:genid30 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#DataSchema> .
-_:genid30 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#objectSchemaProperties> .
-<http://www.w3.org/ns/td-validation#PropertyShape> <http://www.w3.org/ns/shacl#property> _:genid31 .
-_:genid31 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid31 <http://www.w3.org/ns/shacl#defaultValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid31 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#writable> .
-<http://www.w3.org/ns/td-validation#PropertyShape> <http://www.w3.org/ns/shacl#property> _:genid32 .
-_:genid32 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid32 <http://www.w3.org/ns/shacl#defaultValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid32 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#observable> .
+<http://www.w3.org/ns/td-validation#PropertyShape> <http://www.w3.org/ns/shacl#property> _:genid66 .
+_:genid66 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid66 <http://www.w3.org/ns/shacl#defaultValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid66 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#observable> .
 <http://www.w3.org/ns/td-validation#PropertyShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#Property> .
 # 
-# http://www.w3.org/ns/td-validation#SecurityShape
-<http://www.w3.org/ns/td-validation#SecurityShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.w3.org/ns/td-validation#SecurityShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
-<http://www.w3.org/ns/td-validation#SecurityShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#SecurityShape> <http://www.w3.org/ns/shacl#property> _:genid33 .
-_:genid33 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid33 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#in> .
-<http://www.w3.org/ns/td-validation#SecurityShape> <http://www.w3.org/ns/shacl#property> _:genid34 .
-_:genid34 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid34 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid34 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#scheme> .
-<http://www.w3.org/ns/td-validation#SecurityShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#Security> .
+# http://www.w3.org/ns/td-validation#PublicSecuritySchemeShape
+<http://www.w3.org/ns/td-validation#PublicSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#PublicSecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#PublicSecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid67 .
+_:genid67 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid67 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#identity> .
+<http://www.w3.org/ns/td-validation#PublicSecuritySchemeShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/wot-security#PublicSecurityScheme> .
+# 
+# http://www.w3.org/ns/td-validation#SecuritySchemeShape
+<http://www.w3.org/ns/td-validation#SecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#SecuritySchemeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#SecuritySchemeShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.w3.org/ns/td-validation#SecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid68 .
+_:genid68 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid68 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid68 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#scheme> .
+<http://www.w3.org/ns/td-validation#SecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid69 .
+_:genid69 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid69 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#description> .
+<http://www.w3.org/ns/td-validation#SecuritySchemeShape> <http://www.w3.org/ns/shacl#property> _:genid70 .
+_:genid70 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid70 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/wot-security#proxy> .
+<http://www.w3.org/ns/td-validation#SecuritySchemeShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/wot-security#SecurityScheme> .
 # 
 # http://www.w3.org/ns/td-validation#StringSchemaShape
 <http://www.w3.org/ns/td-validation#StringSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#StringSchemaShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#StringSchemaShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#StringSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#StringSchema> .
+<http://www.w3.org/ns/td-validation#StringSchemaShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/json-schema#StringSchema> .
 # 
 # http://www.w3.org/ns/td-validation#ThingShape
 <http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 <http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid35 .
-_:genid35 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid35 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#label> .
-<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid36 .
-_:genid36 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid36 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#description> .
-<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid37 .
-_:genid37 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid37 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#support> .
-<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid38 .
-_:genid38 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
-_:genid38 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#base> .
-<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid39 .
-_:genid39 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Property> .
-_:genid39 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#properties> .
-<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid40 .
-_:genid40 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Action> .
-_:genid40 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#actions> .
-<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid41 .
-_:genid41 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Event> .
-_:genid41 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#events> .
-<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid42 .
-_:genid42 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Link> .
-_:genid42 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#links> .
-<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid43 .
-_:genid43 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Security> .
-_:genid43 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#securityDefinitions> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid71 .
+_:genid71 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid71 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid71 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#name> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid72 .
+_:genid72 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid72 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#description> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid73 .
+_:genid73 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid73 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#support> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid74 .
+_:genid74 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid74 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#created> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid75 .
+_:genid75 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid75 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#lastModified> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid76 .
+_:genid76 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid76 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#base> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid77 .
+_:genid77 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Property> .
+_:genid77 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#properties> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid78 .
+_:genid78 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Action> .
+_:genid78 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#actions> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid79 .
+_:genid79 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Event> .
+_:genid79 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#events> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid80 .
+_:genid80 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Link> .
+_:genid80 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#links> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid81 .
+_:genid81 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/wot-security#SecurityScheme> .
+_:genid81 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid81 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#security> .
+<http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#property> _:genid82 .
+_:genid82 <http://www.w3.org/ns/shacl#class> <http://www.w3.org/ns/td#Versioning> .
+_:genid82 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#version> .
 <http://www.w3.org/ns/td-validation#ThingShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#Thing> .
+# 
+# http://www.w3.org/ns/td-validation#VersioningShape
+<http://www.w3.org/ns/td-validation#VersioningShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/td-validation#VersioningShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://www.w3.org/ns/td-validation#VersioningShape> <http://www.w3.org/ns/shacl#closed> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.w3.org/ns/td-validation#VersioningShape> <http://www.w3.org/ns/shacl#property> _:genid83 .
+_:genid83 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid83 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid83 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/ns/td#instance> .
+<http://www.w3.org/ns/td-validation#VersioningShape> <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/ns/td#Versioning> .
 # 
 # Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

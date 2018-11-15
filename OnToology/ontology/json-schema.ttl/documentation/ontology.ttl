@@ -1,0 +1,243 @@
+@prefix : <http://www.w3.org/ns/json-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/ns/json-schema#> .
+
+<http://www.w3.org/ns/json-schema#> rdf:type owl:Ontology ;
+                                     <http://purl.org/dc/elements/1.1/publisher> <https://www.w3.org/WoT/WG/> ;
+                                     <http://purl.org/dc/elements/1.1/title> "JSON Schema in RDF"@en ;
+                                     <http://purl.org/dc/terms/creator> <mailto:victor.charpenay@siemens.com> ;
+                                     <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                     <http://purl.org/vocab/vann/preferredNamespacePrefix> "jsonschema" ;
+                                     <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3.org/ns/json-schema#" ;
+                                     rdfs:comment "Module for data schema specifications, part of the W3C Web of Things (WoT) Thing Description model"@en ;
+                                     owl:versionInfo "0.5.0" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/ns/json-schema#items
+:items rdf:type owl:ObjectProperty ;
+       rdfs:domain :ArraySchema ;
+       rdfs:range :DataSchema ;
+       rdfs:comment "Used to define the characteristics of an array."@en ;
+       rdfs:label "items" .
+
+
+###  http://www.w3.org/ns/json-schema#properties
+:properties rdf:type owl:ObjectProperty ;
+            rdfs:comment "Data schema nested definitions"@en ;
+            rdfs:label "properties" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/ns/json-schema#const
+:const rdf:type owl:DatatypeProperty ;
+       rdfs:range rdfs:Literal ;
+       rdfs:comment "Provides a constant value."@en ;
+       rdfs:label "const" .
+
+
+###  http://www.w3.org/ns/json-schema#enum
+:enum rdf:type owl:DatatypeProperty ;
+      rdfs:range rdfs:Literal ;
+      rdfs:comment "Restricted set of values provided as an array."@en ;
+      rdfs:label "enum" .
+
+
+###  http://www.w3.org/ns/json-schema#maxItems
+:maxItems rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:unsignedInt ;
+          rdfs:comment "Defines the maximum number of items that have to be in the array."@en ;
+          rdfs:label "maxItems" .
+
+
+###  http://www.w3.org/ns/json-schema#maximum
+:maximum rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:double ;
+         rdfs:comment "Specifies a maximum numeric value. Only applicable for associated number or integer types."@en ;
+         rdfs:label "maximum" ;
+         rdfs:seeAlso <http://schema.org/maxValue> .
+
+
+###  http://www.w3.org/ns/json-schema#minItems
+:minItems rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:unsignedInt ;
+          rdfs:comment "Defines the minimum number of items that have to be in the array."@en ;
+          rdfs:label "minItems" .
+
+
+###  http://www.w3.org/ns/json-schema#minimum
+:minimum rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:double ;
+         rdfs:comment "Specifies a minimum numeric value. Only applicable for associated number or integer types."@en ;
+         rdfs:label "minimum" ;
+         rdfs:seeAlso <http://schema.org/minValue> .
+
+
+###  http://www.w3.org/ns/json-schema#readOnly
+:readOnly rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Boolean value that indicates whether a property interaction / value is read only (=true) or not (=false)"@en ;
+          rdfs:label "readOnly" .
+
+
+###  http://www.w3.org/ns/json-schema#required
+:required rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Defines which members of the object type are mandatory."@en ;
+          rdfs:label "required" .
+
+
+###  http://www.w3.org/ns/json-schema#type
+:type rdf:type owl:DatatypeProperty ;
+      rdfs:comment "Assignment of JSON-based data types compatible with JSON Schema (one of boolean, integer, number, string, object, array, or null)." ;
+      rdfs:label "type" .
+
+
+###  http://www.w3.org/ns/json-schema#unit
+:unit rdf:type owl:DatatypeProperty ;
+      rdfs:range rdfs:Literal ;
+      rdfs:comment "Provides unit information that is used, e.g., in international science, engineering, and business."@en ;
+      rdfs:label "unit" .
+
+
+###  http://www.w3.org/ns/json-schema#writeOnly
+:writeOnly rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Boolean value that indicates whether a property interaction / value is write only (=true) or not (=false)"@en ;
+           rdfs:label "writeOnly" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/json-schema#ArraySchema
+:ArraySchema rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :type ;
+                                   owl:hasValue "array"
+                                 ] ;
+             rdfs:subClassOf :DataSchema ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :items ;
+                               owl:allValuesFrom :DataSchema
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :maxItems ;
+                               owl:allValuesFrom xsd:unsignedInt
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :minItems ;
+                               owl:allValuesFrom xsd:unsignedInt
+                             ] ;
+             rdfs:comment "A JSON array specification (\"type\": \"array\")."@en .
+
+
+###  http://www.w3.org/ns/json-schema#BooleanSchema
+:BooleanSchema rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :type ;
+                                     owl:hasValue "boolean"
+                                   ] ;
+               rdfs:subClassOf :DataSchema ;
+               rdfs:comment "A JSON boolean value specification (\"type\": \"boolean\")."@en .
+
+
+###  http://www.w3.org/ns/json-schema#DataSchema
+:DataSchema rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :const ;
+                              owl:allValuesFrom rdfs:Literal
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :enum ;
+                              owl:allValuesFrom rdfs:Literal
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :type ;
+                              owl:allValuesFrom xsd:string
+                            ] .
+
+
+###  http://www.w3.org/ns/json-schema#IntegerSchema
+:IntegerSchema rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :type ;
+                                     owl:hasValue "integer"
+                                   ] ;
+               rdfs:subClassOf :DataSchema ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :maximum ;
+                                 owl:allValuesFrom xsd:integer
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :minimum ;
+                                 owl:allValuesFrom xsd:integer
+                               ] ;
+               rdfs:comment "A JSON integer value specification, that is, numbers without a fractional part (\"type\": \"integer\")."@en .
+
+
+###  http://www.w3.org/ns/json-schema#NumberSchema
+:NumberSchema rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :type ;
+                                    owl:hasValue "number"
+                                  ] ;
+              rdfs:subClassOf :DataSchema ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :maximum ;
+                                owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:unionOf ( xsd:double
+                                                                  xsd:integer
+                                                                )
+                                                  ]
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :minimum ;
+                                owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:unionOf ( xsd:double
+                                                                  xsd:integer
+                                                                )
+                                                  ]
+                              ] ;
+              rdfs:comment "A JSON number value specification (\"type\": \"number\")."@en .
+
+
+###  http://www.w3.org/ns/json-schema#ObjectSchema
+:ObjectSchema rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :type ;
+                                    owl:hasValue "object"
+                                  ] ;
+              rdfs:subClassOf :DataSchema ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :properties ;
+                                owl:allValuesFrom :DataSchema
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :required ;
+                                owl:allValuesFrom xsd:string
+                              ] ;
+              rdfs:comment "A JSON object specification (\"type\": \"object\")."@en .
+
+
+###  http://www.w3.org/ns/json-schema#StringSchema
+:StringSchema rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :type ;
+                                    owl:hasValue "string"
+                                  ] ;
+              rdfs:subClassOf :DataSchema ;
+              rdfs:comment "A JSON string value specification (\"type\": \"string\")."@en .
+
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

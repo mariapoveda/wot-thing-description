@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/ns/json-ld#"
+     xml:base="http://www.w3.org/ns/json-ld"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.w3.org/ns/json-ld"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#container -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/json-ld#container">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/json-ld#TermMapping"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/json-ld#ContainerType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#context -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/json-ld#context">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/json-ld#Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#iri -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/json-ld#iri">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/json-ld#Mapping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#mapping -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/json-ld#mapping">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/json-ld#Context"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/json-ld#Mapping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#type -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/json-ld#type">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/json-ld#TermMapping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#vocab -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/json-ld#vocab">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/json-ld#Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#base -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/json-ld#base">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/json-ld#Context"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#term -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/json-ld#term">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/json-ld#Mapping"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#version -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/json-ld#version">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/json-ld#Context"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#ContainerType -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/json-ld#ContainerType"/>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#Context -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/json-ld#Context"/>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#Mapping -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/json-ld#Mapping"/>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#PrefixMapping -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/json-ld#PrefixMapping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/json-ld#Mapping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#TermMapping -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/json-ld#TermMapping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/json-ld#Mapping"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#graph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/json-ld#graph">
+        <rdf:type rdf:resource="http://www.w3.org/ns/json-ld#ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#id -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/json-ld#id">
+        <rdf:type rdf:resource="http://www.w3.org/ns/json-ld#ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#index -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/json-ld#index">
+        <rdf:type rdf:resource="http://www.w3.org/ns/json-ld#ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#language -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/json-ld#language">
+        <rdf:type rdf:resource="http://www.w3.org/ns/json-ld#ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#list -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/json-ld#list">
+        <rdf:type rdf:resource="http://www.w3.org/ns/json-ld#ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#set -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/json-ld#set">
+        <rdf:type rdf:resource="http://www.w3.org/ns/json-ld#ContainerType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/json-ld#type -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/json-ld#type">
+        <rdf:type rdf:resource="http://www.w3.org/ns/json-ld#ContainerType"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+

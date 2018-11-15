@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:TermMapping" "base:Mapping" "base:Context" "base:ContainerType" ; /*classes style*/
+	"owl:Thing" -> "base:Context" [ label = "base:context" ];
+	"base:Context" -> "owl:Thing" [ label = "base:version" ];
+	"base:Context" -> "base:Mapping" [ label = "base:mapping" ];
+	"base:Mapping" -> "owl:Thing" [ label = "base:term" ];
+	"base:TermMapping" -> "owl:Thing" [ label = "base:type" ];
+	"base:Context" -> "owl:Thing" [ label = "base:base" ];
+	"base:TermMapping" -> "base:ContainerType" [ label = "base:container" ];
+	"base:Context" -> "owl:Thing" [ label = "base:vocab" ];
+	"base:Mapping" -> "owl:Thing" [ label = "base:iri" ];
+
+}

@@ -7,19 +7,7 @@ This ontology has the following classes and properties.</span>
       <a href="#Action" title="http://www.w3.org/ns/td#Action">Action</a>
    </li>
    <li>
-      <a href="#ArraySchema" title="http://www.w3.org/ns/td#ArraySchema">
-         <span>array schema</span>
-      </a>
-   </li>
-   <li>
-      <a href="#BooleanSchema" title="http://www.w3.org/ns/td#BooleanSchema">
-         <span>boolean schema</span>
-      </a>
-   </li>
-   <li>
-      <a href="#DataSchema" title="http://www.w3.org/ns/td#DataSchema">
-         <span>data schema</span>
-      </a>
+      <a href="#Data" title="http://www.w3.org/ns/td#Data">Data</a>
    </li>
    <li>
       <a href="#Event" title="http://www.w3.org/ns/td#Event">Event</a>
@@ -28,45 +16,32 @@ This ontology has the following classes and properties.</span>
       <a href="#Form" title="http://www.w3.org/ns/td#Form">Form</a>
    </li>
    <li>
-      <a href="#IntegerSchema" title="http://www.w3.org/ns/td#IntegerSchema">
-         <span>integer schema</span>
-      </a>
+      <a href="#InteractionPattern" title="http://www.w3.org/ns/td#InteractionPattern">InteractionPattern</a>
    </li>
    <li>
       <a href="#Link" title="http://www.w3.org/ns/td#Link">Link</a>
    </li>
    <li>
-      <a href="#NumberSchema" title="http://www.w3.org/ns/td#NumberSchema">
-         <span>number schema</span>
-      </a>
-   </li>
-   <li>
-      <a href="#ObjectSchema" title="http://www.w3.org/ns/td#ObjectSchema">
-         <span>object schema</span>
-      </a>
-   </li>
-   <li>
       <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
    </li>
    <li>
-      <a href="#Security" title="http://www.w3.org/ns/td#Security">Security</a>
-   </li>
-   <li>
-      <a href="#SimpleDataSchema" title="http://www.w3.org/ns/td#SimpleDataSchema">
-         <span>simple data schema</span>
-      </a>
-   </li>
-   <li>
-      <a href="#StringSchema" title="http://www.w3.org/ns/td#StringSchema">
-         <span>string schema</span>
-      </a>
+      <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
    </li>
    <li>
       <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
    </li>
+   <li>
+      <a href="#Versioning" title="http://www.w3.org/ns/td#Versioning">Versioning</a>
+   </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
       <a href="#actions" title="http://www.w3.org/ns/td#actions">actions</a>
+   </li>
+   <li>
+      <a href="#cancellation" title="http://www.w3.org/ns/td#cancellation">cancellation</a>
+   </li>
+   <li>
+      <a href="#data" title="http://www.w3.org/ns/td#data">data</a>
    </li>
    <li>
       <a href="#events" title="http://www.w3.org/ns/td#events">events</a>
@@ -75,10 +50,15 @@ This ontology has the following classes and properties.</span>
       <a href="#forms" title="http://www.w3.org/ns/td#forms">forms</a>
    </li>
    <li>
+      <a href="#idempotent" title="http://www.w3.org/ns/td#idempotent">idempotent</a>
+   </li>
+   <li>
       <a href="#input" title="http://www.w3.org/ns/td#input">input</a>
    </li>
    <li>
-      <a href="#items" title="http://www.w3.org/ns/td#items">items</a>
+      <a href="#interactions" title="http://www.w3.org/ns/td#interactions">
+         <span>interactions</span>
+      </a>
    </li>
    <li>
       <a href="#links" title="http://www.w3.org/ns/td#links">links</a>
@@ -87,16 +67,29 @@ This ontology has the following classes and properties.</span>
       <a href="#output" title="http://www.w3.org/ns/td#output">output</a>
    </li>
    <li>
-      <a href="#objectSchemaProperties" title="http://www.w3.org/ns/td#objectSchemaProperties">properties</a>
-   </li>
-   <li>
       <a href="#properties" title="http://www.w3.org/ns/td#properties">properties</a>
    </li>
    <li>
-      <a href="#schema" title="http://www.w3.org/ns/td#schema">schema</a>
+      <a href="#safe" title="http://www.w3.org/ns/td#safe">safe</a>
    </li>
    <li>
-      <a href="#securityDefinition" title="http://www.w3.org/ns/td#securityDefinition">securityDefinitions</a>
+      <a href="#security" title="http://www.w3.org/ns/td#security">security</a>
+   </li>
+   <li>
+      <a href="#specifiedBy" title="http://www.w3.org/ns/td#specifiedBy">
+         <span>specified by</span>
+      </a>
+   </li>
+   <li>
+      <a href="#subscription" title="http://www.w3.org/ns/td#subscription">subscription</a>
+   </li>
+   <li>
+      <a href="#uriVariables" title="http://www.w3.org/ns/td#uriVariables">uriVariables</a>
+   </li>
+   <li>
+      <a href="#version" title="http://www.w3.org/ns/td#version">
+         <span>version</span>
+      </a>
    </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
@@ -106,40 +99,22 @@ This ontology has the following classes and properties.</span>
       <a href="#base" title="http://www.w3.org/ns/td#base">base</a>
    </li>
    <li>
-      <a href="#const" title="http://www.w3.org/ns/td#const">const</a>
+      <a href="#contentType" title="http://www.w3.org/ns/td#contentType">contentType</a>
+   </li>
+   <li>
+      <a href="#created" title="http://www.w3.org/ns/td#created">created</a>
    </li>
    <li>
       <a href="#description" title="http://www.w3.org/ns/td#description">description</a>
    </li>
    <li>
-      <a href="#enum" title="http://www.w3.org/ns/td#enum">enum</a>
-   </li>
-   <li>
       <a href="#href" title="http://www.w3.org/ns/td#href">href</a>
    </li>
    <li>
-      <a href="#id" title="http://www.w3.org/ns/td#id">id</a>
+      <a href="#instance" title="http://www.w3.org/ns/td#instance">instance</a>
    </li>
    <li>
-      <a href="#in" title="http://www.w3.org/ns/td#in">in</a>
-   </li>
-   <li>
-      <a href="#label" title="http://www.w3.org/ns/td#label">label</a>
-   </li>
-   <li>
-      <a href="#maximum" title="http://www.w3.org/ns/td#maximum">maximum</a>
-   </li>
-   <li>
-      <a href="#maxItems" title="http://www.w3.org/ns/td#maxItems">maxItems</a>
-   </li>
-   <li>
-      <a href="#mediaType" title="http://www.w3.org/ns/td#mediaType">mediaType</a>
-   </li>
-   <li>
-      <a href="#minimum" title="http://www.w3.org/ns/td#minimum">minimum</a>
-   </li>
-   <li>
-      <a href="#minItems" title="http://www.w3.org/ns/td#minItems">minItems</a>
+      <a href="#lastModified" title="http://www.w3.org/ns/td#lastModified">lastModified</a>
    </li>
    <li>
       <a href="#name" title="http://www.w3.org/ns/td#name">name</a>
@@ -148,24 +123,26 @@ This ontology has the following classes and properties.</span>
       <a href="#observable" title="http://www.w3.org/ns/td#observable">observable</a>
    </li>
    <li>
+      <a href="#op" title="http://www.w3.org/ns/td#op">op</a>
+   </li>
+   <li>
       <a href="#rel" title="http://www.w3.org/ns/td#rel">rel</a>
    </li>
    <li>
-      <a href="#required" title="http://www.w3.org/ns/td#required">required</a>
-   </li>
-   <li>
-      <a href="#scheme" title="http://www.w3.org/ns/td#scheme">scheme</a>
-   </li>
-   <li>
-      <a href="#security" title="http://www.w3.org/ns/td#security">security</a>
+      <a href="#subprotocol" title="http://www.w3.org/ns/td#subprotocol">subprotocol</a>
    </li>
    <li>
       <a href="#support" title="http://www.w3.org/ns/td#support">support</a>
    </li>
    <li>
+      <a href="#title" title="http://www.w3.org/ns/td#title">title</a>
+   </li>
+   <li>
       <a href="#type" title="http://www.w3.org/ns/td#type">type</a>
    </li>
    <li>
-      <a href="#writable" title="http://www.w3.org/ns/td#writable">writable</a>
+      <a href="#version" title="http://www.w3.org/ns/td#version">
+         <span>version</span>
+      </a>
    </li>
 </ul>

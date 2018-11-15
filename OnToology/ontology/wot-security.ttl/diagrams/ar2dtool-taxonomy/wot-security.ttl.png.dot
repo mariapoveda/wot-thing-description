@@ -1,0 +1,16 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "wotsec:APIKeySecurityScheme" "wotsec:CertSecurityScheme" "wotsec:BearerSecurityScheme" "wotsec:PoPSecurityScheme" "wotsec:PSKSecurityScheme" "wotsec:OAuth2SecurityScheme" "wotsec:NoSecurityScheme" "wotsec:SecurityScheme" "wotsec:PublicSecurityScheme" "wotsec:DigestSecurityScheme" "wotsec:BasicSecurityScheme" ; /*classes style*/
+	"wotsec:NoSecurityScheme" -> "wotsec:SecurityScheme" [ label = "rdfs:subClassOf" ];
+	"wotsec:BasicSecurityScheme" -> "wotsec:SecurityScheme" [ label = "rdfs:subClassOf" ];
+	"wotsec:CertSecurityScheme" -> "wotsec:SecurityScheme" [ label = "rdfs:subClassOf" ];
+	"wotsec:PoPSecurityScheme" -> "wotsec:SecurityScheme" [ label = "rdfs:subClassOf" ];
+	"wotsec:DigestSecurityScheme" -> "wotsec:SecurityScheme" [ label = "rdfs:subClassOf" ];
+	"wotsec:OAuth2SecurityScheme" -> "wotsec:SecurityScheme" [ label = "rdfs:subClassOf" ];
+	"wotsec:APIKeySecurityScheme" -> "wotsec:SecurityScheme" [ label = "rdfs:subClassOf" ];
+	"wotsec:BearerSecurityScheme" -> "wotsec:SecurityScheme" [ label = "rdfs:subClassOf" ];
+	"wotsec:PSKSecurityScheme" -> "wotsec:SecurityScheme" [ label = "rdfs:subClassOf" ];
+	"wotsec:PublicSecurityScheme" -> "wotsec:SecurityScheme" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,52 @@
+{
+  "@context" : {
+    "ContainerType" : {
+      "@id" : "http://www.w3.org/ns/json-ld#ContainerType"
+    },
+    "iri" : {
+      "@id" : "http://www.w3.org/ns/json-ld#iri",
+      "@type" : "@id"
+    },
+    "Context" : {
+      "@id" : "http://www.w3.org/ns/json-ld#Context"
+    },
+    "term" : {
+      "@id" : "http://www.w3.org/ns/json-ld#term"
+    },
+    "base" : {
+      "@id" : "http://www.w3.org/ns/json-ld#base"
+    },
+    "vocab" : {
+      "@id" : "http://www.w3.org/ns/json-ld#vocab",
+      "@type" : "@id"
+    },
+    "context" : {
+      "@id" : "http://www.w3.org/ns/json-ld#context",
+      "@type" : "@id"
+    },
+    "Mapping" : {
+      "@id" : "http://www.w3.org/ns/json-ld#Mapping"
+    },
+    "type" : {
+      "@id" : "http://www.w3.org/ns/json-ld#type",
+      "@type" : "@id"
+    },
+    "mapping" : {
+      "@id" : "http://www.w3.org/ns/json-ld#mapping",
+      "@type" : "@id"
+    },
+    "version" : {
+      "@id" : "http://www.w3.org/ns/json-ld#version"
+    },
+    "PrefixMapping" : {
+      "@id" : "http://www.w3.org/ns/json-ld#PrefixMapping"
+    },
+    "TermMapping" : {
+      "@id" : "http://www.w3.org/ns/json-ld#TermMapping"
+    },
+    "container" : {
+      "@id" : "http://www.w3.org/ns/json-ld#container",
+      "@type" : "@id"
+    }
+  }
+}

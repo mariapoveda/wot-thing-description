@@ -1,0 +1,640 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#container" : [ {
+    "@value" : "http://www.w3.org/ns/json-ld#"
+  } ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#properties"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "properties"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#container" : [ {
+    "@value" : "http://www.w3.org/ns/json-ld#"
+  } ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#actions"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "actions"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#container" : [ {
+    "@value" : "http://www.w3.org/ns/json-ld#"
+  } ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#events"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "events"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#security"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "security"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Thing"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "Thing"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#DataSchema"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "DataSchema"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#label"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "label"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#schema"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "schema"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Event"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "Event"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#base"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "base"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Context" ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#anchor"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "anchor"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#href"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "href"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#name"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "name"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#observable"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "observable"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Form"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "Form"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Security"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "Security"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#writable"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "writable"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "preferredNamespacePrefix"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Property"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "Property"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Context" ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "td"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#objectSchemaProperties"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "properties"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#container" : [ {
+    "@value" : "http://www.w3.org/ns/json-ld#@set"
+  } ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#form"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "forms"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#container" : [ {
+    "@value" : "http://www.w3.org/ns/json-ld#@set"
+  } ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#links"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "links"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#rel"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "rel"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#subProtocol"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "subProtocol"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#mediaType"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "mediaType"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#InteractionPattern"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "InteractionPattern"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Action"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "Action"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#inputSchema"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "inputSchema"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#anyOf"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "anyOf"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "rdfs"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#allOf"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "allOf"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Object"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "object"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Number"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "number"
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#maximum"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "maximum"
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#minimum"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "minimum"
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#maxItems"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "maxItems"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#minItems"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "minItems"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#items"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "items"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#field"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "fields"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Integer"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "integer"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "xsd"
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#String"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "string"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#required"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "required"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#oneOf"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "oneOf"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#DataField"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "DataField"
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#description"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "description"
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Array"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "array"
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#enum"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "enum"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Boolean"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "boolean"
+  } ]
+}, {
+  "@id" : "_:genid58",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#schemaType"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "type"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@vocab"
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#support"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "support"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#outputSchema"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "outputSchema"
+  } ],
+  "http://www.w3.org/ns/json-ld#type" : [ {
+    "@value" : "@id"
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#title"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "title"
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#op"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "op"
+  } ]
+}, {
+  "@id" : "_:genid62",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#uriVariables"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "uriVariables"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://purl.org/dc/terms/license"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "license"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#Link"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "Link"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/ns/json-ld#Mapping" ],
+  "http://www.w3.org/ns/json-ld#container" : [ {
+    "@value" : "http://www.w3.org/ns/json-ld#"
+  } ],
+  "http://www.w3.org/ns/json-ld#iri" : [ {
+    "@id" : "http://www.w3.org/ns/td#definition"
+  } ],
+  "http://www.w3.org/ns/json-ld#term" : [ {
+    "@value" : "definitions"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#Context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#Mapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#container",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#iri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#term",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

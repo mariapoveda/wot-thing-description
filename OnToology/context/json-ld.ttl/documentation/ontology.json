@@ -1,0 +1,103 @@
+[ {
+  "@id" : "http://www.w3.org/ns/json-ld",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#ContainerType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#Context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#Mapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#PrefixMapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#Mapping"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#TermMapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#Mapping"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#base",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#Context"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#container",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#TermMapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#ContainerType"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#Context"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#graph",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/json-ld#ContainerType" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#id",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/json-ld#ContainerType" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#index",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/json-ld#ContainerType" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#iri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#Mapping"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/json-ld#ContainerType" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#list",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/json-ld#ContainerType" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#mapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#Context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#Mapping"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#set",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/json-ld#ContainerType" ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#term",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#Mapping"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/json-ld#ContainerType" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#TermMapping"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#version",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#Context"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/json-ld#vocab",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/json-ld#Context"
+  } ]
+} ]

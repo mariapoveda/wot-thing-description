@@ -1,0 +1,121 @@
+<http://www.w3.org/ns/json-ld> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/json-ld#container
+<http://www.w3.org/ns/json-ld#container> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/json-ld#container> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/json-ld#TermMapping> .
+<http://www.w3.org/ns/json-ld#container> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/json-ld#ContainerType> .
+# 
+# http://www.w3.org/ns/json-ld#context
+<http://www.w3.org/ns/json-ld#context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/json-ld#context> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/json-ld#Context> .
+# 
+# http://www.w3.org/ns/json-ld#iri
+<http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/json-ld#Mapping> .
+# 
+# http://www.w3.org/ns/json-ld#mapping
+<http://www.w3.org/ns/json-ld#mapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/json-ld#mapping> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/json-ld#Context> .
+<http://www.w3.org/ns/json-ld#mapping> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/json-ld#Mapping> .
+# 
+# http://www.w3.org/ns/json-ld#type
+<http://www.w3.org/ns/json-ld#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/json-ld#type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/json-ld#TermMapping> .
+# 
+# http://www.w3.org/ns/json-ld#vocab
+<http://www.w3.org/ns/json-ld#vocab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/json-ld#vocab> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/json-ld#Context> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/json-ld#base
+<http://www.w3.org/ns/json-ld#base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/json-ld#base> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/json-ld#Context> .
+# 
+# http://www.w3.org/ns/json-ld#term
+<http://www.w3.org/ns/json-ld#term> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/json-ld#term> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/json-ld#Mapping> .
+# 
+# http://www.w3.org/ns/json-ld#version
+<http://www.w3.org/ns/json-ld#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/json-ld#version> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/json-ld#Context> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/json-ld#ContainerType
+<http://www.w3.org/ns/json-ld#ContainerType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/json-ld#Context
+<http://www.w3.org/ns/json-ld#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/json-ld#Mapping
+<http://www.w3.org/ns/json-ld#Mapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/json-ld#PrefixMapping
+<http://www.w3.org/ns/json-ld#PrefixMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/json-ld#PrefixMapping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/json-ld#Mapping> .
+# 
+# http://www.w3.org/ns/json-ld#TermMapping
+<http://www.w3.org/ns/json-ld#TermMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/json-ld#TermMapping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/json-ld#Mapping> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/json-ld#graph
+<http://www.w3.org/ns/json-ld#graph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/json-ld#graph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#ContainerType> .
+# 
+# http://www.w3.org/ns/json-ld#id
+<http://www.w3.org/ns/json-ld#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/json-ld#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#ContainerType> .
+# 
+# http://www.w3.org/ns/json-ld#index
+<http://www.w3.org/ns/json-ld#index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/json-ld#index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#ContainerType> .
+# 
+# http://www.w3.org/ns/json-ld#language
+<http://www.w3.org/ns/json-ld#language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/json-ld#language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#ContainerType> .
+# 
+# http://www.w3.org/ns/json-ld#list
+<http://www.w3.org/ns/json-ld#list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/json-ld#list> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#ContainerType> .
+# 
+# http://www.w3.org/ns/json-ld#set
+<http://www.w3.org/ns/json-ld#set> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/json-ld#set> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#ContainerType> .
+# 
+# http://www.w3.org/ns/json-ld#type
+<http://www.w3.org/ns/json-ld#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/json-ld#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#ContainerType> .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
