@@ -4,11 +4,23 @@
       "@id" : "http://www.w3.org/ns/td#properties",
       "@type" : "@id"
     },
+    "subprotocol" : {
+      "@id" : "http://www.w3.org/ns/td#subprotocol",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "term_status" : {
       "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
     },
+    "lastModified" : {
+      "@id" : "http://www.w3.org/ns/td#lastModified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://www.w3.org/ns/td#created",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
@@ -16,47 +28,37 @@
     "Link" : {
       "@id" : "http://www.w3.org/ns/td#Link"
     },
+    "specifiedBy" : {
+      "@id" : "http://www.w3.org/ns/td#specifiedBy",
+      "@type" : "@id"
+    },
     "output" : {
       "@id" : "http://www.w3.org/ns/td#output",
       "@type" : "@id"
     },
     "security" : {
       "@id" : "http://www.w3.org/ns/td#security",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+      "@type" : "@id"
     },
     "Thing" : {
       "@id" : "http://www.w3.org/ns/td#Thing"
     },
-    "maxItems" : {
-      "@id" : "http://www.w3.org/ns/td#maxItems",
-      "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
+    "cancellation" : {
+      "@id" : "http://www.w3.org/ns/td#cancellation",
+      "@type" : "@id"
     },
     "DataSchema" : {
       "@id" : "http://www.w3.org/ns/td#DataSchema"
     },
     "label" : {
-      "@id" : "http://www.w3.org/ns/td#label",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "forms" : {
       "@id" : "http://www.w3.org/ns/td#forms",
       "@type" : "@id"
     },
-    "maximum" : {
-      "@id" : "http://www.w3.org/ns/td#maximum",
-      "@type" : "http://www.w3.org/2001/XMLSchema#double"
-    },
-    "schema" : {
-      "@id" : "http://www.w3.org/ns/td#schema",
-      "@type" : "@id"
-    },
-    "id" : {
-      "@id" : "http://www.w3.org/ns/td#id",
-      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "minimum" : {
-      "@id" : "http://www.w3.org/ns/td#minimum",
-      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    "Specification" : {
+      "@id" : "http://www.w3.org/ns/td#Specification"
     },
     "Event" : {
       "@id" : "http://www.w3.org/ns/td#Event"
@@ -65,15 +67,9 @@
       "@id" : "http://www.w3.org/ns/td#base",
       "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
-    "ArraySchema" : {
-      "@id" : "http://www.w3.org/ns/td#ArraySchema"
-    },
     "anchor" : {
-      "@id" : "http://www.w3.org/ns/td#anchor"
-    },
-    "minItems" : {
-      "@id" : "http://www.w3.org/ns/td#minItems",
-      "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
+      "@id" : "http://www.w3.org/ns/td#anchor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
@@ -86,22 +82,13 @@
       "@id" : "http://www.w3.org/ns/td#name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "NumberSchema" : {
-      "@id" : "http://www.w3.org/ns/td#NumberSchema"
-    },
-    "items" : {
-      "@id" : "http://www.w3.org/ns/td#items",
-      "@type" : "@id"
-    },
-    "securityDefinition" : {
-      "@id" : "http://www.w3.org/ns/td#securityDefinition",
-      "@type" : "@id"
-    },
-    "BooleanSchema" : {
-      "@id" : "http://www.w3.org/ns/td#BooleanSchema"
-    },
     "support" : {
-      "@id" : "http://www.w3.org/ns/td#support"
+      "@id" : "http://www.w3.org/ns/td#support",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "idempotent" : {
+      "@id" : "http://www.w3.org/ns/td#idempotent",
+      "@type" : "@id"
     },
     "observable" : {
       "@id" : "http://www.w3.org/ns/td#observable",
@@ -110,26 +97,20 @@
     "Form" : {
       "@id" : "http://www.w3.org/ns/td#Form"
     },
-    "Security" : {
-      "@id" : "http://www.w3.org/ns/td#Security"
-    },
-    "const" : {
-      "@id" : "http://www.w3.org/ns/td#const",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "writable" : {
-      "@id" : "http://www.w3.org/ns/td#writable",
-      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "objectSchemaProperties" : {
-      "@id" : "http://www.w3.org/ns/td#objectSchemaProperties",
+    "subscription" : {
+      "@id" : "http://www.w3.org/ns/td#subscription",
       "@type" : "@id"
     },
-    "SimpleDataSchema" : {
-      "@id" : "http://www.w3.org/ns/td#SimpleDataSchema"
+    "scope" : {
+      "@id" : "http://www.w3.org/ns/td#scope",
+      "@type" : "@id"
     },
     "preferredNamespacePrefix" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "instance" : {
+      "@id" : "http://www.w3.org/ns/td#instance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "events" : {
       "@id" : "http://www.w3.org/ns/td#events",
@@ -143,22 +124,23 @@
       "@id" : "http://www.w3.org/ns/td#input",
       "@type" : "@id"
     },
+    "interactions" : {
+      "@id" : "http://www.w3.org/ns/td#interactions",
+      "@type" : "@id"
+    },
     "Property" : {
       "@id" : "http://www.w3.org/ns/td#Property"
     },
     "title" : {
-      "@id" : "http://purl.org/dc/elements/1.1/title"
-    },
-    "required" : {
-      "@id" : "http://www.w3.org/ns/td#required",
+      "@id" : "http://www.w3.org/ns/td#title",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Data" : {
+      "@id" : "http://www.w3.org/ns/td#Data"
     },
     "rel" : {
       "@id" : "http://www.w3.org/ns/td#rel",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "ObjectSchema" : {
-      "@id" : "http://www.w3.org/ns/td#ObjectSchema"
     },
     "type" : {
       "@id" : "http://www.w3.org/ns/td#type",
@@ -167,27 +149,42 @@
     "publisher" : {
       "@id" : "http://purl.org/dc/elements/1.1/publisher"
     },
-    "mediaType" : {
-      "@id" : "http://www.w3.org/ns/td#mediaType",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    "version" : {
+      "@id" : "http://www.w3.org/ns/td#version"
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
     },
+    "contentType" : {
+      "@id" : "http://www.w3.org/ns/td#contentType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "InteractionPattern" : {
+      "@id" : "http://www.w3.org/ns/td#InteractionPattern"
+    },
+    "op" : {
+      "@id" : "http://www.w3.org/ns/td#op",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Versioning" : {
+      "@id" : "http://www.w3.org/ns/td#Versioning"
     },
     "contributor" : {
       "@id" : "http://purl.org/dc/terms/contributor"
     },
-    "IntegerSchema" : {
-      "@id" : "http://www.w3.org/ns/td#IntegerSchema"
+    "data" : {
+      "@id" : "http://www.w3.org/ns/td#data",
+      "@type" : "@id"
     },
     "Action" : {
       "@id" : "http://www.w3.org/ns/td#Action"
     },
-    "scheme" : {
-      "@id" : "http://www.w3.org/ns/td#scheme"
+    "uriVariables" : {
+      "@id" : "http://www.w3.org/ns/td#uriVariables",
+      "@type" : "@id"
     },
     "description" : {
       "@id" : "http://www.w3.org/ns/td#description",
@@ -200,16 +197,9 @@
       "@id" : "http://www.w3.org/ns/td#actions",
       "@type" : "@id"
     },
-    "in" : {
-      "@id" : "http://www.w3.org/ns/td#in",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "enum" : {
-      "@id" : "http://www.w3.org/ns/td#enum",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "StringSchema" : {
-      "@id" : "http://www.w3.org/ns/td#StringSchema"
+    "safe" : {
+      "@id" : "http://www.w3.org/ns/td#safe",
+      "@type" : "@id"
     }
   }
 }

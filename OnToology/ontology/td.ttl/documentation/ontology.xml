@@ -14,13 +14,14 @@
         <dc:publisher rdf:resource="https://www.w3.org/WoT/WG/"/>
         <dc:title xml:lang="en">Ontology model for Web of Things</dc:title>
         <terms:contributor rdf:resource="http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/"/>
+        <terms:contributor rdf:resource="mailto:victor.charpenay@siemens.com"/>
         <terms:creator rdf:resource="http://purl.org/net/mpoveda"/>
         <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <vann:preferredNamespacePrefix>td</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://www.w3.org/ns/td#</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)</rdfs:comment>
-        <owl:versionInfo>0.0.1</owl:versionInfo>
+        <owl:versionInfo>0.5.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -60,10 +61,35 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#actions">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/td#interactions"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/td#Action"/>
-        <rdfs:comment>Keeps all Action-based interaction pattern of the Thing.</rdfs:comment>
+        <rdfs:comment xml:lang="en">All Action-based interaction patterns of the Thing.</rdfs:comment>
         <rdfs:label>actions</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/td#cancellation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#cancellation">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Specification"/>
+        <rdfs:comment xml:lang="en">Defines any data that needs to be passed to cancel a subscription, e.g., a specific message to remove a Webhook</rdfs:comment>
+        <rdfs:label>cancellation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/td#data -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#data">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Specification"/>
+        <rdfs:comment xml:lang="en">Defines the data schema of the Event instance messages pushed by the Thing.</rdfs:comment>
+        <rdfs:label>data</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -72,7 +98,10 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#events">
-        <rdfs:comment>Keeps all Event-based interaction pattern of the Thing.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/td#interactions"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Event"/>
+        <rdfs:comment xml:lang="en">All Event-based interaction patterns of the Thing.</rdfs:comment>
         <rdfs:label>events</rdfs:label>
     </owl:ObjectProperty>
     
@@ -82,8 +111,22 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#forms">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#InteractionPattern"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Form"/>
         <rdfs:comment xml:lang="en">Indicates one or more endpoints from which an interaction pattern is accessible</rdfs:comment>
-        <rdfs:label xml:lang="en">forms</rdfs:label>
+        <rdfs:label>forms</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/td#idempotent -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#idempotent">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Specification"/>
+        <rdfs:comment xml:lang="en">Signals if the action is idempotent (=true) or not. Informs if the action can be called repeatedly with the same outcome. </rdfs:comment>
+        <rdfs:label>idempotent</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -92,22 +135,20 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#input">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Property"/>
-        <rdfs:comment xml:lang="en">link to the n-ary class that allows the declaration of the accepted data type of an action.</rdfs:comment>
-        <rdfs:label xml:lang="en">input</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Specification"/>
+        <rdfs:comment xml:lang="en">Used to define the input data schema of the action.</rdfs:comment>
+        <rdfs:label>input</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/td#items -->
+    <!-- http://www.w3.org/ns/td#interactions -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#items">
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#interactions">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Property"/>
-        <rdfs:comment>Used to defines characteristics of an array.</rdfs:comment>
-        <rdfs:label>items</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#InteractionPattern"/>
     </owl:ObjectProperty>
     
 
@@ -116,18 +157,10 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#links">
-        <rdfs:comment>provides Web links to arbitrary resources that relate to the specified Thing Description.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Link"/>
+        <rdfs:comment xml:lang="en">Provides Web links to arbitrary resources that relate to the specified Thing Description.</rdfs:comment>
         <rdfs:label>links</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/td#objectSchemaProperties -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#objectSchemaProperties">
-        <rdfs:comment>Data schema nested definitions</rdfs:comment>
-        <rdfs:label>properties</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -136,10 +169,10 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#output">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Property"/>
-        <rdfs:comment xml:lang="en">link to the n-ary class that allows the declaration of the data type returned by an action.</rdfs:comment>
-        <rdfs:label xml:lang="en">output</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Specification"/>
+        <rdfs:comment xml:lang="en">Used to define the output data schema of the action.</rdfs:comment>
+        <rdfs:label>output</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -148,31 +181,94 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#properties">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/td#interactions"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/td#Property"/>
-        <rdfs:comment>Keeps all Property-based interaction pattern of the Thing.</rdfs:comment>
+        <rdfs:comment xml:lang="en">All Property-based interaction patterns of the Thing.</rdfs:comment>
         <rdfs:label>properties</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/td#schema -->
+    <!-- http://www.w3.org/ns/td#safe -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#schema">
-        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Property"/>
-        <rdfs:comment xml:lang="en">schema definition for values of the given object schema property.</rdfs:comment>
-        <rdfs:label xml:lang="en">schema</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#safe">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Specification"/>
+        <rdfs:comment xml:lang="en">Signals if the action is safe (=true) or not. Used to signal if there is no internal state (cf. resource state) is changed when invoking an Action. In that case responses can be cached as example.</rdfs:comment>
+        <rdfs:label>safe</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/td#securityDefinition -->
+    <!-- http://www.w3.org/ns/td#scope -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#securityDefinition">
-        <rdfs:comment xml:lang="en">Links a given Thing to the security information that indicates the access metadata information for securely transmitting information via all the resources of the Thing.</rdfs:comment>
-        <rdfs:label xml:lang="en">securityDefinitions</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#scope"/>
+    
+
+
+    <!-- http://www.w3.org/ns/td#security -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#security">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/td#Form"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/td#InteractionPattern"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/td#Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:comment xml:lang="en">Set of security configurations, provided as an array, that must all be satisfied for access to resources at or below the current level, if not overridden at a lower level.</rdfs:comment>
+        <rdfs:label>security</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/td#specifiedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#specifiedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Specification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/td#subscription -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#subscription">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Specification"/>
+        <rdfs:comment xml:lang="en">Defines data that needs to be passed upon subscription, e.g., filters or message format for setting up Webhooks.</rdfs:comment>
+        <rdfs:label>subscription</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/td#uriVariables -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#uriVariables">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#InteractionPattern"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
+        <rdfs:comment xml:lang="en">Define URI template variables as collection based on DataSchema declarations.</rdfs:comment>
+        <rdfs:label>uriVariables</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/td#version -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/td#version">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/td#Versioning"/>
     </owl:ObjectProperty>
     
 
@@ -193,7 +289,9 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#anchor">
-        <rdfs:comment>By default, the context of a link is the URL of the representation it is associated with, and is serialised as a URI. When present, the anchor parameter overrides this with another URI, such as a fragment of this resource, or a third resource (i.e., when the anchor value is an absolute URI).</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Link"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">By default, the context of a link is the URL of the representation it is associated with, and is serialised as a URI. When present, the anchor parameter overrides this with another URI, such as a fragment of this resource, or a third resource (i.e., when the anchor value is an absolute URI).</rdfs:comment>
         <rdfs:label>anchor</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -203,20 +301,40 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#base">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:comment xml:lang="en">Define base URI that is valid for all defined local interaction resources. All other URIs in the TD must then be resolved using the algorithm defined in [[!RFC3986]]. This field is optional.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Define the base URI that is valid for all defined local interaction resources. All other URIs in the TD must then be resolved using the algorithm defined in [[!RFC3986]].</rdfs:comment>
         <rdfs:label xml:lang="en">base</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.w3.org/ns/td#const -->
+    <!-- http://www.w3.org/ns/td#contentType -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#const">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>Provides a constant value.</rdfs:comment>
-        <rdfs:label>const</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#contentType">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/td#Form"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Assign a content type based on a media type [[!MEDIATYPES]] (e.g., &apos;application/json) and (optional) parameters (e.g., &apos;charset=utf-8&apos;)</rdfs:comment>
+        <rdfs:label>contentType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/td#created -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#created">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Provides information when the TD instance was created.</rdfs:comment>
+        <rdfs:label>created</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -226,19 +344,8 @@
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#description">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Provides additionel (human) readable information.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Provides additional (human-readable) information.</rdfs:comment>
         <rdfs:label>description</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/td#enum -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#enum">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>Restricted set of values provided as array.</rdfs:comment>
-        <rdfs:label>enum</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -248,99 +355,40 @@
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#href">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/td#Form"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/td#Link"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:comment xml:lang="en">URI of the endpoint where an interaction pattern is provided</rdfs:comment>
-        <rdfs:label xml:lang="en">href</rdfs:label>
+        <rdfs:comment xml:lang="en">URI of the endpoint where an interaction pattern is provided.</rdfs:comment>
+        <rdfs:label>href</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.w3.org/ns/td#id -->
+    <!-- http://www.w3.org/ns/td#instance -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#id">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:comment>Defines unique URI (includes also URNs) ID of the Thing.</rdfs:comment>
-        <rdfs:label>id</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/td#in -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#in">
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#instance">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Specifies location of the authentication information</rdfs:comment>
-        <rdfs:label>in</rdfs:label>
+        <rdfs:comment xml:lang="en">Provides a version identicator of this TD instance.</rdfs:comment>
+        <rdfs:label>instance</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.w3.org/ns/td#label -->
+    <!-- http://www.w3.org/ns/td#lastModified -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#label">
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#lastModified">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Provides a label (e.g., display a text for UI representation) of the interaction pattern.</rdfs:comment>
-        <rdfs:label>label</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/td#maxItems -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#maxItems">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:comment>Defines the maximum number of itmes that have to be in the array.</rdfs:comment>
-        <rdfs:label>maxItems</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/td#maximum -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#maximum">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-        <rdfs:comment>Specifies a maximum numeric value. Only applicable for associated number or integer types.</rdfs:comment>
-        <rdfs:label>maximum</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://schema.org/maxValue"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/td#mediaType -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#mediaType">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Assign underlying media type of the interaction pattern based on IANA (https://www.iana.org/assignments/media-types/media-types.xhtml)</rdfs:comment>
-        <rdfs:label xml:lang="en">mediaType</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/td#minItems -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#minItems">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-        <rdfs:comment>Defines the minimum number of itmes that have to be in the array.</rdfs:comment>
-        <rdfs:label>minItems</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/td#minimum -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#minimum">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-        <rdfs:comment>Specifies a minimum numeric value. Only applicable for associated number or integer types.</rdfs:comment>
-        <rdfs:label>minimum</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://schema.org/minValue"/>
+        <rdfs:comment xml:lang="en">Provides information when the TD instance was last modified.</rdfs:comment>
+        <rdfs:label>lastModified</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -349,9 +397,10 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#name">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Name of the Thing or interaction pattern (must be a valid keyword to be used in the scripting API)</rdfs:comment>
-        <rdfs:label xml:lang="en">name</rdfs:label>
+        <rdfs:comment xml:lang="en">Name of the Thing.</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -361,9 +410,26 @@
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#observable">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Property"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment xml:lang="en">Indicates whether a remote servient can subscribe to (&quot;observe&quot;) the Property, to receive change notifications or periodic updates (true/false). </rdfs:comment>
-        <rdfs:label xml:lang="en">observable</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates whether a remote servient can subscribe to (&quot;observe&quot;) the Property, to receive change notifications or periodic updates (true/false).</rdfs:comment>
+        <rdfs:label>observable</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/td#op -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#op">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Link"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Indicates the expected result of performing the operation described by the form.
+
+For example, the Property interaction allows get and set operations.  
+The protocol binding may contain a form for the get operation and a different form for the set operation.  
+The op attribute indicates which form is which and allows the client to select the correct form for the operation required.</rdfs:comment>
+        <rdfs:label>op</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -372,43 +438,24 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#rel">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Link"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Indicates the expected result of performing the operation described by the form.
-
-For example, the Property interaction allows get and set operations. The protocol binding may contain a form for the get operation and a different form for the set operation. The value of the &quot;rel&quot; attribute of the form indicates which form is which and allows the client to select the correct form for the oeration required</rdfs:comment>
-        <rdfs:label xml:lang="en">rel</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates the relation to an other Thing.</rdfs:comment>
+        <rdfs:label>rel</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.w3.org/ns/td#required -->
+    <!-- http://www.w3.org/ns/td#subprotocol -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#required">
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#subprotocol">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Form"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Defines which members of the object type are required/mandatory.</rdfs:comment>
-        <rdfs:label>required</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/td#scheme -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#scheme">
-        <rdfs:comment>Identification of security scheme (e.g., basic, digest, and oauth2).</rdfs:comment>
-        <rdfs:label>scheme</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/td#security -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#security">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>Defines the security requirements of the interacions by making a reference to the top level securityDefinition</rdfs:comment>
-        <rdfs:label>security</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates the exact mechanism by which an interaction will be accomplished for a given protocol when there are multiple options.
+     
+For example, for HTTP and Events, it indicates which of several available mechanisms should be used for asynchronous notifications.</rdfs:comment>
+        <rdfs:label>subprotocol</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -417,8 +464,21 @@ For example, the Property interaction allows get and set operations. The protoco
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#support">
-        <rdfs:comment>Provides information about TD maintainer (e.g., author, link or telephon number to get support, etc).</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/td#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Provides information about the TD maintainer (e.g., author, link or telephone number to get support, etc).</rdfs:comment>
         <rdfs:label>support</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/td#title -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#title">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Provides a human-readable title (e.g., display a text for UI representation) of the interaction pattern.</rdfs:comment>
+        <rdfs:label>title</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -427,21 +487,25 @@ For example, the Property interaction allows get and set operations. The protoco
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#type">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/td#Link"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Assignment of JSON-based data types that are compatible with JSON Schema (boolean, integer, number, string, object, array, null).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Provides a hint indicating what the media type [[!MEDIATYPES]] of the result of dereferencing the link should be.</rdfs:comment>
         <rdfs:label>type</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.w3.org/ns/td#writable -->
+    <!-- http://www.w3.org/ns/td#version -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#writable">
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/td#version">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment xml:lang="en">Boolean value that indicates whether a property is writable (=true) or not (=false)</rdfs:comment>
-        <rdfs:label xml:lang="en">writable</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -462,76 +526,50 @@ For example, the Property interaction allows get and set operations. The protoco
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/td#Action">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/td#InteractionPattern"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#forms"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Form"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#idempotent"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Specification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/td#input"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Property"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Specification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/td#output"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Property"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Specification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#description"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#scope"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Specification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#label"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Actions offer functions of the Thing. These functions may manipulate the interal state of a Thing in a way that is not possible through setting Properties. Examples are changing internal state that is not exposed as Property, changing multiple Properties, changing Properties over time or with a process that shall not be disclosed. Actions may also be pure functions, that is, they do not use any internal state at all, e.g., for processing input data and returning the result directly.</rdfs:comment>
-        <rdfs:label xml:lang="en">Action</rdfs:label>
+        <rdfs:comment xml:lang="en">Actions offer functions of the Thing. These functions may manipulate the interal state of a Thing in a way that is not possible through setting Properties. Examples are changing internal state that is not exposed as a Property, changing multiple Properties, changing Properties over time or with a process that should not be disclosed. Actions may also be pure functions, that is, they may not use any internal state at all, and may simply process input data and return a result that directly depends only on the input given.</rdfs:comment>
+        <rdfs:label>Action</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/td#ArraySchema -->
+    <!-- http://www.w3.org/ns/td#Data -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/ns/td#ArraySchema">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
+    <owl:Class rdf:about="http://www.w3.org/ns/td#Data">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#items"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#specifiedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/td#Specification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#maxItems"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#minItems"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>A JSON array specification (&quot;type&quot;: &quot;array&quot;).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/td#BooleanSchema -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/td#BooleanSchema">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
-        <rdfs:comment>A JSON boolean value specification (&quot;type&quot;: &quot;boolean&quot;).</rdfs:comment>
+        <rdfs:comment>Any part of a Thing that is represented by some piece of data (e.g. a temperarture quantity represented by a JSON number). Data and Specification are related in the sense that the former can embed specification elements (for the sake of conciseness), thus being its own specification.</rdfs:comment>
+        <rdfs:label>Data</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://schema.org/PropertyValue"/>
     </owl:Class>
     
 
@@ -539,27 +577,7 @@ For example, the Property interaction allows get and set operations. The protoco
     <!-- http://www.w3.org/ns/td#DataSchema -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/ns/td#DataSchema">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#const"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#enum"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#type"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Any JSON value specification.</rdfs:comment>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/ns/td#DataSchema"/>
     
 
 
@@ -567,7 +585,26 @@ For example, the Property interaction allows get and set operations. The protoco
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/td#Event">
-        <rdfs:comment>The Event Interaction Pattern describes event sources that asynchronously push messages. Here not state, but state transitions (events) are communicated (e.g., &quot;clicked&quot;). Events may be triggered by internal state changes that are not exposed as Properties. Events usually follow strong consistency, where messages need to be queued to ensure eventual delivery of all occured events.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/td#InteractionPattern"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#cancellation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Specification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#data"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Specification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#subscription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Specification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The Event Interaction Pattern describes event sources that asynchronously push messages. Here not state, but state transitions (events) are communicated (e.g., &quot;clicked&quot;). Events may be triggered by internal state changes that are not exposed as Properties. Events usually follow strong consistency, where messages need to be queued to ensure eventual delivery of all events that have occurred.</rdfs:comment>
         <rdfs:label>Event</rdfs:label>
     </owl:Class>
     
@@ -585,34 +622,64 @@ For example, the Property interaction allows get and set operations. The protoco
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#mediaType"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#contentType"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#rel"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#op"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#security"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#subprotocol"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Communication metadata where a service can be accessed by a client application. An interaction might have more than one form.</rdfs:comment>
-        <rdfs:label xml:lang="en">Form</rdfs:label>
+        <rdfs:comment xml:lang="en">Communication metadata indicating where a service can be accessed by a client application. An interaction might have more than one form.</rdfs:comment>
+        <rdfs:label>Form</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/td#IntegerSchema -->
+    <!-- http://www.w3.org/ns/td#InteractionPattern -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/ns/td#IntegerSchema">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/td#NumberSchema"/>
-        <rdfs:comment>A JSON integer value specification, i.e. numbers without a fractional part (&quot;type&quot;: &quot;integer&quot;).</rdfs:comment>
+    <owl:Class rdf:about="http://www.w3.org/ns/td#InteractionPattern">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#uriVariables"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#uriVariables"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/td#Form"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#forms"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Form"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#title"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Three interaction patterns are defined as subclasses: Property, Action and Event. When a concrete Property, Action or Event is defined in a Thing Description, it is called an &quot;interaction resource&quot;. Interactions between Things can be as simple as one Thing accessing another Thing&apos;s data to get or (in the case the data is also writable) change the representation of data such as metadata, status or mode. A Thing may also be interested in getting asynchronously notified of future changes in another Thing, or may want to initiate a process served in another Thing that may take some time to complete and monitor the progress. Interactions between Things may involve exchanges of data between them. This data can be either given as input by the client Thing, returned as output by the server Thing or both.</rdfs:comment>
+        <rdfs:label>InteractionPattern</rdfs:label>
     </owl:Class>
     
 
@@ -635,8 +702,8 @@ For example, the Property interaction allows get and set operations. The protoco
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#mediaType"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#href"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -645,66 +712,14 @@ For example, the Property interaction allows get and set operations. The protoco
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>A Web link, as specified by IETF RFC 8288 (https://tools.ietf.org/html/rfc8288).</rdfs:comment>
-        <rdfs:label>Link</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/td#NumberSchema -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/td#NumberSchema">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#maximum"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#double"/>
-                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                        </owl:unionOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#minimum"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#double"/>
-                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
-                        </owl:unionOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>A JSON number value specification (&quot;type&quot;: &quot;number&quot;).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/td#ObjectSchema -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/td#ObjectSchema">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#properties"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#required"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#type"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>A JSON object specification (&quot;type&quot;: &quot;object&quot;).</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Web link, as specified by IETF RFC 8288 (https://tools.ietf.org/html/rfc8288).</rdfs:comment>
+        <rdfs:label>Link</rdfs:label>
     </owl:Class>
     
 
@@ -713,90 +728,27 @@ For example, the Property interaction allows get and set operations. The protoco
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/td#Property">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#forms"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Form"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#schema"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#label"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/td#Data"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/td#InteractionPattern"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/td#observable"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#writable"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Properties expose internal state of a Thing that can be directly accessed (get) and optionally manipulated (set). In addition, Things can also choose to make Properties observable by pushing the new state (not an event) after a change; this must follow eventual consistency (also see CAP Theorem).</rdfs:comment>
-        <rdfs:label xml:lang="en">Property</rdfs:label>
+        <rdfs:comment xml:lang="en">Properties expose internal state of a Thing that can be directly retrieved (get) and optionally modified (set). In addition, Things can also choose to make Properties observable by pushing the new state (not an event) after a change; this must follow eventual consistency (also see CAP Theorem).</rdfs:comment>
+        <rdfs:label>Property</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/td#Security -->
+    <!-- http://www.w3.org/ns/td#Specification -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/ns/td#Security">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#in"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#scheme"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The (optional) security field can be used to provide access metadata (self-contained) information of the Thing for securely transmitting information via all its resources. Also see Section Security Consideration. Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#security-metadata</rdfs:comment>
-        <rdfs:label xml:lang="en">Security</rdfs:label>
-        <ns:term_status xml:lang="en">testing</ns:term_status>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/td#SimpleDataSchema -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/td#SimpleDataSchema">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/ns/td#BooleanSchema"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/td#NumberSchema"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/td#StringSchema"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
+    <owl:Class rdf:about="http://www.w3.org/ns/td#Specification">
+        <rdfs:comment xml:lang="en">Data specification (e.g. a JSON schema) to use for validation of concrete data exchanged between servients.</rdfs:comment>
+        <rdfs:label>Specification</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://schema.org/PropertyValueSpecification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/td#StringSchema -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/td#StringSchema">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/td#DataSchema"/>
-        <rdfs:comment>A JSON string value specification (&quot;type&quot;: &quot;string&quot;).</rdfs:comment>
     </owl:Class>
     
 
@@ -814,7 +766,7 @@ For example, the Property interaction allows get and set operations. The protoco
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/td#events"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Property"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Event"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -825,8 +777,14 @@ For example, the Property interaction allows get and set operations. The protoco
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#securityDefinition"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Security"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#properties"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#version"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/td#Versioning"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -843,13 +801,19 @@ For example, the Property interaction allows get and set operations. The protoco
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#created"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/td#description"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#id"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#lastModified"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -859,9 +823,41 @@ For example, the Property interaction allows get and set operations. The protoco
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Describes a physical and/or virtual Thing (may represent one or more physical and / or virtual Things) in the Web of Thing context.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes a physical and/or virtual Thing (may represent one or more physical and/or virtual Things) in the Web of Things context.</rdfs:comment>
         <rdfs:label xml:lang="en">Thing</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/td#Versioning -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/td#Versioning">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/td#instance"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Carries version information about the TD instance. If required, additional version information such as firmware and hardware version (term definitions outside of the TD namespace) can be extended here.</rdfs:comment>
+        <rdfs:label>Versioning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/td#version">
+        <rdfs:comment xml:lang="en">Provides version information.</rdfs:comment>
+        <rdfs:label>version</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 

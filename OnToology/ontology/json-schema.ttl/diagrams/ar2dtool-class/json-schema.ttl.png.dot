@@ -1,0 +1,46 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "jsonschema:DataSchema" "jsonschema:ArraySchema" ; /*classes style*/
+	"NULL" -> "373d60c0:16716b7df63:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "jsonschema:maximum" [ label = "owl:onProperty" ];
+	"NULL" -> "jsonschema:items" [ label = "owl:onProperty" ];
+	"NULL" -> "jsonschema:minItems" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:integer" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "xsd:unsignedInt" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "373d60c0:16716b7df63:-7ffa" [ label = "owl:unionOf" ];
+	"NULL" -> "279c083ffa27da0ea7ed5a7111c9ec69" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "xsd:double" [ label = "rdf:first" ];
+	"NULL" -> "jsonschema:maxItems" [ label = "owl:onProperty" ];
+	"NULL" -> "b214d37f5bd3b29ec5b4375f905c4429" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "jsonschema:required" [ label = "owl:onProperty" ];
+	"NULL" -> "373d60c0:16716b7df63:-7ff9" [ label = "rdf:rest" ];
+	"NULL" -> "373d60c0:16716b7df63:-7ffc" [ label = "owl:unionOf" ];
+	"NULL" -> "jsonschema:const" [ label = "owl:onProperty" ];
+	"NULL" -> "rdfs:Literal" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "jsonschema:minimum" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:integer" [ label = "rdf:first" ];
+	"NULL" -> "jsonschema:enum" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "jsonschema:properties" [ label = "owl:onProperty" ];
+	"NULL" -> "jsonschema:DataSchema" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "jsonschema:type" [ label = "owl:onProperty" ];
+	"jsonschema:minimum" -> "http://schema.org/minValue" [ label = "rdfs:seeAlso" ];
+	"jsonschema:maximum" -> "http://schema.org/maxValue" [ label = "rdfs:seeAlso" ];
+	"jsonschema:" -> "mailto:victor.charpenay@siemens.com" [ label = "dcterms:creator" ];
+	"jsonschema:" -> "https://www.w3.org/WoT/WG/" [ label = "dc:publisher" ];
+	"jsonschema:" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "dcterms:license" ];
+	"owl:Thing" -> "xsd:string" [ label = "jsonschema:required" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "jsonschema:unit" ];
+	"owl:Thing" -> "xsd:unsignedInt" [ label = "jsonschema:minItems" ];
+	"owl:Thing" -> "xsd:unsignedInt" [ label = "jsonschema:maxItems" ];
+	"owl:Thing" -> "xsd:string" [ label = "jsonschema:writeOnly" ];
+	"owl:Thing" -> "xsd:double" [ label = "jsonschema:minimum" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "jsonschema:const" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "jsonschema:enum" ];
+	"owl:Thing" -> "xsd:string" [ label = "jsonschema:readOnly" ];
+	"jsonschema:ArraySchema" -> "jsonschema:DataSchema" [ label = "jsonschema:items" ];
+	"owl:Thing" -> "xsd:double" [ label = "jsonschema:maximum" ];
+
+}

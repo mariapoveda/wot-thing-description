@@ -1,0 +1,9 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "JSON Schema in RDF";
+	 prov:wasAttributedTo <mailto:victor.charpenay@siemens.com>;
+	 dc:creator <mailto:victor.charpenay@siemens.com>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.

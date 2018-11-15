@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/ns/wot-security#"
+     xml:base="http://www.w3.org/ns/wot-security"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.w3.org/ns/wot-security#">
+        <dc:title xml:lang="en">Security mechanisms for the Web of Things</dc:title>
+        <terms:contributor rdf:resource="mailto:victor.charpenay@siemens.com"/>
+        <terms:creator rdf:resource="mailto:michael.mccool@intel.com"/>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <vann:preferredNamespacePrefix>wotsec</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://www.w3.org/ns/wot-security#</vann:preferredNamespaceUri>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#alg -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#alg">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Encoding, encryption, or digest algorithm (one of MD5, ES256, or ES512-256).</rdfs:comment>
+        <rdfs:label>alg</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#authorization -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#authorization">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">URI of the authorization server.</rdfs:comment>
+        <rdfs:label>authorization</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#description"/>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#flow -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#flow">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Authorization flow (one of implicit, password, client, or code)</rdfs:comment>
+        <rdfs:label>flow</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#format -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#format">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Specifies format of security authentication information (one of jwt, jwe, or jws).</rdfs:comment>
+        <rdfs:label>format</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#identity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#identity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Pre-shared key identity</rdfs:comment>
+        <rdfs:label>identity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#in -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#in">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Specifies the location of security authentication information (one of header, query, body, or cookie).</rdfs:comment>
+        <rdfs:label>in</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name for query, header, or cookie parameters.</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#proxy -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#proxy">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">URI of the proxy server this security configuration provides access to.  If not given, the corresponding security configuration is for the endpoint.</rdfs:comment>
+        <rdfs:label>proxy</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#qop -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#qop">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Quality of protection (one of auth or auth-int).</rdfs:comment>
+        <rdfs:label>qop</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#refresh -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#refresh">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">URI of the refresh server</rdfs:comment>
+        <rdfs:label>refresh</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#scheme -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#scheme">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identification of security mechanism being configured.</rdfs:comment>
+        <rdfs:label>scheme</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#scopes -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#scopes">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Set of authorization scope identifiers, provided as an array.  These are provided in tokens returned by an authorization server and associated with forms in order to identify what resources a client may access and how.</rdfs:comment>
+        <rdfs:label>scopes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#token -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wot-security#token">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">URI of the token server.</rdfs:comment>
+        <rdfs:label>token</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#APIKeySecurityScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/wot-security#APIKeySecurityScheme">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
+                <owl:hasValue>apikey</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#in"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">API key authentication security configuration (&quot;scheme&quot;: &quot;apikey&quot;).  This is for the case where the access token is opaque and is not using a standard token format.</rdfs:comment>
+        <rdfs:label>APIKeySecurityScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#BasicSecurityScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/wot-security#BasicSecurityScheme">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
+                <owl:hasValue>basic</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#in"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Basic authentication security configuration (&quot;scheme&quot;: &quot;basic&quot;), using an unencrypted username and password.  This scheme should be used with some other security mechanism providing confidentiality, for example, TLS.</rdfs:comment>
+        <rdfs:label>BasicSecurityScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#BearerSecurityScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/wot-security#BearerSecurityScheme">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
+                <owl:hasValue>bearer</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#alg"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#authorization"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#format"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#in"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Bearer token authentication security configuration (&quot;scheme&quot;: &quot;bearer&quot;).  This scheme is intended for situations where bearer tokens are used independently of OAuth2.  If the oauth2 scheme is specified it is not generally necessary to specify this scheme as well as it is implied.</rdfs:comment>
+        <rdfs:label>BearerSecurityScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#CertSecurityScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/wot-security#CertSecurityScheme">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
+                <owl:hasValue>cert</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#identity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Certificate-base asymmetric key security configuration (&quot;scheme&quot;: &quot;cert&quot;).</rdfs:comment>
+        <rdfs:label>CertSecurityScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#DigestSecurityScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/wot-security#DigestSecurityScheme">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
+                <owl:hasValue>digest</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#in"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#qop"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Digest authentication security configuration (&quot;scheme&quot;: &quot;digest&quot;). This scheme is similar to basic authentication but with added features to avoid man-in-the-middle attacks.</rdfs:comment>
+        <rdfs:label>DigestSecurityScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#NoSecurityScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/wot-security#NoSecurityScheme">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
+                <owl:hasValue>nosec</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+        <rdfs:comment xml:lang="en">A security configuration corresponding to (&quot;scheme&quot;: &quot;nosec&quot;), indicating there is no authentication or other mechanism required to access the resource.</rdfs:comment>
+        <rdfs:label>NoSecurityScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#OAuth2SecurityScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/wot-security#OAuth2SecurityScheme">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
+                <owl:hasValue>oauth2</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#authorization"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#flow"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#refresh"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scopes"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#token"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">OAuth2 authentication security configuration (&quot;scheme&quot;: &quot;oauth2&quot;).  For the implicit flow the authorization and scopes are required.  For the password and client flows both token and scopes are required.  For the code flow authorization, token, and scopes are required.</rdfs:comment>
+        <rdfs:label>OAuth2SecurityScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#PSKSecurityScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/wot-security#PSKSecurityScheme">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
+                <owl:hasValue>psk</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#identity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Pre-shared key authentication security configuration (&quot;scheme&quot;: &quot;psk&quot;).</rdfs:comment>
+        <rdfs:label>PSKSecurityScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#PoPSecurityScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/wot-security#PoPSecurityScheme">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
+                <owl:hasValue>pop</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#alg"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#authorization"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#format"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#in"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Proof-of-possession token authentication security configuration (&quot;scheme&quot;: &quot;pop&quot;).</rdfs:comment>
+        <rdfs:label>PoPSecurityScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#PublicSecurityScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/wot-security#PublicSecurityScheme">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
+                <owl:hasValue>public</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wot-security#SecurityScheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#identity"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Raw public key asymmetric key security configuration (&quot;scheme&quot;: &quot;public&quot;).</rdfs:comment>
+        <rdfs:label>PublicSecurityScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/wot-security#SecurityScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/wot-security#SecurityScheme">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#proxy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/wot-security#scheme"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+

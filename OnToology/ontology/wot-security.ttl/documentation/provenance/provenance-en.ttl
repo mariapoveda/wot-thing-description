@@ -1,0 +1,11 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "Security mechanisms for the Web of Things";
+	 prov:wasAttributedTo <mailto:michael.mccool@intel.com>;
+	 dc:creator <mailto:michael.mccool@intel.com>;
+	 prov:wasAttributedTo <mailto:victor.charpenay@siemens.com>;
+	 dc:contributor <mailto:victor.charpenay@siemens.com>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.

@@ -1,0 +1,13 @@
+{
+  "@context" : {
+    "iri" : {
+      "@id" : "http://www.w3.org/ns/json-ld#iri"
+    },
+    "Context" : {
+      "@id" : "http://www.w3.org/ns/json-ld#Context"
+    },
+    "Mapping" : {
+      "@id" : "http://www.w3.org/ns/json-ld#Mapping"
+    }
+  }
+}

@@ -1,0 +1,581 @@
+<h2  id="crossreference" class="list">Cross reference for JSON Schema in RDF classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by JSON Schema in RDF.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ArraySchema" title="http://www.w3.org/ns/json-schema#ArraySchema">
+            <span>array schema</span>
+         </a>
+      </li>
+      <li>
+         <a href="#BooleanSchema" title="http://www.w3.org/ns/json-schema#BooleanSchema">
+            <span>boolean schema</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DataSchema" title="http://www.w3.org/ns/json-schema#DataSchema">
+            <span>data schema</span>
+         </a>
+      </li>
+      <li>
+         <a href="#IntegerSchema" title="http://www.w3.org/ns/json-schema#IntegerSchema">
+            <span>integer schema</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NumberSchema" title="http://www.w3.org/ns/json-schema#NumberSchema">
+            <span>number schema</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ObjectSchema" title="http://www.w3.org/ns/json-schema#ObjectSchema">
+            <span>object schema</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StringSchema" title="http://www.w3.org/ns/json-schema#StringSchema">
+            <span>string schema</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="ArraySchema">
+      <h3>array schema<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#ArraySchema</p>
+      <div class="comment">
+         <span class="markdown">A JSON array specification ("type": "array").</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#type" title="http://www.w3.org/ns/json-schema#type">type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> array</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataSchema" title="http://www.w3.org/ns/json-schema#DataSchema">data schema</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#items" title="http://www.w3.org/ns/json-schema#items">items</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#DataSchema" title="http://www.w3.org/ns/json-schema#DataSchema">data schema</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#maxItems" title="http://www.w3.org/ns/json-schema#maxItems">maxItems</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#unsignedInt">unsigned int</span>
+         </dd>
+         <dd>
+            <a href="#minItems" title="http://www.w3.org/ns/json-schema#minItems">minItems</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#unsignedInt">unsigned int</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#items" title="http://www.w3.org/ns/json-schema#items">items</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BooleanSchema">
+      <h3>boolean schema<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#BooleanSchema</p>
+      <div class="comment">
+         <span class="markdown">A JSON boolean value specification ("type": "boolean").</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#type" title="http://www.w3.org/ns/json-schema#type">type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> boolean</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataSchema" title="http://www.w3.org/ns/json-schema#DataSchema">data schema</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataSchema">
+      <h3>data schema<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#DataSchema</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#const" title="http://www.w3.org/ns/json-schema#const">const</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+         </dd>
+         <dd>
+            <a href="#enum" title="http://www.w3.org/ns/json-schema#enum">enum</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+         </dd>
+         <dd>
+            <a href="#type" title="http://www.w3.org/ns/json-schema#type">type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ArraySchema" title="http://www.w3.org/ns/json-schema#ArraySchema">array schema</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#BooleanSchema" title="http://www.w3.org/ns/json-schema#BooleanSchema">boolean schema</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#IntegerSchema" title="http://www.w3.org/ns/json-schema#IntegerSchema">integer schema</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NumberSchema" title="http://www.w3.org/ns/json-schema#NumberSchema">number schema</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ObjectSchema" title="http://www.w3.org/ns/json-schema#ObjectSchema">object schema</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StringSchema" title="http://www.w3.org/ns/json-schema#StringSchema">string schema</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#items" title="http://www.w3.org/ns/json-schema#items">items</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IntegerSchema">
+      <h3>integer schema<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#IntegerSchema</p>
+      <div class="comment">
+         <span class="markdown">A JSON integer value specification, that is, numbers without a fractional part ("type": "integer").</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#type" title="http://www.w3.org/ns/json-schema#type">type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> integer</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataSchema" title="http://www.w3.org/ns/json-schema#DataSchema">data schema</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#maximum" title="http://www.w3.org/ns/json-schema#maximum">maximum</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+         </dd>
+         <dd>
+            <a href="#minimum" title="http://www.w3.org/ns/json-schema#minimum">minimum</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NumberSchema">
+      <h3>number schema<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#NumberSchema</p>
+      <div class="comment">
+         <span class="markdown">A JSON number value specification ("type": "number").</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#type" title="http://www.w3.org/ns/json-schema#type">type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> number</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataSchema" title="http://www.w3.org/ns/json-schema#DataSchema">data schema</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#maximum" title="http://www.w3.org/ns/json-schema#maximum">maximum</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span> 
+            <span class="logic">or</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+         </dd>
+         <dd>
+            <a href="#minimum" title="http://www.w3.org/ns/json-schema#minimum">minimum</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span> 
+            <span class="logic">or</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ObjectSchema">
+      <h3>object schema<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#ObjectSchema</p>
+      <div class="comment">
+         <span class="markdown">A JSON object specification ("type": "object").</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#type" title="http://www.w3.org/ns/json-schema#type">type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> object</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataSchema" title="http://www.w3.org/ns/json-schema#DataSchema">data schema</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#properties" title="http://www.w3.org/ns/json-schema#properties">properties</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#DataSchema" title="http://www.w3.org/ns/json-schema#DataSchema">data schema</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#required" title="http://www.w3.org/ns/json-schema#required">required</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StringSchema">
+      <h3>string schema<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#StringSchema</p>
+      <div class="comment">
+         <span class="markdown">A JSON string value specification ("type": "string").</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#type" title="http://www.w3.org/ns/json-schema#type">type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> string</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataSchema" title="http://www.w3.org/ns/json-schema#DataSchema">data schema</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#items" title="http://www.w3.org/ns/json-schema#items">items</a>
+      </li>
+      <li>
+         <a href="#properties" title="http://www.w3.org/ns/json-schema#properties">properties</a>
+      </li>
+   </ul>
+   <div class="entity" id="items">
+      <h3>items<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#items</p>
+      <div class="comment">
+         <span class="markdown">Used to define the characteristics of an array.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ArraySchema" title="http://www.w3.org/ns/json-schema#ArraySchema">array schema</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DataSchema" title="http://www.w3.org/ns/json-schema#DataSchema">data schema</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="properties">
+      <h3>properties<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#properties</p>
+      <div class="comment">
+         <span class="markdown">Data schema nested definitions</span>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#const" title="http://www.w3.org/ns/json-schema#const">const</a>
+      </li>
+      <li>
+         <a href="#enum" title="http://www.w3.org/ns/json-schema#enum">enum</a>
+      </li>
+      <li>
+         <a href="#maximum" title="http://www.w3.org/ns/json-schema#maximum">maximum</a>
+      </li>
+      <li>
+         <a href="#maxItems" title="http://www.w3.org/ns/json-schema#maxItems">maxItems</a>
+      </li>
+      <li>
+         <a href="#minimum" title="http://www.w3.org/ns/json-schema#minimum">minimum</a>
+      </li>
+      <li>
+         <a href="#minItems" title="http://www.w3.org/ns/json-schema#minItems">minItems</a>
+      </li>
+      <li>
+         <a href="#readOnly" title="http://www.w3.org/ns/json-schema#readOnly">readOnly</a>
+      </li>
+      <li>
+         <a href="#required" title="http://www.w3.org/ns/json-schema#required">required</a>
+      </li>
+      <li>
+         <a href="#type" title="http://www.w3.org/ns/json-schema#type">type</a>
+      </li>
+      <li>
+         <a href="#unit" title="http://www.w3.org/ns/json-schema#unit">unit</a>
+      </li>
+      <li>
+         <a href="#writeOnly" title="http://www.w3.org/ns/json-schema#writeOnly">writeOnly</a>
+      </li>
+   </ul>
+   <div class="entity" id="const">
+      <h3>const<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#const</p>
+      <div class="comment">
+         <span class="markdown">Provides a constant value.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="enum">
+      <h3>enum<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#enum</p>
+      <div class="comment">
+         <span class="markdown">Restricted set of values provided as an array.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="maximum">
+      <h3>maximum<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#maximum</p>
+      <div class="comment">
+         <span class="markdown">Specifies a maximum numeric value. Only applicable for associated number or integer types.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="maxItems">
+      <h3>maxItems<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#maxItems</p>
+      <div class="comment">
+         <span class="markdown">Defines the maximum number of items that have to be in the array.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#unsignedInt">unsigned int</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="minimum">
+      <h3>minimum<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#minimum</p>
+      <div class="comment">
+         <span class="markdown">Specifies a minimum numeric value. Only applicable for associated number or integer types.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="minItems">
+      <h3>minItems<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#minItems</p>
+      <div class="comment">
+         <span class="markdown">Defines the minimum number of items that have to be in the array.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#unsignedInt">unsigned int</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="readOnly">
+      <h3>readOnly<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#readOnly</p>
+      <div class="comment">
+         <span class="markdown">Boolean value that indicates whether a property interaction / value is read only (=true) or not (=false)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="required">
+      <h3>required<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#required</p>
+      <div class="comment">
+         <span class="markdown">Defines which members of the object type are mandatory.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="type">
+      <h3>type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#type</p>
+      <div class="comment">
+         <span class="markdown">Assignment of JSON-based data types compatible with JSON Schema (one of boolean, integer, number, string, object, array, or null).</span>
+      </div>
+   </div>
+   <div class="entity" id="unit">
+      <h3>unit<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#unit</p>
+      <div class="comment">
+         <span class="markdown">Provides unit information that is used, e.g., in international science, engineering, and business.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="writeOnly">
+      <h3>writeOnly<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/json-schema#writeOnly</p>
+      <div class="comment">
+         <span class="markdown">Boolean value that indicates whether a property interaction / value is write only (=true) or not (=false)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

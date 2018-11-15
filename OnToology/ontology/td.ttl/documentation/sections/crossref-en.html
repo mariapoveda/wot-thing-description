@@ -7,19 +7,7 @@ This section provides details for each class and property defined by Ontology mo
          <a href="#Action" title="http://www.w3.org/ns/td#Action">Action</a>
       </li>
       <li>
-         <a href="#ArraySchema" title="http://www.w3.org/ns/td#ArraySchema">
-            <span>array schema</span>
-         </a>
-      </li>
-      <li>
-         <a href="#BooleanSchema" title="http://www.w3.org/ns/td#BooleanSchema">
-            <span>boolean schema</span>
-         </a>
-      </li>
-      <li>
-         <a href="#DataSchema" title="http://www.w3.org/ns/td#DataSchema">
-            <span>data schema</span>
-         </a>
+         <a href="#Data" title="http://www.w3.org/ns/td#Data">Data</a>
       </li>
       <li>
          <a href="#Event" title="http://www.w3.org/ns/td#Event">Event</a>
@@ -28,41 +16,22 @@ This section provides details for each class and property defined by Ontology mo
          <a href="#Form" title="http://www.w3.org/ns/td#Form">Form</a>
       </li>
       <li>
-         <a href="#IntegerSchema" title="http://www.w3.org/ns/td#IntegerSchema">
-            <span>integer schema</span>
-         </a>
+         <a href="#InteractionPattern" title="http://www.w3.org/ns/td#InteractionPattern">InteractionPattern</a>
       </li>
       <li>
          <a href="#Link" title="http://www.w3.org/ns/td#Link">Link</a>
       </li>
       <li>
-         <a href="#NumberSchema" title="http://www.w3.org/ns/td#NumberSchema">
-            <span>number schema</span>
-         </a>
-      </li>
-      <li>
-         <a href="#ObjectSchema" title="http://www.w3.org/ns/td#ObjectSchema">
-            <span>object schema</span>
-         </a>
-      </li>
-      <li>
          <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
       </li>
       <li>
-         <a href="#Security" title="http://www.w3.org/ns/td#Security">Security</a>
-      </li>
-      <li>
-         <a href="#SimpleDataSchema" title="http://www.w3.org/ns/td#SimpleDataSchema">
-            <span>simple data schema</span>
-         </a>
-      </li>
-      <li>
-         <a href="#StringSchema" title="http://www.w3.org/ns/td#StringSchema">
-            <span>string schema</span>
-         </a>
+         <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
       </li>
       <li>
          <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+      </li>
+      <li>
+         <a href="#Versioning" title="http://www.w3.org/ns/td#Versioning">Versioning</a>
       </li>
    </ul>
    <div class="entity" id="Action">
@@ -73,42 +42,49 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#Action</p>
       <div class="comment">
-         <span class="markdown">Actions offer functions of the Thing. These functions may manipulate the interal state of a Thing in a way that is not possible through setting Properties. Examples are changing internal state that is not exposed as Property, changing multiple Properties, changing Properties over time or with a process that shall not be disclosed. Actions may also be pure functions, that is, they do not use any internal state at all, e.g., for processing input data and returning the result directly.</span>
+         <span class="markdown">Actions offer functions of the Thing. These functions may manipulate the interal state of a Thing in a way that is not possible through setting Properties. Examples are changing internal state that is not exposed as a Property, changing multiple Properties, changing Properties over time or with a process that should not be disclosed. Actions may also be pure functions, that is, they may not use any internal state at all, and may simply process input data and return a result that directly depends only on the input given.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#forms" title="http://www.w3.org/ns/td#forms">forms</a>
+            <a href="#InteractionPattern" title="http://www.w3.org/ns/td#InteractionPattern">InteractionPattern</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#idempotent" title="http://www.w3.org/ns/td#idempotent">idempotent</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#Form" title="http://www.w3.org/ns/td#Form">Form</a>
+            <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#input" title="http://www.w3.org/ns/td#input">input</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
+            <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#output" title="http://www.w3.org/ns/td#output">output</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
+            <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#description" title="http://www.w3.org/ns/td#description">description</a>
-            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="dotted" title="http://www.w3.org/ns/td#scope">scope</span>
+            <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
          <dd>
-            <a href="#label" title="http://www.w3.org/ns/td#label">label</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            <a href="#idempotent" title="http://www.w3.org/ns/td#idempotent">idempotent</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#input" title="http://www.w3.org/ns/td#input">input</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#output" title="http://www.w3.org/ns/td#output">output</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#safe" title="http://www.w3.org/ns/td#safe">safe</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -117,100 +93,34 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
       </dl>
    </div>
-   <div class="entity" id="ArraySchema">
-      <h3>array schema<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Data">
+      <h3>Data<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#ArraySchema</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#Data</p>
       <div class="comment">
-         <span class="markdown">A JSON array specification ("type": "array").</span>
+         <span class="markdown">Any part of a Thing that is represented by some piece of data (e.g. a temperarture quantity represented by a JSON number). Data and Specification are related in the sense that the former can embed specification elements (for the sake of conciseness), thus being its own specification.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DataSchema" title="http://www.w3.org/ns/td#DataSchema">data schema</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#items" title="http://www.w3.org/ns/td#items">items</a>
+            <a href="#specifiedBy" title="http://www.w3.org/ns/td#specifiedBy">specified by</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#DataSchema" title="http://www.w3.org/ns/td#DataSchema">data schema</a>
+            <span class="logic">some</span> 
+            <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#maxItems" title="http://www.w3.org/ns/td#maxItems">maxItems</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#unsignedInt">unsigned int</span>
-         </dd>
-         <dd>
-            <a href="#minItems" title="http://www.w3.org/ns/td#minItems">minItems</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#unsignedInt">unsigned int</span>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="BooleanSchema">
-      <h3>boolean schema<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#BooleanSchema</p>
-      <div class="comment">
-         <span class="markdown">A JSON boolean value specification ("type": "boolean").</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#DataSchema" title="http://www.w3.org/ns/td#DataSchema">data schema</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="DataSchema">
-      <h3>data schema<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#DataSchema</p>
-      <div class="comment">
-         <span class="markdown">Any JSON value specification.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#const" title="http://www.w3.org/ns/td#const">const</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
-         </dd>
-         <dd>
-            <a href="#enum" title="http://www.w3.org/ns/td#enum">enum</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
-         </dd>
-         <dd>
-            <a href="#type" title="http://www.w3.org/ns/td#type">type</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#ArraySchema" title="http://www.w3.org/ns/td#ArraySchema">array schema</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#BooleanSchema" title="http://www.w3.org/ns/td#BooleanSchema">boolean schema</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#NumberSchema" title="http://www.w3.org/ns/td#NumberSchema">number schema</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ObjectSchema" title="http://www.w3.org/ns/td#ObjectSchema">object schema</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#SimpleDataSchema" title="http://www.w3.org/ns/td#SimpleDataSchema">simple data schema</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#StringSchema" title="http://www.w3.org/ns/td#StringSchema">string schema</a>
+            <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#specifiedBy" title="http://www.w3.org/ns/td#specifiedBy">specified by</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -222,8 +132,48 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#Event</p>
       <div class="comment">
-         <span class="markdown">The Event Interaction Pattern describes event sources that asynchronously push messages. Here not state, but state transitions (events) are communicated (e.g., "clicked"). Events may be triggered by internal state changes that are not exposed as Properties. Events usually follow strong consistency, where messages need to be queued to ensure eventual delivery of all occured events.</span>
+         <span class="markdown">The Event Interaction Pattern describes event sources that asynchronously push messages. Here not state, but state transitions (events) are communicated (e.g., "clicked"). Events may be triggered by internal state changes that are not exposed as Properties. Events usually follow strong consistency, where messages need to be queued to ensure eventual delivery of all events that have occurred.</span>
       </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#InteractionPattern" title="http://www.w3.org/ns/td#InteractionPattern">InteractionPattern</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#cancellation" title="http://www.w3.org/ns/td#cancellation">cancellation</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#data" title="http://www.w3.org/ns/td#data">data</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#subscription" title="http://www.w3.org/ns/td#subscription">subscription</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#cancellation" title="http://www.w3.org/ns/td#cancellation">cancellation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#data" title="http://www.w3.org/ns/td#data">data</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#subscription" title="http://www.w3.org/ns/td#subscription">subscription</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#events" title="http://www.w3.org/ns/td#events">events</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="Form">
       <h3>Form<sup class="type-c" title="class">c</sup>
@@ -233,7 +183,7 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#Form</p>
       <div class="comment">
-         <span class="markdown">Communication metadata where a service can be accessed by a client application. An interaction might have more than one form.</span>
+         <span class="markdown">Communication metadata indicating where a service can be accessed by a client application. An interaction might have more than one form.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -244,40 +194,97 @@ This section provides details for each class and property defined by Ontology mo
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
          </dd>
          <dd>
-            <a href="#mediaType" title="http://www.w3.org/ns/td#mediaType">mediaType</a>
+            <a href="#contentType" title="http://www.w3.org/ns/td#contentType">contentType</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#rel" title="http://www.w3.org/ns/td#rel">rel</a>
+            <a href="#op" title="http://www.w3.org/ns/td#op">op</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#security" title="http://www.w3.org/ns/td#security">security</a>
+            <a href="#subprotocol" title="http://www.w3.org/ns/td#subprotocol">subprotocol</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#subprotocol" title="http://www.w3.org/ns/td#subprotocol">subprotocol</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#forms" title="http://www.w3.org/ns/td#forms">forms</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="IntegerSchema">
-      <h3>integer schema<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="InteractionPattern">
+      <h3>InteractionPattern<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#IntegerSchema</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#InteractionPattern</p>
       <div class="comment">
-         <span class="markdown">A JSON integer value specification, i.e. numbers without a fractional part ("type": "integer").</span>
+         <span class="markdown">Three interaction patterns are defined as subclasses: Property, Action and Event. When a concrete Property, Action or Event is defined in a Thing Description, it is called an "interaction resource". Interactions between Things can be as simple as one Thing accessing another Thing's data to get or (in the case the data is also writable) change the representation of data such as metadata, status or mode. A Thing may also be interested in getting asynchronously notified of future changes in another Thing, or may want to initiate a process served in another Thing that may take some time to complete and monitor the progress. Interactions between Things may involve exchanges of data between them. This data can be either given as input by the client Thing, returned as output by the server Thing or both.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#NumberSchema" title="http://www.w3.org/ns/td#NumberSchema">number schema</a>
+            <a href="#uriVariables" title="http://www.w3.org/ns/td#uriVariables">uriVariables</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/ns/td#DataSchema">data schema</span>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#uriVariables" title="http://www.w3.org/ns/td#uriVariables">uriVariables</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Form" title="http://www.w3.org/ns/td#Form">Form</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#forms" title="http://www.w3.org/ns/td#forms">forms</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Form" title="http://www.w3.org/ns/td#Form">Form</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#description" title="http://www.w3.org/ns/td#description">description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#title" title="http://www.w3.org/ns/td#title">title</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Action" title="http://www.w3.org/ns/td#Action">Action</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Event" title="http://www.w3.org/ns/td#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#forms" title="http://www.w3.org/ns/td#forms">forms</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#uriVariables" title="http://www.w3.org/ns/td#uriVariables">uriVariables</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#interactions" title="http://www.w3.org/ns/td#interactions">interactions</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -306,10 +313,10 @@ This section provides details for each class and property defined by Ontology mo
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
          </dd>
          <dd>
-            <a href="#mediaType" title="http://www.w3.org/ns/td#mediaType">mediaType</a>
+            <a href="#href" title="http://www.w3.org/ns/td#href">href</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
          </dd>
          <dd>
             <a href="#rel" title="http://www.w3.org/ns/td#rel">rel</a>
@@ -317,75 +324,23 @@ This section provides details for each class and property defined by Ontology mo
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
-      </dl>
-   </div>
-   <div class="entity" id="NumberSchema">
-      <h3>number schema<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#NumberSchema</p>
-      <div class="comment">
-         <span class="markdown">A JSON number value specification ("type": "number").</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
          <dd>
-            <a href="#DataSchema" title="http://www.w3.org/ns/td#DataSchema">data schema</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#maximum" title="http://www.w3.org/ns/td#maximum">maximum</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span> 
-            <span class="logic">or</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
-         </dd>
-         <dd>
-            <a href="#minimum" title="http://www.w3.org/ns/td#minimum">minimum</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span> 
-            <span class="logic">or</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#IntegerSchema" title="http://www.w3.org/ns/td#IntegerSchema">integer schema</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ObjectSchema">
-      <h3>object schema<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#ObjectSchema</p>
-      <div class="comment">
-         <span class="markdown">A JSON object specification ("type": "object").</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#DataSchema" title="http://www.w3.org/ns/td#DataSchema">data schema</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#properties" title="http://www.w3.org/ns/td#properties">properties</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#DataSchema" title="http://www.w3.org/ns/td#DataSchema">data schema</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#required" title="http://www.w3.org/ns/td#required">required</a>
+            <a href="#type" title="http://www.w3.org/ns/td#type">type</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#anchor" title="http://www.w3.org/ns/td#anchor">anchor</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#op" title="http://www.w3.org/ns/td#op">op</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#rel" title="http://www.w3.org/ns/td#rel">rel</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#links" title="http://www.w3.org/ns/td#links">links</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -397,29 +352,17 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#Property</p>
       <div class="comment">
-         <span class="markdown">Properties expose internal state of a Thing that can be directly accessed (get) and optionally manipulated (set). In addition, Things can also choose to make Properties observable by pushing the new state (not an event) after a change; this must follow eventual consistency (also see CAP Theorem).</span>
+         <span class="markdown">Properties expose internal state of a Thing that can be directly retrieved (get) and optionally modified (set). In addition, Things can also choose to make Properties observable by pushing the new state (not an event) after a change; this must follow eventual consistency (also see CAP Theorem).</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#forms" title="http://www.w3.org/ns/td#forms">forms</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#Form" title="http://www.w3.org/ns/td#Form">Form</a>
+            <a href="#Data" title="http://www.w3.org/ns/td#Data">Data</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#schema" title="http://www.w3.org/ns/td#schema">schema</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#DataSchema" title="http://www.w3.org/ns/td#DataSchema">data schema</a>
+            <a href="#InteractionPattern" title="http://www.w3.org/ns/td#InteractionPattern">InteractionPattern</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#label" title="http://www.w3.org/ns/td#label">label</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
             <a href="#observable" title="http://www.w3.org/ns/td#observable">observable</a>
@@ -427,94 +370,40 @@ This section provides details for each class and property defined by Ontology mo
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
+         <dt>is in domain of</dt>
          <dd>
-            <a href="#writable" title="http://www.w3.org/ns/td#writable">writable</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            <a href="#observable" title="http://www.w3.org/ns/td#observable">observable</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#input" title="http://www.w3.org/ns/td#input">input</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#items" title="http://www.w3.org/ns/td#items">items</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#output" title="http://www.w3.org/ns/td#output">output</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#properties" title="http://www.w3.org/ns/td#properties">properties</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#schema" title="http://www.w3.org/ns/td#schema">schema</a>
+            <a href="#properties" title="http://www.w3.org/ns/td#properties">properties</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Security">
-      <h3>Security<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Specification">
+      <h3>Specification<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#Security</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#Specification</p>
       <div class="comment">
-         <span class="markdown">The (optional) security field can be used to provide access metadata (self-contained) information of the Thing for securely transmitting information via all its resources. Also see Section Security Consideration. Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#security-metadata</span>
-      </div>
-      <dl>
-         <dt>Term status</dt>
-         <dd>testing</dd>
-      </dl>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#in" title="http://www.w3.org/ns/td#in">in</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#scheme" title="http://www.w3.org/ns/td#scheme">scheme</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="SimpleDataSchema">
-      <h3>simple data schema<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#SimpleDataSchema</p>
-      <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#BooleanSchema" title="http://www.w3.org/ns/td#BooleanSchema">boolean schema</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">or</span> 
-            <a href="#NumberSchema" title="http://www.w3.org/ns/td#NumberSchema">number schema</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">or</span> 
-            <a href="#StringSchema" title="http://www.w3.org/ns/td#StringSchema">string schema</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#DataSchema" title="http://www.w3.org/ns/td#DataSchema">data schema</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="StringSchema">
-      <h3>string schema<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#StringSchema</p>
-      <div class="comment">
-         <span class="markdown">A JSON string value specification ("type": "string").</span>
+         <span class="markdown">Data specification (e.g. a JSON schema) to use for validation of concrete data exchanged between servients.</span>
       </div>
       <dl class="description">
-         <dt>has super-classes</dt>
+         <dt>is in range of</dt>
          <dd>
-            <a href="#DataSchema" title="http://www.w3.org/ns/td#DataSchema">data schema</a>
-            <sup class="type-c" title="class">c</sup>
+            <a href="#cancellation" title="http://www.w3.org/ns/td#cancellation">cancellation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#data" title="http://www.w3.org/ns/td#data">data</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#idempotent" title="http://www.w3.org/ns/td#idempotent">idempotent</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#input" title="http://www.w3.org/ns/td#input">input</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#output" title="http://www.w3.org/ns/td#output">output</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#safe" title="http://www.w3.org/ns/td#safe">safe</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#specifiedBy" title="http://www.w3.org/ns/td#specifiedBy">specified by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#subscription" title="http://www.w3.org/ns/td#subscription">subscription</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -526,7 +415,7 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#Thing</p>
       <div class="comment">
-         <span class="markdown">Describes a physical and/or virtual Thing (may represent one or more physical and / or virtual Things) in the Web of Thing context.</span>
+         <span class="markdown">Describes a physical and/or virtual Thing (may represent one or more physical and/or virtual Things) in the Web of Things context.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -541,7 +430,7 @@ This section provides details for each class and property defined by Ontology mo
             <a href="#events" title="http://www.w3.org/ns/td#events">events</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
+            <a href="#Event" title="http://www.w3.org/ns/td#Event">Event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -552,10 +441,17 @@ This section provides details for each class and property defined by Ontology mo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#securityDefinition" title="http://www.w3.org/ns/td#securityDefinition">securityDefinitions</a>
+            <a href="#properties" title="http://www.w3.org/ns/td#properties">properties</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#Security" title="http://www.w3.org/ns/td#Security">Security</a>
+            <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#version" title="http://www.w3.org/ns/td#version">version</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Versioning" title="http://www.w3.org/ns/td#Versioning">Versioning</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -571,13 +467,19 @@ This section provides details for each class and property defined by Ontology mo
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
          </dd>
          <dd>
+            <a href="#created" title="http://www.w3.org/ns/td#created">created</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
             <a href="#description" title="http://www.w3.org/ns/td#description">description</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#id" title="http://www.w3.org/ns/td#id">id</a>
+            <a href="#lastModified" title="http://www.w3.org/ns/td#lastModified">lastModified</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -591,10 +493,41 @@ This section provides details for each class and property defined by Ontology mo
          <dt>is in domain of</dt>
          <dd>
             <a href="#actions" title="http://www.w3.org/ns/td#actions">actions</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#input" title="http://www.w3.org/ns/td#input">input</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#items" title="http://www.w3.org/ns/td#items">items</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#output" title="http://www.w3.org/ns/td#output">output</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#properties" title="http://www.w3.org/ns/td#properties">properties</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#base" title="http://www.w3.org/ns/td#base">base</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#created" title="http://www.w3.org/ns/td#created">created</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#events" title="http://www.w3.org/ns/td#events">events</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#interactions" title="http://www.w3.org/ns/td#interactions">interactions</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#lastModified" title="http://www.w3.org/ns/td#lastModified">lastModified</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#links" title="http://www.w3.org/ns/td#links">links</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#name" title="http://www.w3.org/ns/td#name">name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#properties" title="http://www.w3.org/ns/td#properties">properties</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#support" title="http://www.w3.org/ns/td#support">support</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#version" title="http://www.w3.org/ns/td#version">version</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Versioning">
+      <h3>Versioning<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#Versioning</p>
+      <div class="comment">
+         <span class="markdown">Carries version information about the TD instance. If required, additional version information such as firmware and hardware version (term definitions outside of the TD namespace) can be extended here.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#instance" title="http://www.w3.org/ns/td#instance">instance</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#version" title="http://www.w3.org/ns/td#version">version</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -606,16 +539,27 @@ This section provides details for each class and property defined by Ontology mo
          <a href="#actions" title="http://www.w3.org/ns/td#actions">actions</a>
       </li>
       <li>
+         <a href="#cancellation" title="http://www.w3.org/ns/td#cancellation">cancellation</a>
+      </li>
+      <li>
+         <a href="#data" title="http://www.w3.org/ns/td#data">data</a>
+      </li>
+      <li>
          <a href="#events" title="http://www.w3.org/ns/td#events">events</a>
       </li>
       <li>
          <a href="#forms" title="http://www.w3.org/ns/td#forms">forms</a>
       </li>
       <li>
+         <a href="#idempotent" title="http://www.w3.org/ns/td#idempotent">idempotent</a>
+      </li>
+      <li>
          <a href="#input" title="http://www.w3.org/ns/td#input">input</a>
       </li>
       <li>
-         <a href="#items" title="http://www.w3.org/ns/td#items">items</a>
+         <a href="#interactions" title="http://www.w3.org/ns/td#interactions">
+            <span>interactions</span>
+         </a>
       </li>
       <li>
          <a href="#links" title="http://www.w3.org/ns/td#links">links</a>
@@ -624,16 +568,29 @@ This section provides details for each class and property defined by Ontology mo
          <a href="#output" title="http://www.w3.org/ns/td#output">output</a>
       </li>
       <li>
-         <a href="#objectSchemaProperties" title="http://www.w3.org/ns/td#objectSchemaProperties">properties</a>
-      </li>
-      <li>
          <a href="#properties" title="http://www.w3.org/ns/td#properties">properties</a>
       </li>
       <li>
-         <a href="#schema" title="http://www.w3.org/ns/td#schema">schema</a>
+         <a href="#safe" title="http://www.w3.org/ns/td#safe">safe</a>
       </li>
       <li>
-         <a href="#securityDefinition" title="http://www.w3.org/ns/td#securityDefinition">securityDefinitions</a>
+         <a href="#security" title="http://www.w3.org/ns/td#security">security</a>
+      </li>
+      <li>
+         <a href="#specifiedBy" title="http://www.w3.org/ns/td#specifiedBy">
+            <span>specified by</span>
+         </a>
+      </li>
+      <li>
+         <a href="#subscription" title="http://www.w3.org/ns/td#subscription">subscription</a>
+      </li>
+      <li>
+         <a href="#uriVariables" title="http://www.w3.org/ns/td#uriVariables">uriVariables</a>
+      </li>
+      <li>
+         <a href="#version" title="http://www.w3.org/ns/td#version">
+            <span>version</span>
+         </a>
       </li>
    </ul>
    <div class="entity" id="actions">
@@ -644,10 +601,15 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#actions</p>
       <div class="comment">
-         <span class="markdown">Keeps all Action-based interaction pattern of the Thing.</span>
+         <span class="markdown">All Action-based interaction patterns of the Thing.</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#interactions" title="http://www.w3.org/ns/td#interactions">interactions</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
@@ -661,6 +623,56 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
+   <div class="entity" id="cancellation">
+      <h3>cancellation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#cancellation</p>
+      <div class="comment">
+         <span class="markdown">Defines any data that needs to be passed to cancel a subscription, e.g., a specific message to remove a Webhook</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Event" title="http://www.w3.org/ns/td#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="data">
+      <h3>data<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#data</p>
+      <div class="comment">
+         <span class="markdown">Defines the data schema of the Event instance messages pushed by the Thing.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Event" title="http://www.w3.org/ns/td#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="events">
       <h3>events<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -669,7 +681,26 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#events</p>
       <div class="comment">
-         <span class="markdown">Keeps all Event-based interaction pattern of the Thing.</span>
+         <span class="markdown">All Event-based interaction patterns of the Thing.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#interactions" title="http://www.w3.org/ns/td#interactions">interactions</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Event" title="http://www.w3.org/ns/td#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="forms">
@@ -682,6 +713,45 @@ This section provides details for each class and property defined by Ontology mo
       <div class="comment">
          <span class="markdown">Indicates one or more endpoints from which an interaction pattern is accessible</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#InteractionPattern" title="http://www.w3.org/ns/td#InteractionPattern">InteractionPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Form" title="http://www.w3.org/ns/td#Form">Form</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="idempotent">
+      <h3>idempotent<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#idempotent</p>
+      <div class="comment">
+         <span class="markdown">Signals if the action is idempotent (=true) or not. Informs if the action can be called repeatedly with the same outcome. </span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Action" title="http://www.w3.org/ns/td#Action">Action</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="input">
       <h3>input<sup class="type-op" title="object property">op</sup>
@@ -691,35 +761,39 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#input</p>
       <div class="comment">
-         <span class="markdown">link to the n-ary class that allows the declaration of the accepted data type of an action.</span>
+         <span class="markdown">Used to define the input data schema of the action.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+               <a href="#Action" title="http://www.w3.org/ns/td#Action">Action</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
+               <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="items">
-      <h3>items<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="interactions">
+      <h3>interactions<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#items</p>
-      <div class="comment">
-         <span class="markdown">Used to defines characteristics of an array.</span>
-      </div>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#interactions</p>
       <div class="description">
          <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#actions" title="http://www.w3.org/ns/td#actions">actions</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#events" title="http://www.w3.org/ns/td#events">events</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#properties" title="http://www.w3.org/ns/td#properties">properties</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
@@ -727,7 +801,7 @@ This section provides details for each class and property defined by Ontology mo
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
+               <a href="#InteractionPattern" title="http://www.w3.org/ns/td#InteractionPattern">InteractionPattern</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -741,7 +815,21 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#links</p>
       <div class="comment">
-         <span class="markdown">provides Web links to arbitrary resources that relate to the specified Thing Description.</span>
+         <span class="markdown">Provides Web links to arbitrary resources that relate to the specified Thing Description.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Link" title="http://www.w3.org/ns/td#Link">Link</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="output">
@@ -752,32 +840,21 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#output</p>
       <div class="comment">
-         <span class="markdown">link to the n-ary class that allows the declaration of the data type returned by an action.</span>
+         <span class="markdown">Used to define the output data schema of the action.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+               <a href="#Action" title="http://www.w3.org/ns/td#Action">Action</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
+               <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
-      </div>
-   </div>
-   <div class="entity" id="objectSchemaProperties">
-      <h3>properties<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#objectSchemaProperties</p>
-      <div class="comment">
-         <span class="markdown">Data schema nested definitions</span>
       </div>
    </div>
    <div class="entity" id="properties">
@@ -788,10 +865,15 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#properties</p>
       <div class="comment">
-         <span class="markdown">Keeps all Property-based interaction pattern of the Thing.</span>
+         <span class="markdown">All Property-based interaction patterns of the Thing.</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#interactions" title="http://www.w3.org/ns/td#interactions">interactions</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
@@ -805,35 +887,155 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="schema">
-      <h3>schema<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="safe">
+      <h3>safe<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#schema</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#safe</p>
       <div class="comment">
-         <span class="markdown">schema definition for values of the given object schema property.</span>
+         <span class="markdown">Signals if the action is safe (=true) or not. Used to signal if there is no internal state (cf. resource state) is changed when invoking an Action. In that case responses can be cached as example.</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Action" title="http://www.w3.org/ns/td#Action">Action</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
+               <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="securityDefinition">
-      <h3>securityDefinitions<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="security">
+      <h3>security<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#securityDefinition</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#security</p>
       <div class="comment">
-         <span class="markdown">Links a given Thing to the security information that indicates the access metadata information for securely transmitting information via all the resources of the Thing.</span>
+         <span class="markdown">Set of security configurations, provided as an array, that must all be satisfied for access to resources at or below the current level, if not overridden at a lower level.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Form" title="http://www.w3.org/ns/td#Form">Form</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#InteractionPattern" title="http://www.w3.org/ns/td#InteractionPattern">InteractionPattern</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="specifiedBy">
+      <h3>specified by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#specifiedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Data" title="http://www.w3.org/ns/td#Data">Data</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="subscription">
+      <h3>subscription<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#subscription</p>
+      <div class="comment">
+         <span class="markdown">Defines data that needs to be passed upon subscription, e.g., filters or message format for setting up Webhooks.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Event" title="http://www.w3.org/ns/td#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Specification" title="http://www.w3.org/ns/td#Specification">Specification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="uriVariables">
+      <h3>uriVariables<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#uriVariables</p>
+      <div class="comment">
+         <span class="markdown">Define URI template variables as collection based on DataSchema declarations.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#InteractionPattern" title="http://www.w3.org/ns/td#InteractionPattern">InteractionPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/ns/td#DataSchema">data schema</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="version">
+      <h3>version<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#version</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Versioning" title="http://www.w3.org/ns/td#Versioning">Versioning</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#version">data property</a>
+            </dd>
+         </dl>
       </div>
    </div>
 </div><div id="dataproperties">
@@ -846,40 +1048,22 @@ This section provides details for each class and property defined by Ontology mo
          <a href="#base" title="http://www.w3.org/ns/td#base">base</a>
       </li>
       <li>
-         <a href="#const" title="http://www.w3.org/ns/td#const">const</a>
+         <a href="#contentType" title="http://www.w3.org/ns/td#contentType">contentType</a>
+      </li>
+      <li>
+         <a href="#created" title="http://www.w3.org/ns/td#created">created</a>
       </li>
       <li>
          <a href="#description" title="http://www.w3.org/ns/td#description">description</a>
       </li>
       <li>
-         <a href="#enum" title="http://www.w3.org/ns/td#enum">enum</a>
-      </li>
-      <li>
          <a href="#href" title="http://www.w3.org/ns/td#href">href</a>
       </li>
       <li>
-         <a href="#id" title="http://www.w3.org/ns/td#id">id</a>
+         <a href="#instance" title="http://www.w3.org/ns/td#instance">instance</a>
       </li>
       <li>
-         <a href="#in" title="http://www.w3.org/ns/td#in">in</a>
-      </li>
-      <li>
-         <a href="#label" title="http://www.w3.org/ns/td#label">label</a>
-      </li>
-      <li>
-         <a href="#maximum" title="http://www.w3.org/ns/td#maximum">maximum</a>
-      </li>
-      <li>
-         <a href="#maxItems" title="http://www.w3.org/ns/td#maxItems">maxItems</a>
-      </li>
-      <li>
-         <a href="#mediaType" title="http://www.w3.org/ns/td#mediaType">mediaType</a>
-      </li>
-      <li>
-         <a href="#minimum" title="http://www.w3.org/ns/td#minimum">minimum</a>
-      </li>
-      <li>
-         <a href="#minItems" title="http://www.w3.org/ns/td#minItems">minItems</a>
+         <a href="#lastModified" title="http://www.w3.org/ns/td#lastModified">lastModified</a>
       </li>
       <li>
          <a href="#name" title="http://www.w3.org/ns/td#name">name</a>
@@ -888,25 +1072,27 @@ This section provides details for each class and property defined by Ontology mo
          <a href="#observable" title="http://www.w3.org/ns/td#observable">observable</a>
       </li>
       <li>
+         <a href="#op" title="http://www.w3.org/ns/td#op">op</a>
+      </li>
+      <li>
          <a href="#rel" title="http://www.w3.org/ns/td#rel">rel</a>
       </li>
       <li>
-         <a href="#required" title="http://www.w3.org/ns/td#required">required</a>
-      </li>
-      <li>
-         <a href="#scheme" title="http://www.w3.org/ns/td#scheme">scheme</a>
-      </li>
-      <li>
-         <a href="#security" title="http://www.w3.org/ns/td#security">security</a>
+         <a href="#subprotocol" title="http://www.w3.org/ns/td#subprotocol">subprotocol</a>
       </li>
       <li>
          <a href="#support" title="http://www.w3.org/ns/td#support">support</a>
       </li>
       <li>
+         <a href="#title" title="http://www.w3.org/ns/td#title">title</a>
+      </li>
+      <li>
          <a href="#type" title="http://www.w3.org/ns/td#type">type</a>
       </li>
       <li>
-         <a href="#writable" title="http://www.w3.org/ns/td#writable">writable</a>
+         <a href="#version" title="http://www.w3.org/ns/td#version">
+            <span>version</span>
+         </a>
       </li>
    </ul>
    <div class="entity" id="anchor">
@@ -919,6 +1105,19 @@ This section provides details for each class and property defined by Ontology mo
       <div class="comment">
          <span class="markdown">By default, the context of a link is the URL of the representation it is associated with, and is serialised as a URI. When present, the anchor parameter overrides this with another URI, such as a fragment of this resource, or a third resource (i.e., when the anchor value is an absolute URI).</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Link" title="http://www.w3.org/ns/td#Link">Link</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="base">
       <h3>base<sup class="type-dp" title="data property">dp</sup>
@@ -928,10 +1127,15 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#base</p>
       <div class="comment">
-         <span class="markdown">Define base URI that is valid for all defined local interaction resources. All other URIs in the TD must then be resolved using the algorithm defined in [[!RFC3986]]. This field is optional.</span>
+         <span class="markdown">Define the base URI that is valid for all defined local interaction resources. All other URIs in the TD must then be resolved using the algorithm defined in [[!RFC3986]].</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
@@ -939,21 +1143,50 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="const">
-      <h3>const<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="contentType">
+      <h3>contentType<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#const</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#contentType</p>
       <div class="comment">
-         <span class="markdown">Provides a constant value.</span>
+         <span class="markdown">Assign a content type based on a media type [[!MEDIATYPES]] (e.g., 'application/json) and (optional) parameters (e.g., 'charset=utf-8')</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Form" title="http://www.w3.org/ns/td#Form">Form</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="created">
+      <h3>created<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#created</p>
+      <div class="comment">
+         <span class="markdown">Provides information when the TD instance was created.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
@@ -966,32 +1199,13 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#description</p>
       <div class="comment">
-         <span class="markdown">Provides additionel (human) readable information.</span>
+         <span class="markdown">Provides additional (human-readable) information.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="enum">
-      <h3>enum<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#enum</p>
-      <div class="comment">
-         <span class="markdown">Restricted set of values provided as array.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
             </dd>
          </dl>
       </div>
@@ -1004,12 +1218,20 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#href</p>
       <div class="comment">
-         <span class="markdown">URI of the endpoint where an interaction pattern is provided</span>
+         <span class="markdown">URI of the endpoint where an interaction pattern is provided.</span>
       </div>
       <div class="description">
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Form" title="http://www.w3.org/ns/td#Form">Form</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Link" title="http://www.w3.org/ns/td#Link">Link</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
@@ -1017,34 +1239,15 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="id">
-      <h3>id<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="instance">
+      <h3>instance<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#id</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#instance</p>
       <div class="comment">
-         <span class="markdown">Defines unique URI (includes also URNs) ID of the Thing.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="in">
-      <h3>in<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#in</p>
-      <div class="comment">
-         <span class="markdown">Specifies location of the authentication information</span>
+         <span class="markdown">Provides a version identicator of this TD instance.</span>
       </div>
       <div class="description">
          <dl>
@@ -1055,116 +1258,26 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="label">
-      <h3>label<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="lastModified">
+      <h3>lastModified<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#label</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#lastModified</p>
       <div class="comment">
-         <span class="markdown">Provides a label (e.g., display a text for UI representation) of the interaction pattern.</span>
+         <span class="markdown">Provides information when the TD instance was last modified.</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="maximum">
-      <h3>maximum<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#maximum</p>
-      <div class="comment">
-         <span class="markdown">Specifies a maximum numeric value. Only applicable for associated number or integer types.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="maxItems">
-      <h3>maxItems<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#maxItems</p>
-      <div class="comment">
-         <span class="markdown">Defines the maximum number of itmes that have to be in the array.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#unsignedInt">unsigned int</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="mediaType">
-      <h3>mediaType<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#mediaType</p>
-      <div class="comment">
-         <span class="markdown">Assign underlying media type of the interaction pattern based on IANA (https://www.iana.org/assignments/media-types/media-types.xhtml)</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="minimum">
-      <h3>minimum<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#minimum</p>
-      <div class="comment">
-         <span class="markdown">Specifies a minimum numeric value. Only applicable for associated number or integer types.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="minItems">
-      <h3>minItems<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#minItems</p>
-      <div class="comment">
-         <span class="markdown">Defines the minimum number of itmes that have to be in the array.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#unsignedInt">unsigned int</span>
             </dd>
          </dl>
       </div>
@@ -1177,10 +1290,15 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#name</p>
       <div class="comment">
-         <span class="markdown">Name of the Thing or interaction pattern (must be a valid keyword to be used in the scripting API)</span>
+         <span class="markdown">Name of the Thing.</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -1196,15 +1314,48 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#observable</p>
       <div class="comment">
-         <span class="markdown">Indicates whether a remote servient can subscribe to ("observe") the Property, to receive change notifications or periodic updates (true/false). </span>
+         <span class="markdown">Indicates whether a remote servient can subscribe to ("observe") the Property, to receive change notifications or periodic updates (true/false).</span>
       </div>
       <div class="description">
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="http://www.w3.org/ns/td#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="op">
+      <h3>op<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#op</p>
+      <div class="comment">
+         <span class="markdown">Indicates the expected result of performing the operation described by the form.
+
+For example, the Property interaction allows get and set operations.  
+The protocol binding may contain a form for the get operation and a different form for the set operation.  
+The op attribute indicates which form is which and allows the client to select the correct form for the operation required.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Link" title="http://www.w3.org/ns/td#Link">Link</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
@@ -1217,12 +1368,15 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#rel</p>
       <div class="comment">
-         <span class="markdown">Indicates the expected result of performing the operation described by the form.
-
-For example, the Property interaction allows get and set operations. The protocol binding may contain a form for the get operation and a different form for the set operation. The value of the "rel" attribute of the form indicates which form is which and allows the client to select the correct form for the oeration required</span>
+         <span class="markdown">Indicates the relation to an other Thing.</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Link" title="http://www.w3.org/ns/td#Link">Link</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -1230,51 +1384,28 @@ For example, the Property interaction allows get and set operations. The protoco
          </dl>
       </div>
    </div>
-   <div class="entity" id="required">
-      <h3>required<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="subprotocol">
+      <h3>subprotocol<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#required</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#subprotocol</p>
       <div class="comment">
-         <span class="markdown">Defines which members of the object type are required/mandatory.</span>
+         <span class="markdown">Indicates the exact mechanism by which an interaction will be accomplished for a given protocol when there are multiple options.
+     
+For example, for HTTP and Events, it indicates which of several available mechanisms should be used for asynchronous notifications.</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Form" title="http://www.w3.org/ns/td#Form">Form</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="scheme">
-      <h3>scheme<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#scheme</p>
-      <div class="comment">
-         <span class="markdown">Identification of security scheme (e.g., basic, digest, and oauth2).</span>
-      </div>
-   </div>
-   <div class="entity" id="security">
-      <h3>security<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#security</p>
-      <div class="comment">
-         <span class="markdown">Defines the security requirements of the interacions by making a reference to the top level securityDefinition</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
             </dd>
          </dl>
       </div>
@@ -1287,18 +1418,31 @@ For example, the Property interaction allows get and set operations. The protoco
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/td#support</p>
       <div class="comment">
-         <span class="markdown">Provides information about TD maintainer (e.g., author, link or telephon number to get support, etc).</span>
+         <span class="markdown">Provides information about the TD maintainer (e.g., author, link or telephone number to get support, etc).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Thing" title="http://www.w3.org/ns/td#Thing">Thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
       </div>
    </div>
-   <div class="entity" id="type">
-      <h3>type<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="title">
+      <h3>title<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#type</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#title</p>
       <div class="comment">
-         <span class="markdown">Assignment of JSON-based data types that are compatible with JSON Schema (boolean, integer, number, string, object, array, null).</span>
+         <span class="markdown">Provides a human-readable title (e.g., display a text for UI representation) of the interaction pattern.</span>
       </div>
       <div class="description">
          <dl>
@@ -1309,23 +1453,44 @@ For example, the Property interaction allows get and set operations. The protoco
          </dl>
       </div>
    </div>
-   <div class="entity" id="writable">
-      <h3>writable<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="type">
+      <h3>type<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/td#writable</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#type</p>
       <div class="comment">
-         <span class="markdown">Boolean value that indicates whether a property is writable (=true) or not (=false)</span>
+         <span class="markdown">Provides a hint indicating what the media type [[!MEDIATYPES]] of the result of dereferencing the link should be.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Link" title="http://www.w3.org/ns/td#Link">Link</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="version">
+      <h3>version<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/td#version</p>
       <div class="description">
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
-            <dt>has range</dt>
+            <dt>is also defined as</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="#version">object property</a>
             </dd>
          </dl>
       </div>

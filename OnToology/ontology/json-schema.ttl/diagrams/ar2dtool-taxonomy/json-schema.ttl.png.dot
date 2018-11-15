@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "jsonschema:StringSchema" "jsonschema:ObjectSchema" "jsonschema:NumberSchema" "jsonschema:IntegerSchema" "jsonschema:DataSchema" "jsonschema:BooleanSchema" "jsonschema:ArraySchema" ; /*classes style*/
+	"jsonschema:IntegerSchema" -> "jsonschema:DataSchema" [ label = "rdfs:subClassOf" ];
+	"jsonschema:ArraySchema" -> "jsonschema:DataSchema" [ label = "rdfs:subClassOf" ];
+	"jsonschema:ObjectSchema" -> "jsonschema:DataSchema" [ label = "rdfs:subClassOf" ];
+	"jsonschema:BooleanSchema" -> "jsonschema:DataSchema" [ label = "rdfs:subClassOf" ];
+	"jsonschema:NumberSchema" -> "jsonschema:DataSchema" [ label = "rdfs:subClassOf" ];
+	"jsonschema:StringSchema" -> "jsonschema:DataSchema" [ label = "rdfs:subClassOf" ];
+
+}

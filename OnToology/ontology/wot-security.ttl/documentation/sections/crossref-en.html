@@ -1,0 +1,783 @@
+<h2  id="crossreference" class="list">Cross reference for Security mechanisms for the Web of Things classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Security mechanisms for the Web of Things.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#APIKeySecurityScheme"
+            title="http://www.w3.org/ns/wot-security#APIKeySecurityScheme">APIKeySecurityScheme</a>
+      </li>
+      <li>
+         <a href="#BasicSecurityScheme"
+            title="http://www.w3.org/ns/wot-security#BasicSecurityScheme">BasicSecurityScheme</a>
+      </li>
+      <li>
+         <a href="#BearerSecurityScheme"
+            title="http://www.w3.org/ns/wot-security#BearerSecurityScheme">BearerSecurityScheme</a>
+      </li>
+      <li>
+         <a href="#CertSecurityScheme"
+            title="http://www.w3.org/ns/wot-security#CertSecurityScheme">CertSecurityScheme</a>
+      </li>
+      <li>
+         <a href="#DigestSecurityScheme"
+            title="http://www.w3.org/ns/wot-security#DigestSecurityScheme">DigestSecurityScheme</a>
+      </li>
+      <li>
+         <a href="#NoSecurityScheme"
+            title="http://www.w3.org/ns/wot-security#NoSecurityScheme">NoSecurityScheme</a>
+      </li>
+      <li>
+         <a href="#OAuth2SecurityScheme"
+            title="http://www.w3.org/ns/wot-security#OAuth2SecurityScheme">OAuth2SecurityScheme</a>
+      </li>
+      <li>
+         <a href="#PoPSecurityScheme"
+            title="http://www.w3.org/ns/wot-security#PoPSecurityScheme">PoPSecurityScheme</a>
+      </li>
+      <li>
+         <a href="#PSKSecurityScheme"
+            title="http://www.w3.org/ns/wot-security#PSKSecurityScheme">PSKSecurityScheme</a>
+      </li>
+      <li>
+         <a href="#PublicSecurityScheme"
+            title="http://www.w3.org/ns/wot-security#PublicSecurityScheme">PublicSecurityScheme</a>
+      </li>
+      <li>
+         <a href="#SecurityScheme" title="http://www.w3.org/ns/wot-security#SecurityScheme">
+            <span>security scheme</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="APIKeySecurityScheme">
+      <h3>APIKeySecurityScheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#APIKeySecurityScheme</p>
+      <div class="comment">
+         <span class="markdown">API key authentication security configuration ("scheme": "apikey").  This is for the case where the access token is opaque and is not using a standard token format.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> apikey</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityScheme" title="http://www.w3.org/ns/wot-security#SecurityScheme">security scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#in" title="http://www.w3.org/ns/wot-security#in">in</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#name" title="http://www.w3.org/ns/wot-security#name">name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BasicSecurityScheme">
+      <h3>BasicSecurityScheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#BasicSecurityScheme</p>
+      <div class="comment">
+         <span class="markdown">Basic authentication security configuration ("scheme": "basic"), using an unencrypted username and password.  This scheme should be used with some other security mechanism providing confidentiality, for example, TLS.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> basic</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityScheme" title="http://www.w3.org/ns/wot-security#SecurityScheme">security scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#in" title="http://www.w3.org/ns/wot-security#in">in</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#name" title="http://www.w3.org/ns/wot-security#name">name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BearerSecurityScheme">
+      <h3>BearerSecurityScheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#BearerSecurityScheme</p>
+      <div class="comment">
+         <span class="markdown">Bearer token authentication security configuration ("scheme": "bearer").  This scheme is intended for situations where bearer tokens are used independently of OAuth2.  If the oauth2 scheme is specified it is not generally necessary to specify this scheme as well as it is implied.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> bearer</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityScheme" title="http://www.w3.org/ns/wot-security#SecurityScheme">security scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#alg" title="http://www.w3.org/ns/wot-security#alg">alg</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#authorization" title="http://www.w3.org/ns/wot-security#authorization">authorization</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+         </dd>
+         <dd>
+            <a href="#format" title="http://www.w3.org/ns/wot-security#format">format</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#in" title="http://www.w3.org/ns/wot-security#in">in</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#name" title="http://www.w3.org/ns/wot-security#name">name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CertSecurityScheme">
+      <h3>CertSecurityScheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#CertSecurityScheme</p>
+      <div class="comment">
+         <span class="markdown">Certificate-base asymmetric key security configuration ("scheme": "cert").</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> cert</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityScheme" title="http://www.w3.org/ns/wot-security#SecurityScheme">security scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#identity" title="http://www.w3.org/ns/wot-security#identity">identity</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DigestSecurityScheme">
+      <h3>DigestSecurityScheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#DigestSecurityScheme</p>
+      <div class="comment">
+         <span class="markdown">Digest authentication security configuration ("scheme": "digest"). This scheme is similar to basic authentication but with added features to avoid man-in-the-middle attacks.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> digest</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityScheme" title="http://www.w3.org/ns/wot-security#SecurityScheme">security scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#in" title="http://www.w3.org/ns/wot-security#in">in</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#name" title="http://www.w3.org/ns/wot-security#name">name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#qop" title="http://www.w3.org/ns/wot-security#qop">qop</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NoSecurityScheme">
+      <h3>NoSecurityScheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#NoSecurityScheme</p>
+      <div class="comment">
+         <span class="markdown">A security configuration corresponding to ("scheme": "nosec"), indicating there is no authentication or other mechanism required to access the resource.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> nosec</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityScheme" title="http://www.w3.org/ns/wot-security#SecurityScheme">security scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OAuth2SecurityScheme">
+      <h3>OAuth2SecurityScheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#OAuth2SecurityScheme</p>
+      <div class="comment">
+         <span class="markdown">OAuth2 authentication security configuration ("scheme": "oauth2").  For the implicit flow the authorization and scopes are required.  For the password and client flows both token and scopes are required.  For the code flow authorization, token, and scopes are required.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> oauth2</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityScheme" title="http://www.w3.org/ns/wot-security#SecurityScheme">security scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#authorization" title="http://www.w3.org/ns/wot-security#authorization">authorization</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+         </dd>
+         <dd>
+            <a href="#flow" title="http://www.w3.org/ns/wot-security#flow">flow</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#refresh" title="http://www.w3.org/ns/wot-security#refresh">refresh</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+         </dd>
+         <dd>
+            <a href="#scopes" title="http://www.w3.org/ns/wot-security#scopes">scopes</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#token" title="http://www.w3.org/ns/wot-security#token">token</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PoPSecurityScheme">
+      <h3>PoPSecurityScheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#PoPSecurityScheme</p>
+      <div class="comment">
+         <span class="markdown">Proof-of-possession token authentication security configuration ("scheme": "pop").</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> pop</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityScheme" title="http://www.w3.org/ns/wot-security#SecurityScheme">security scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#alg" title="http://www.w3.org/ns/wot-security#alg">alg</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#authorization" title="http://www.w3.org/ns/wot-security#authorization">authorization</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+         </dd>
+         <dd>
+            <a href="#format" title="http://www.w3.org/ns/wot-security#format">format</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#in" title="http://www.w3.org/ns/wot-security#in">in</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#name" title="http://www.w3.org/ns/wot-security#name">name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PSKSecurityScheme">
+      <h3>PSKSecurityScheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#PSKSecurityScheme</p>
+      <div class="comment">
+         <span class="markdown">Pre-shared key authentication security configuration ("scheme": "psk").</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> psk</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityScheme" title="http://www.w3.org/ns/wot-security#SecurityScheme">security scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#identity" title="http://www.w3.org/ns/wot-security#identity">identity</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PublicSecurityScheme">
+      <h3>PublicSecurityScheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#PublicSecurityScheme</p>
+      <div class="comment">
+         <span class="markdown">Raw public key asymmetric key security configuration ("scheme": "public").</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> public</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityScheme" title="http://www.w3.org/ns/wot-security#SecurityScheme">security scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#identity" title="http://www.w3.org/ns/wot-security#identity">identity</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SecurityScheme">
+      <h3>security scheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#SecurityScheme</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/wot-security#description">description</span>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#proxy" title="http://www.w3.org/ns/wot-security#proxy">proxy</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+         </dd>
+         <dd>
+            <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#APIKeySecurityScheme"
+               title="http://www.w3.org/ns/wot-security#APIKeySecurityScheme">APIKeySecurityScheme</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#BasicSecurityScheme"
+               title="http://www.w3.org/ns/wot-security#BasicSecurityScheme">BasicSecurityScheme</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#BearerSecurityScheme"
+               title="http://www.w3.org/ns/wot-security#BearerSecurityScheme">BearerSecurityScheme</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CertSecurityScheme"
+               title="http://www.w3.org/ns/wot-security#CertSecurityScheme">CertSecurityScheme</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DigestSecurityScheme"
+               title="http://www.w3.org/ns/wot-security#DigestSecurityScheme">DigestSecurityScheme</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NoSecurityScheme"
+               title="http://www.w3.org/ns/wot-security#NoSecurityScheme">NoSecurityScheme</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#OAuth2SecurityScheme"
+               title="http://www.w3.org/ns/wot-security#OAuth2SecurityScheme">OAuth2SecurityScheme</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PSKSecurityScheme"
+               title="http://www.w3.org/ns/wot-security#PSKSecurityScheme">PSKSecurityScheme</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PoPSecurityScheme"
+               title="http://www.w3.org/ns/wot-security#PoPSecurityScheme">PoPSecurityScheme</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PublicSecurityScheme"
+               title="http://www.w3.org/ns/wot-security#PublicSecurityScheme">PublicSecurityScheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#alg" title="http://www.w3.org/ns/wot-security#alg">alg</a>
+      </li>
+      <li>
+         <a href="#authorization" title="http://www.w3.org/ns/wot-security#authorization">authorization</a>
+      </li>
+      <li>
+         <a href="#flow" title="http://www.w3.org/ns/wot-security#flow">flow</a>
+      </li>
+      <li>
+         <a href="#format" title="http://www.w3.org/ns/wot-security#format">format</a>
+      </li>
+      <li>
+         <a href="#identity" title="http://www.w3.org/ns/wot-security#identity">identity</a>
+      </li>
+      <li>
+         <a href="#in" title="http://www.w3.org/ns/wot-security#in">in</a>
+      </li>
+      <li>
+         <a href="#name" title="http://www.w3.org/ns/wot-security#name">name</a>
+      </li>
+      <li>
+         <a href="#proxy" title="http://www.w3.org/ns/wot-security#proxy">proxy</a>
+      </li>
+      <li>
+         <a href="#qop" title="http://www.w3.org/ns/wot-security#qop">qop</a>
+      </li>
+      <li>
+         <a href="#refresh" title="http://www.w3.org/ns/wot-security#refresh">refresh</a>
+      </li>
+      <li>
+         <a href="#scheme" title="http://www.w3.org/ns/wot-security#scheme">scheme</a>
+      </li>
+      <li>
+         <a href="#scopes" title="http://www.w3.org/ns/wot-security#scopes">scopes</a>
+      </li>
+      <li>
+         <a href="#token" title="http://www.w3.org/ns/wot-security#token">token</a>
+      </li>
+   </ul>
+   <div class="entity" id="alg">
+      <h3>alg<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#alg</p>
+      <div class="comment">
+         <span class="markdown">Encoding, encryption, or digest algorithm (one of MD5, ES256, or ES512-256).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="authorization">
+      <h3>authorization<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#authorization</p>
+      <div class="comment">
+         <span class="markdown">URI of the authorization server.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="flow">
+      <h3>flow<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#flow</p>
+      <div class="comment">
+         <span class="markdown">Authorization flow (one of implicit, password, client, or code)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="format">
+      <h3>format<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#format</p>
+      <div class="comment">
+         <span class="markdown">Specifies format of security authentication information (one of jwt, jwe, or jws).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="identity">
+      <h3>identity<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#identity</p>
+      <div class="comment">
+         <span class="markdown">Pre-shared key identity</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="in">
+      <h3>in<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#in</p>
+      <div class="comment">
+         <span class="markdown">Specifies the location of security authentication information (one of header, query, body, or cookie).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#name</p>
+      <div class="comment">
+         <span class="markdown">Name for query, header, or cookie parameters.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="proxy">
+      <h3>proxy<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#proxy</p>
+      <div class="comment">
+         <span class="markdown">URI of the proxy server this security configuration provides access to.  If not given, the corresponding security configuration is for the endpoint.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="qop">
+      <h3>qop<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#qop</p>
+      <div class="comment">
+         <span class="markdown">Quality of protection (one of auth or auth-int).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="refresh">
+      <h3>refresh<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#refresh</p>
+      <div class="comment">
+         <span class="markdown">URI of the refresh server</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="scheme">
+      <h3>scheme<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#scheme</p>
+      <div class="comment">
+         <span class="markdown">Identification of security mechanism being configured.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="scopes">
+      <h3>scopes<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#scopes</p>
+      <div class="comment">
+         <span class="markdown">Set of authorization scope identifiers, provided as an array.  These are provided in tokens returned by an authorization server and associated with forms in order to identify what resources a client may access and how.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="token">
+      <h3>token<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/wot-security#token</p>
+      <div class="comment">
+         <span class="markdown">URI of the token server.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

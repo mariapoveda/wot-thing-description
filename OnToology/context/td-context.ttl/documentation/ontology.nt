@@ -1,0 +1,244 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/json-ld#container
+<http://www.w3.org/ns/json-ld#container> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/json-ld#iri
+<http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/json-ld#term
+<http://www.w3.org/ns/json-ld#term> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/json-ld#type
+<http://www.w3.org/ns/json-ld#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/json-ld#Context
+<http://www.w3.org/ns/json-ld#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/json-ld#Mapping
+<http://www.w3.org/ns/json-ld#Mapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Context> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid3 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#> .
+_:genid3 <http://www.w3.org/ns/json-ld#term> "td" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid4 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/2000/01/rdf-schema#> .
+_:genid4 <http://www.w3.org/ns/json-ld#term> "rdfs" .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid5 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/2001/XMLSchema#> .
+_:genid5 <http://www.w3.org/ns/json-ld#term> "xsd" .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid6 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#outputSchema> .
+_:genid6 <http://www.w3.org/ns/json-ld#term> "outputSchema" .
+_:genid6 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid7 <http://www.w3.org/ns/json-ld#iri> <http://purl.org/dc/terms/license> .
+_:genid7 <http://www.w3.org/ns/json-ld#term> "license" .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid8 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Link> .
+_:genid8 <http://www.w3.org/ns/json-ld#term> "Link" .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid9 <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#" .
+_:genid9 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#definition> .
+_:genid9 <http://www.w3.org/ns/json-ld#term> "definitions" .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid10 <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#" .
+_:genid10 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#properties> .
+_:genid10 <http://www.w3.org/ns/json-ld#term> "properties" .
+_:genid10 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid11 <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#" .
+_:genid11 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#actions> .
+_:genid11 <http://www.w3.org/ns/json-ld#term> "actions" .
+_:genid11 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid12 <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#" .
+_:genid12 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#events> .
+_:genid12 <http://www.w3.org/ns/json-ld#term> "events" .
+_:genid12 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid13 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#security> .
+_:genid13 <http://www.w3.org/ns/json-ld#term> "security" .
+_:genid13 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid14 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Thing> .
+_:genid14 <http://www.w3.org/ns/json-ld#term> "Thing" .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid15 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#DataSchema> .
+_:genid15 <http://www.w3.org/ns/json-ld#term> "DataSchema" .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid16 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#label> .
+_:genid16 <http://www.w3.org/ns/json-ld#term> "label" .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid17 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#schema> .
+_:genid17 <http://www.w3.org/ns/json-ld#term> "schema" .
+_:genid17 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid18 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Event> .
+_:genid18 <http://www.w3.org/ns/json-ld#term> "Event" .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid19 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#base> .
+_:genid19 <http://www.w3.org/ns/json-ld#term> "base" .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid20 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#anchor> .
+_:genid20 <http://www.w3.org/ns/json-ld#term> "anchor" .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid21 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#href> .
+_:genid21 <http://www.w3.org/ns/json-ld#term> "href" .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid22 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#name> .
+_:genid22 <http://www.w3.org/ns/json-ld#term> "name" .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid23 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#observable> .
+_:genid23 <http://www.w3.org/ns/json-ld#term> "observable" .
+_:genid23 <http://www.w3.org/ns/json-ld#type> "http://www.w3.org/2001/XMLSchema#boolean" .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid24 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Form> .
+_:genid24 <http://www.w3.org/ns/json-ld#term> "Form" .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid25 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Security> .
+_:genid25 <http://www.w3.org/ns/json-ld#term> "Security" .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid26 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#writable> .
+_:genid26 <http://www.w3.org/ns/json-ld#term> "writable" .
+_:genid26 <http://www.w3.org/ns/json-ld#type> "http://www.w3.org/2001/XMLSchema#boolean" .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid27 <http://www.w3.org/ns/json-ld#iri> <http://purl.org/vocab/vann/preferredNamespacePrefix> .
+_:genid27 <http://www.w3.org/ns/json-ld#term> "preferredNamespacePrefix" .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid28 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Property> .
+_:genid28 <http://www.w3.org/ns/json-ld#term> "Property" .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Context> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid30 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#objectSchemaProperties> .
+_:genid30 <http://www.w3.org/ns/json-ld#term> "properties" .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid31 <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#@set" .
+_:genid31 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#form> .
+_:genid31 <http://www.w3.org/ns/json-ld#term> "forms" .
+_:genid31 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid32 <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#@set" .
+_:genid32 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#links> .
+_:genid32 <http://www.w3.org/ns/json-ld#term> "links" .
+_:genid32 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid33 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#rel> .
+_:genid33 <http://www.w3.org/ns/json-ld#term> "rel" .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid34 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#subProtocol> .
+_:genid34 <http://www.w3.org/ns/json-ld#term> "subProtocol" .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid35 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#mediaType> .
+_:genid35 <http://www.w3.org/ns/json-ld#term> "mediaType" .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid36 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#InteractionPattern> .
+_:genid36 <http://www.w3.org/ns/json-ld#term> "InteractionPattern" .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid37 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Action> .
+_:genid37 <http://www.w3.org/ns/json-ld#term> "Action" .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid38 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#inputSchema> .
+_:genid38 <http://www.w3.org/ns/json-ld#term> "inputSchema" .
+_:genid38 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid39 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#anyOf> .
+_:genid39 <http://www.w3.org/ns/json-ld#term> "anyOf" .
+_:genid39 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid40 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#allOf> .
+_:genid40 <http://www.w3.org/ns/json-ld#term> "allOf" .
+_:genid40 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid41 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Object> .
+_:genid41 <http://www.w3.org/ns/json-ld#term> "object" .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid42 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Number> .
+_:genid42 <http://www.w3.org/ns/json-ld#term> "number" .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid43 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#maximum> .
+_:genid43 <http://www.w3.org/ns/json-ld#term> "maximum" .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid44 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#minimum> .
+_:genid44 <http://www.w3.org/ns/json-ld#term> "minimum" .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid45 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#maxItems> .
+_:genid45 <http://www.w3.org/ns/json-ld#term> "maxItems" .
+_:genid45 <http://www.w3.org/ns/json-ld#type> "http://www.w3.org/2001/XMLSchema#decimal" .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid46 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#minItems> .
+_:genid46 <http://www.w3.org/ns/json-ld#term> "minItems" .
+_:genid46 <http://www.w3.org/ns/json-ld#type> "http://www.w3.org/2001/XMLSchema#decimal" .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid47 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#items> .
+_:genid47 <http://www.w3.org/ns/json-ld#term> "items" .
+_:genid47 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid48 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#field> .
+_:genid48 <http://www.w3.org/ns/json-ld#term> "fields" .
+_:genid48 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid49 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Integer> .
+_:genid49 <http://www.w3.org/ns/json-ld#term> "integer" .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid50 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#String> .
+_:genid50 <http://www.w3.org/ns/json-ld#term> "string" .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid51 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#required> .
+_:genid51 <http://www.w3.org/ns/json-ld#term> "required" .
+_:genid51 <http://www.w3.org/ns/json-ld#type> "http://www.w3.org/2001/XMLSchema#boolean" .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid52 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#oneOf> .
+_:genid52 <http://www.w3.org/ns/json-ld#term> "oneOf" .
+_:genid52 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid53 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#DataField> .
+_:genid53 <http://www.w3.org/ns/json-ld#term> "DataField" .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid54 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#description> .
+_:genid54 <http://www.w3.org/ns/json-ld#term> "description" .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid55 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Array> .
+_:genid55 <http://www.w3.org/ns/json-ld#term> "array" .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid56 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#enum> .
+_:genid56 <http://www.w3.org/ns/json-ld#term> "enum" .
+_:genid56 <http://www.w3.org/ns/json-ld#type> "@id" .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid57 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Boolean> .
+_:genid57 <http://www.w3.org/ns/json-ld#term> "boolean" .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid58 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#schemaType> .
+_:genid58 <http://www.w3.org/ns/json-ld#term> "type" .
+_:genid58 <http://www.w3.org/ns/json-ld#type> "@vocab" .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid59 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#support> .
+_:genid59 <http://www.w3.org/ns/json-ld#term> "support" .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid60 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#title> .
+_:genid60 <http://www.w3.org/ns/json-ld#term> "title" .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid61 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#op> .
+_:genid61 <http://www.w3.org/ns/json-ld#term> "op" .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/json-ld#Mapping> .
+_:genid62 <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#uriVariables> .
+_:genid62 <http://www.w3.org/ns/json-ld#term> "uriVariables" .
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

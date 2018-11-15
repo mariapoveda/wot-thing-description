@@ -1,0 +1,312 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/ns/json-ld#container
+<http://www.w3.org/ns/json-ld#container> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/json-ld#iri
+<http://www.w3.org/ns/json-ld#iri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/json-ld#term
+<http://www.w3.org/ns/json-ld#term> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/json-ld#type
+<http://www.w3.org/ns/json-ld#type> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/json-ld#Context
+<http://www.w3.org/ns/json-ld#Context> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/json-ld#Mapping
+<http://www.w3.org/ns/json-ld#Mapping> rdf:type owl:Class .
+
+
+[ rdf:type <http://www.w3.org/ns/json-ld#Context>
+] .
+
+_:genid3 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+          <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#> ;
+          <http://www.w3.org/ns/json-ld#term> "td" .
+
+_:genid4 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+          <http://www.w3.org/ns/json-ld#iri> rdfs: ;
+          <http://www.w3.org/ns/json-ld#term> "rdfs" .
+
+_:genid5 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+          <http://www.w3.org/ns/json-ld#iri> xsd: ;
+          <http://www.w3.org/ns/json-ld#term> "xsd" .
+
+_:genid6 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+          <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#outputSchema> ;
+          <http://www.w3.org/ns/json-ld#term> "outputSchema" ;
+          <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid7 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+          <http://www.w3.org/ns/json-ld#iri> <http://purl.org/dc/terms/license> ;
+          <http://www.w3.org/ns/json-ld#term> "license" .
+
+_:genid8 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+          <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Link> ;
+          <http://www.w3.org/ns/json-ld#term> "Link" .
+
+_:genid9 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+          <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#" ;
+          <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#definition> ;
+          <http://www.w3.org/ns/json-ld#term> "definitions" .
+
+_:genid10 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#" ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#properties> ;
+           <http://www.w3.org/ns/json-ld#term> "properties" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid11 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#" ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#actions> ;
+           <http://www.w3.org/ns/json-ld#term> "actions" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid12 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#" ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#events> ;
+           <http://www.w3.org/ns/json-ld#term> "events" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid13 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#security> ;
+           <http://www.w3.org/ns/json-ld#term> "security" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid14 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Thing> ;
+           <http://www.w3.org/ns/json-ld#term> "Thing" .
+
+_:genid15 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#DataSchema> ;
+           <http://www.w3.org/ns/json-ld#term> "DataSchema" .
+
+_:genid16 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#label> ;
+           <http://www.w3.org/ns/json-ld#term> "label" .
+
+_:genid17 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#schema> ;
+           <http://www.w3.org/ns/json-ld#term> "schema" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid18 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Event> ;
+           <http://www.w3.org/ns/json-ld#term> "Event" .
+
+_:genid19 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#base> ;
+           <http://www.w3.org/ns/json-ld#term> "base" .
+
+_:genid20 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#anchor> ;
+           <http://www.w3.org/ns/json-ld#term> "anchor" .
+
+_:genid21 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#href> ;
+           <http://www.w3.org/ns/json-ld#term> "href" .
+
+_:genid22 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#name> ;
+           <http://www.w3.org/ns/json-ld#term> "name" .
+
+_:genid23 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#observable> ;
+           <http://www.w3.org/ns/json-ld#term> "observable" ;
+           <http://www.w3.org/ns/json-ld#type> "http://www.w3.org/2001/XMLSchema#boolean" .
+
+_:genid24 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Form> ;
+           <http://www.w3.org/ns/json-ld#term> "Form" .
+
+_:genid25 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Security> ;
+           <http://www.w3.org/ns/json-ld#term> "Security" .
+
+_:genid26 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#writable> ;
+           <http://www.w3.org/ns/json-ld#term> "writable" ;
+           <http://www.w3.org/ns/json-ld#type> "http://www.w3.org/2001/XMLSchema#boolean" .
+
+_:genid27 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://purl.org/vocab/vann/preferredNamespacePrefix> ;
+           <http://www.w3.org/ns/json-ld#term> "preferredNamespacePrefix" .
+
+_:genid28 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Property> ;
+           <http://www.w3.org/ns/json-ld#term> "Property" .
+
+[ rdf:type <http://www.w3.org/ns/json-ld#Context>
+ ] .
+
+_:genid30 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#objectSchemaProperties> ;
+           <http://www.w3.org/ns/json-ld#term> "properties" .
+
+_:genid31 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#@set" ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#form> ;
+           <http://www.w3.org/ns/json-ld#term> "forms" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid32 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#container> "http://www.w3.org/ns/json-ld#@set" ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#links> ;
+           <http://www.w3.org/ns/json-ld#term> "links" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid33 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#rel> ;
+           <http://www.w3.org/ns/json-ld#term> "rel" .
+
+_:genid34 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#subProtocol> ;
+           <http://www.w3.org/ns/json-ld#term> "subProtocol" .
+
+_:genid35 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#mediaType> ;
+           <http://www.w3.org/ns/json-ld#term> "mediaType" .
+
+_:genid36 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#InteractionPattern> ;
+           <http://www.w3.org/ns/json-ld#term> "InteractionPattern" .
+
+_:genid37 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Action> ;
+           <http://www.w3.org/ns/json-ld#term> "Action" .
+
+_:genid38 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#inputSchema> ;
+           <http://www.w3.org/ns/json-ld#term> "inputSchema" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid39 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#anyOf> ;
+           <http://www.w3.org/ns/json-ld#term> "anyOf" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid40 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#allOf> ;
+           <http://www.w3.org/ns/json-ld#term> "allOf" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid41 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Object> ;
+           <http://www.w3.org/ns/json-ld#term> "object" .
+
+_:genid42 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Number> ;
+           <http://www.w3.org/ns/json-ld#term> "number" .
+
+_:genid43 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#maximum> ;
+           <http://www.w3.org/ns/json-ld#term> "maximum" .
+
+_:genid44 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#minimum> ;
+           <http://www.w3.org/ns/json-ld#term> "minimum" .
+
+_:genid45 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#maxItems> ;
+           <http://www.w3.org/ns/json-ld#term> "maxItems" ;
+           <http://www.w3.org/ns/json-ld#type> "http://www.w3.org/2001/XMLSchema#decimal" .
+
+_:genid46 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#minItems> ;
+           <http://www.w3.org/ns/json-ld#term> "minItems" ;
+           <http://www.w3.org/ns/json-ld#type> "http://www.w3.org/2001/XMLSchema#decimal" .
+
+_:genid47 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#items> ;
+           <http://www.w3.org/ns/json-ld#term> "items" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid48 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#field> ;
+           <http://www.w3.org/ns/json-ld#term> "fields" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid49 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Integer> ;
+           <http://www.w3.org/ns/json-ld#term> "integer" .
+
+_:genid50 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#String> ;
+           <http://www.w3.org/ns/json-ld#term> "string" .
+
+_:genid51 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#required> ;
+           <http://www.w3.org/ns/json-ld#term> "required" ;
+           <http://www.w3.org/ns/json-ld#type> "http://www.w3.org/2001/XMLSchema#boolean" .
+
+_:genid52 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#oneOf> ;
+           <http://www.w3.org/ns/json-ld#term> "oneOf" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid53 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#DataField> ;
+           <http://www.w3.org/ns/json-ld#term> "DataField" .
+
+_:genid54 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#description> ;
+           <http://www.w3.org/ns/json-ld#term> "description" .
+
+_:genid55 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Array> ;
+           <http://www.w3.org/ns/json-ld#term> "array" .
+
+_:genid56 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#enum> ;
+           <http://www.w3.org/ns/json-ld#term> "enum" ;
+           <http://www.w3.org/ns/json-ld#type> "@id" .
+
+_:genid57 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#Boolean> ;
+           <http://www.w3.org/ns/json-ld#term> "boolean" .
+
+_:genid58 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#schemaType> ;
+           <http://www.w3.org/ns/json-ld#term> "type" ;
+           <http://www.w3.org/ns/json-ld#type> "@vocab" .
+
+_:genid59 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#support> ;
+           <http://www.w3.org/ns/json-ld#term> "support" .
+
+_:genid60 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#title> ;
+           <http://www.w3.org/ns/json-ld#term> "title" .
+
+_:genid61 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#op> ;
+           <http://www.w3.org/ns/json-ld#term> "op" .
+
+_:genid62 rdf:type <http://www.w3.org/ns/json-ld#Mapping> ;
+           <http://www.w3.org/ns/json-ld#iri> <http://www.w3.org/ns/td#uriVariables> ;
+           <http://www.w3.org/ns/json-ld#term> "uriVariables" .
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
